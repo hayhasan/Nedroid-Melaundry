@@ -1,4 +1,5 @@
 /* activity */
+
 /* The actual timeline (the vertical ruler) */
 .main-timeline-4 {
   position: relative;
@@ -152,6 +153,7 @@
     rgba(245, 87, 108, 1)
   );
 }
+
 /* account */
 /* Importing fonts from Google */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
@@ -166,7 +168,6 @@
 
 body {
   min-height: 100vh;
-  background: linear-gradient(to bottom, #000428, #004683);
 }
 
 .container {
