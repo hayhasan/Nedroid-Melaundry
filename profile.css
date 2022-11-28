@@ -14,3 +14,48 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 }
+
+#tulisanatasgambargold{
+  margin-left: 15px;
+}
+
+#tulisanatasgambar{
+  margin-left: 29px;
+}
+
+#fotokecil{
+  margin-top: -10px;
+  margin-left: 10px;
+}
+
+#fotokecilmember{
+  margin-top: -8px;
+}
+
+@media screen and (max-width: 780px){
+  #editprofileloc{
+    margin-left: -150px;
+  }
+
+  #editprofile{
+    display: block;
+    width:300px;
+  }
+
+  .mb-1d-block {
+    margin-top: 50px;
+    margin-left: 100px;
+  }
+
+  #tulisanatasgambargold{
+    margin-left: -20px;
+  }
+  
+  #tulisanatasgambar{
+    margin-left: -20px;
+  }
+
+
+}
+
+
