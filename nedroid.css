@@ -123,16 +123,12 @@
   /* Chrome 10-25, Safari 5.1-6 */
   background: -webkit-linear-gradient(
     to right,
-    rgba(106, 17, 203, 1),
-    rgba(37, 117, 252, 1)
+    rgb(232, 69, 229),
+    rgb(252, 37, 109)
   );
 
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: linear-gradient(
-    to right,
-    rgba(106, 17, 203, 1),
-    rgba(37, 117, 252, 1)
-  );
+  background: linear-gradient(to right, rgb(17, 203, 135), rgb(37, 177, 252));
 }
 
 .gradient-custom-4 {
@@ -272,10 +268,13 @@ body {
 
 @media (max-width: 991.5px) {
   .container {
-    margin-top: 20px;
+    margin-top: 80px;
   }
 
   .container .row .col-lg-4 {
     margin: 20px 0px;
+  }
+  #WOM {
+    margin-bottom: 20px;
   }
 }
