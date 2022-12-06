@@ -7,7 +7,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="" name="keywords" />
     <meta content="" name="description" />
-
+<link rel="stylesheet" href="nedroid2.css">
     <!-- Favicon -->
     <link href="Logo.png" rel="icon" />
     <!-- Bootstrap CSS -->
@@ -26,7 +26,7 @@
     <!-- Icon Font Stylesheet -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
-      rel="stylesheet"
+      rel="stylesiheet"
     />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
@@ -42,7 +42,7 @@
 
     <!-- Template Stylesheet -->
     <link href="style.css" rel="stylesheet" />
-    <link rel="stylesheet" href="nedroid.css">
+    
       <!-- Style CSS -->
       <link rel="stylesheet" href="stylepopup.css">
       <!-- Demo CSS -->
@@ -51,7 +51,6 @@
   </head>
 
   <body>
-    
     <!-- Spinner Start -->
     <div
       id="spinner"
@@ -65,7 +64,7 @@
     <nav
       class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 px-4 px-lg-5"
     >
-      <a href="index.html" class="navbar-brand d-flex align-items-center">
+      <a href="index.php" class="navbar-brand d-flex align-items-center">
         <h2 class="m-0 text-primary">
           <img
             class="img-fluid me-2"
@@ -85,101 +84,137 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto py-4 py-lg-0">
-          <a href="index.html" class="nav-item nav-link ">Home</a>
-          <a href="order.html" class="nav-item nav-link ">Order</a>
-          <a href="activity.html" class="nav-item nav-link ">Activity</a>
+          <a href="index.php" class="nav-item nav-link ">Home</a>
+          <a href="order.php" class="nav-item nav-link ">Order</a>
+          <a href="activity.php" class="nav-item nav-link ">Activity</a>
           <div class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" >Features</a>
+            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Features</a>
             <div class="dropdown-menu shadow-sm m-0">
-                <a href="account.html" class="dropdown-item">Account</a>
-                <a href="menu.html" class="dropdown-item">Menu</a>
-                <a href="moreinfo.html" class="dropdown-item">More info</a>
+                <a href="account.php" class="dropdown-item">Account</a>
+                <a href="menu.php" class="dropdown-item">Menu</a>
+                <a href="moreinfo.php" class="dropdown-item">More info</a>
             </div>
         </div>
             <nav class="collapse navbar-collapse"> 
-              <button data-toggle="modal" data-target="#loginModal"  class="btn btn-outline-success" style="color: rgb(0, 213, 255);width: 90px; border-color: rgb(0, 213, 255);" type="button" >Login</button >       </nav>
-    </nav id="pakaian">
+              <button data-toggle="modal" data-target="#loginModal"  class="btn btn-outline-success" style="color: rgb(0, 213, 255);width: 90px; border-color: rgb(0, 213, 255);" type="button" >Login</button >  </nav>
+    </nav>
     <!-- Navbar End -->
-    <!-- history -->
-    <h1 id="WOM" style="text-align: center ; color: rgb(255, 221, 0);  margin-bottom: -100px; margin-top: 50px;">What's on Melaundry?</h1>
-    <div   class="container py-5">
-        <div class="main-timeline-4 text-white">
-          <div class="timeline-4 left-4">
-            <div class="card gradient-custom">
-              <div class="card-body p-4">
-                <img src="fashion.png" alt="">
-                <h4 style="color:white ;" >PAKAIAN</h4>
-                <p  id="boneka"> Di melaundry kita bisa mencuci pakaian dengan jenis jenis kain yang sangat beragam.
-                  Mulai dari kain pakaian yang lembut,sedikit kasar ,hingga betul - betul berteksur.
-                  Dengan berbagai macam pewangi yang telah kami sediakan!
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="timeline-4 right-4">
-            <div class="card gradient-custom-4">
-              <div class="card-body p-4">
-                <img src="bear.png" alt="">
-                <h4 style="color:white ;">BONEKA </h4>
-                <p  id="sepatu">Di melaundry kita bisa mencuci boneka dengan berbagai macam ukuran.
-                  Kami menggunakan teknik handwash secara manual untuk menjaga bulu boneka anda mengalami kerusakan.
-                  Dengan berbagai macam pewangi yang telah kami sediakan!
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="timeline-4 left-4">
-            <div class="card gradient-custom">
-              <div class="card-body p-4">
-                <img src="shoes.png" alt="">
-                <h4  style="color:white ;">SEPATU</h4>
-                <p  id="topi" >Di melaundry kita bisa menangani sepatu anda secara prefesional agar sepatu anda tidak rusak jika dicuci sendiri.
-                  Disini kita juga menggunakan tiga macam cara pengerjaan yaitu proses wet clean, dry clean , dan wet & dry.
-                </p>
-              </div >
-            </div>
-          </div>
-          <div  class="timeline-4 right-4">
-            <div class="card gradient-custom-4">
-              <div class="card-body p-4">
-               <img src="cowboy.png" alt="">
-                <h4 style="color:white ;">TOPI</h4>
-                <p  id="tas">Di melaundry kita bisa menangani pencucian khusus untuk topi. 
-                  Disini kita melakukan teknik handwash secara manual sehingga aman untuk semua jenis topi.
-                  Dengan berbagai macam pewangi yang telah kami sediakan! 
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="timeline-4 left-4">
-            <div class="card gradient-custom">
-              <div class="card-body p-4">
-                <img src="backpack.png" style="width: 60px;" alt="">
-                <h4 style="color:white ;" >TAS </h4>
-                <p  id="bedcover" >Di melaundry kita siap melayani semua jenis tas yang anda berikan! kita akan menyesuaikan metode serta bahan pembersih 
-                  dan perawatan sesuai jenis tas yang anda berikan.
-                </p>
-              </div>
-            </div>
-            
-          </div>
-          
-          <div class="timeline-4 right-4">
-            <div class="card gradient-custom-4">
-              <div class="card-body p-4">
-                <img src="blanket.png" style="width: 60px ;" alt="">
-                <h4 style="color:white ;">BED COVER </h4>
-                <p>Di melaundry kita melayani semua jenis BED COVER yang anda berikan!
-                Kita menggunakan proses pencucian dengan menggunakan peralatan modern, dengan berbagai macam pewangi yang telah kami sediakan!
-                Dijamin BED COVER anda bersih & wangi!
-                </p>
+    <!-- account -->
+    <section class="h-100 bg-light">
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100/ ">
+          <div class="col">
+            <div class="card card-registration my-4">
+              <div class="row g-0">
+                <div class="col-xl-6 d-none d-xl-block">
+                  <img src="loginnnn.jpg"
+                    alt="Sample photo" class="img-fluid"
+                    style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
+                </div>
+                <div class="col-xl-6">
+                  <div class="card-body p-md-5 text-black">
+                    <h3 class="mb-5 text-uppercase">Sign up</h3>
+    
+                    <div class="row">
+                      <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                          <label class="form-label" for="form3Example1m">First name</label>
+                          <input type="text" id="form3Example1m" class="form-control form-control-lg" />
+
+                        </div>
+                      </div>
+                      <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                          <label class="form-label" for="form3Example1n">Last name</label>
+                          <input type="text" id="form3Example1n" class="form-control form-control-lg" />
+
+                        </div>
+                      </div>
+                    </div>
+    
+                    
+                    <div class="form-outline mb-4">
+                      <label class="form-label" for="form3Example8">Email</label>
+                      <input type="text" id="form3Example8" class="form-control form-control-lg" />
+
+                    </div>
+    
+                    <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+    
+                      <h6 class="mb-0 me-4">Gender: </h6>
+    
+                      <div class="form-check form-check-inline mb-0 me-4">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender"
+                          value="option1" />
+                        <label class="form-check-label" for="femaleGender">Female</label>
+                      </div>
+    
+                      <div class="form-check form-check-inline mb-0 me-4">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
+                          value="option2" />
+                        <label class="form-check-label" for="maleGender">Male</label>
+                      </div>
+    
+                    </div>
+    
+                    <div class="row">
+                      <div class="col-md-6 mb-4">
+                        <label class="form-label" for="form3Example8" >Province</label><br>
+                        <select class="btn btn-secondary dropdown-toggle " style="background-color:white ; width: 200px;">
+                          <option value="1">Jawa Tengah</option>
+                          <option value="2">Jawa Barat</option>
+                          <option value="3">Jawa Timur</option>
+                          <option value="4">Daerah Istimewa Yogyakarta</option>
+                        </select>
+    
+                      </div>
+                      <div class="col-md-6 mb-4">
+                        <label class="form-label" for="form3Example8" >Province</label><br>
+                        <select class="btn btn-secondary dropdown-toggle " style="background-color:white ; width: 200px;">
+                          <option value="1">Jawa Tengah</option>
+                          <option value="2">Jawa Barat</option>
+                          <option value="3">Jawa Timur</option>
+                          <option value="4">Daerah Istimewa Yogyakarta</option>
+                        </select>
+    
+              
+    
+                      </div>
+                    </div>
+    
+                    <div class="form-outline mb-4">
+                      <label class="form-label" for="form3Example9">Phone number</label>
+                      <input type="text" id="form3Example9" class="form-control form-control-lg" />
+ 
+                    </div>
+    
+                    <div class="form-outline mb-4">
+                      <label class="form-label" for="form3Example90">Address</label>
+                      <input type="textarea" id="form3Example90" class="form-control form-control-lg" />
+                    </div>
+    
+                    <div class="form-outline mb-4">
+                      <label class="form-label" for="form3Example99">Password</label>
+                      <input type="password" id="form3Example99" class="form-control form-control-lg" />
+                    </div>
+    
+                    <div class="form-outline mb-4">
+                      <label class="form-label" for="form3Example97">Repeat Password</label>
+                      <input type="password" id="form3Example97" class="form-control form-control-lg" />
+                    </div>
+    
+                    <div class="d-flex justify-content-end pt-3">
+                      <button  class="btn btn-outline-success" style="color:white;width: 90px; background-color:rgb(0, 213, 255) ; border-color: rgb(0, 213, 255);">Sign Up</button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    <!-- history end -->
-    
+    </section>  
+      <!-- account -->
     <!-- Footer Start -->
     <div class="container-fluid bg-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
@@ -208,10 +243,10 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="mb-4">MeLaundry</h5>
-                    <a class="btn btn-link" href="index.html">Home</a>
-                    <a class="btn btn-link" href="order.html">Order</a>
-                    <a class="btn btn-link" href="activity.html">Activity</a>
-                    <a class="btn btn-link" href="account.html">Account</a>
+                    <a class="btn btn-link" href="index.php">Home</a>
+                    <a class="btn btn-link" href="order.php">Order</a>
+                    <a class="btn btn-link" href="activity.php">Activity</a>
+                    <a class="btn btn-link" href="account.php">Account</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="mb-4">Bantuan & Panduan</h5>
@@ -239,7 +274,7 @@
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a href="http://127.0.0.1:5500/index.html">Nedroid</a> Distributed By <a
+                        Designed By <a href="http://127.0.0.1:5500/index.php">Nedroid</a> Distributed By <a
                             href="https://themewagon.com">Melaundry</a>
                     </div>
                 </div>
@@ -253,7 +288,8 @@
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
             class="bi bi-arrow-up"></i></a>
 
-         <!-- partial:index.partial.html -->
+
+         <!-- partial:index.partial.php -->
          <div  class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             
           <div class="modal-dialog modal-dialog-centered" role="document">
@@ -294,12 +330,11 @@
               </div>
             </div>
               <div class="modal-footer d-flex justify-content-center">
-                <div class="signup-section">Don't have an account? <a href="login.html" class="text-info"> Sign Up</a>.</div>
+                <div class="signup-section">Don't have an account? <a href="login.php" class="text-info"> Sign Up</a>.</div>
               </div>
           </div>
         </div>
         <!-- partial -->
-
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -308,14 +343,15 @@
     <script src="waypoints.min.js"></script>
     <script src="owl.carousel.min.js"></script>
     <script src="counterup.min.js"></script>
-<!-- jQuery -->
-<script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'></script>
-<!-- Popper JS -->
-<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js'></script>
-<!-- Bootstrap JS -->
-<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
- <!-- Custom Script -->      
-<script  src="js/script.js"></script>
+    <!-- jQuery -->
+  <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'></script>
+  <!-- Popper JS -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js'></script>
+  <!-- Bootstrap JS -->
+  <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
+   <!-- Custom Script -->      
+  <script  src="js/script.js"></script>
+
     <!-- Template Javascript -->
     <script src="main.js"></script>
 </body>

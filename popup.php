@@ -1,5 +1,5 @@
 
-      <!-- partial:index.partial.html -->
+      <!-- partial:index.partial.php -->
       <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
@@ -39,7 +39,7 @@
             </div>
           </div>
             <div class="modal-footer d-flex justify-content-center">
-              <div class="signup-section">Don't have an account? <a href="login.html" class="text-info"> Sign Up</a>.</div>
+              <div class="signup-section">Don't have an account? <a href="login.php" class="text-info"> Sign Up</a>.</div>
             </div>
         </div>
       </div>
