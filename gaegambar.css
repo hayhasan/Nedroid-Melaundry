@@ -8,7 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 850px;
+  width: 67%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -16,11 +16,12 @@
   #fotolangganan {
     display: block;
     margin-left: auto;
+    width: 100%;
   }
   #tombollangganan {
     padding-top: 100px;
     display: block;
-    width: auto;
+    width: 95%;
     margin-left: auto;
 }
 }

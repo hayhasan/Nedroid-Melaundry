@@ -324,3 +324,10 @@
 .row1 .coll-1-of-3 {
   width: calc((100% - 2 * 6rem) / 3);
 }
+
+@media screen and (max-width: 780px){
+  .card1{
+    display: block;
+    width: auto;
+  }
+}
