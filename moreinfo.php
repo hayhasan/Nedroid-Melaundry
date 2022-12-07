@@ -9,12 +9,11 @@
     <meta content="" name="description" />
 
     <!-- Favicon -->
-
     <link href="Logo.png" rel="icon" />
-     <!-- Bootstrap CSS -->
-     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'>
-     <!-- Font Awesome CSS -->
-     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.3.1/css/all.css'>
+    <!-- Bootstrap CSS -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'>
+    <!-- Font Awesome CSS -->
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.3.1/css/all.css'>
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -43,16 +42,17 @@
 
     <!-- Template Stylesheet -->
     <link href="style.css" rel="stylesheet" />
-     <!-- Style CSS -->
-     <link rel="stylesheet" href="stylepopup.css">
-     <!-- Demo CSS -->
-     <link rel="stylesheet" href="css/demo.css">
-   
+    <link rel="stylesheet" href="nedroid.css">
+      <!-- Style CSS -->
+      <link rel="stylesheet" href="stylepopup.css">
+      <!-- Demo CSS -->
+      <link rel="stylesheet" href="css/demo.css">
+    
   </head>
 
   <body>
-    <!-- Spinner Start -->
     
+    <!-- Spinner Start -->
     <div
       id="spinner"
       class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
@@ -65,7 +65,7 @@
     <nav
       class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 px-4 px-lg-5"
     >
-      <a href="index.html" class="navbar-brand d-flex align-items-center">
+      <a href="index.php" class="navbar-brand d-flex align-items-center">
         <h2 class="m-0 text-primary">
           <img
             class="img-fluid me-2"
@@ -85,128 +85,100 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto py-4 py-lg-0">
-          <a href="index.html" class="nav-item nav-link ">Home</a>
-          <a href="order.html" class="nav-item nav-link active">Order</a>
-          <a href="activity.html" class="nav-item nav-link">Activity</a>
+          <a href="index.php" class="nav-item nav-link ">Home</a>
+          <a href="order.php" class="nav-item nav-link ">Order</a>
+          <a href="activity.php" class="nav-item nav-link ">Activity</a>
           <div class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Features</a>
+            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" >Features</a>
             <div class="dropdown-menu shadow-sm m-0">
-                <a href="account.html" class="dropdown-item">Account</a>
-                <a href="menu.html" class="dropdown-item">Menu</a>
-                <a href="moreinfo.html" class="dropdown-item">More info</a>
+                <a href="account.php" class="dropdown-item">Account</a>
+                <a href="menu.php" class="dropdown-item">Menu</a>
+                <a href="moreinfo.php" class="dropdown-item">More info</a>
             </div>
         </div>
             <nav class="collapse navbar-collapse"> 
-                <button data-toggle="modal" data-target="#loginModal"  class="btn btn-outline-success" style="color: rgb(0, 213, 255);width: 90px; border-color: rgb(0, 213, 255);" type="button" >Login</button > 
-            </nav>
-    </nav>
+              <button data-toggle="modal" data-target="#loginModal"  class="btn btn-outline-success" style="color: rgb(0, 213, 255);width: 90px; border-color: rgb(0, 213, 255);" type="button" >Login</button >       </nav>
+    </nav id="pakaian">
     <!-- Navbar End -->
-   
-<!-- order -->
-<section class="h-100 gradient-custom">
-    <div class="container py-5 h-100">
-      <div class="row d-flex justify-content-center align-items-center h-100">
-        <div class="col-lg-10 col-xl-8">
-          <div class="card" style="border-radius: 10px;">
-            <div class="card-header px-4 py-5">
-             <img src="Logo.png" alt="">
-            </div>
-            <div class="card-body p-4">
-              <div class="d-flex justify-content-between align-items-center mb-4">
-  
-              </div><form>
-                <div class="form-row">
-                  <div class="form-group col-md-6">
-                    <label for="inputEmail4">Email</label>
-                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label for="inputEmail4">Username</label>
-                    <input type="text" class="form-control" id="inputPassword4" placeholder="Username">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="inputAddress">No Telepon</label>
-                  <input type="text" class="form-control" id="inputAddress" placeholder="081122321">
-                </div>
-                
-  <div class="form-group">
-    <label for="exampleFormControlTextarea1">Alamat Jemput Pakaian</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-  </div>
-                <div class="form-row">
-                  <div class="form-group col-md-6">
-                    <label for="inputState">Pilihan Paket</label><br>
-                    <select style="background-color: white;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  >
-                      Pilihan Paket
-                    </button>
-                      <option>Reguler</option>
-                      <option>Cepat</option>
-                      <option>Kilat</option>
-                      <option>Express</option>
-                      <option>Premium</option>
-                    </select>
-                  </div>
-                  <div class="form-group col-md-5">
-                    <label for="inputState">Pilihan Pewangi</label><br>
-                    <select style="background-color: white;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Pilihan Paket
-                    </button>>
-                      <option>Vanilla</option>
-                      <option>Lemon</option>
-                      <option>Cookies</option>
-                      <option>Chocolate</option>
-                      <option>Cinnamon</option>
-                    </select>
-                   
-                  </div>
-                  <div class="form-group col-md-2">
-                    <label for="inputZip">Berat</label>
-                    <input placeholder="                kg" type="text" class="form-control" id="inputZip">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck">
-                    <label class="form-check-label" for="gridCheck">
-                      Pastikan semua data telah terisi dengan benar, Apabila menggunakan metode cashless 
-lakukan pembayaran dalam 1x25 menit.
-                    </label>
-                  </div>
-                </div>
-                <a type="submit" style="background-color: #b856df; border-color: #b856df;" class="btn btn-primary" href="map.html">Pesan</a>
-              </form>
-              <div class="d-flex justify-content-between pt-2">
-                <p class="fw-bold mb-0">Rincian</p>
-                
-              </div>
-  
-              <div class="d-flex justify-content-between pt-2">
-                <p class="text-muted mb-0">Nomor Nota : 230551</p>
-                <p class="text-muted mb-0"><span class="fw-bold me-4">Total</span> Rp 120.000</p>
-              </div>
-  
-              <div class="d-flex justify-content-between">
-                <p class="text-muted mb-0">Tanggal Nota : 22 Oktober,2022</p>
-                <p class="text-muted mb-0"><span class="fw-bold me-4">Discount</span> Rp 20.000</p>      
-              </div>
-  
-              <div class="d-flex justify-content-between mb-5">
-                <p class="text-muted mb-0">Recepits Voucher : 4KU-62IIK</p>
-                <p class="text-muted mb-0"><span class="fw-bold me-4"> Antar Jemput pakaian </span> Gratis </p>
+    <!-- history -->
+    <h1 id="WOM" style="text-align: center ; color: rgb(255, 221, 0);  margin-bottom: -100px; margin-top: 50px;">What's on Melaundry?</h1>
+    <div   class="container py-5">
+        <div class="main-timeline-4 text-white">
+          <div class="timeline-4 left-4">
+            <div class="card gradient-custom">
+              <div class="card-body p-4">
+                <img src="fashion.png" alt="">
+                <h4 style="color:white ;" >PAKAIAN</h4>
+                <p  id="boneka"> Di melaundry kita bisa mencuci pakaian dengan jenis jenis kain yang sangat beragam.
+                  Mulai dari kain pakaian yang lembut,sedikit kasar ,hingga betul - betul berteksur.
+                  Dengan berbagai macam pewangi yang telah kami sediakan!
+                </p>
               </div>
             </div>
-            <div class="card-footer border-0 px-4 py-5"
-              style="background-color: #b856df; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
-              <h5  class="d-flex align-items-center justify-content-end text-white text-uppercase mb-0">Total
-                Biaya: <span style="color:white ;" class="h2 mb-0 ms-2">Rp 100.000</span></h5>
+          </div>
+          <div class="timeline-4 right-4">
+            <div class="card gradient-custom-4">
+              <div class="card-body p-4">
+                <img src="bear.png" alt="">
+                <h4 style="color:white ;">BONEKA </h4>
+                <p  id="sepatu">Di melaundry kita bisa mencuci boneka dengan berbagai macam ukuran.
+                  Kami menggunakan teknik handwash secara manual untuk menjaga bulu boneka anda mengalami kerusakan.
+                  Dengan berbagai macam pewangi yang telah kami sediakan!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-4 left-4">
+            <div class="card gradient-custom">
+              <div class="card-body p-4">
+                <img src="shoes.png" alt="">
+                <h4  style="color:white ;">SEPATU</h4>
+                <p  id="topi" >Di melaundry kita bisa menangani sepatu anda secara prefesional agar sepatu anda tidak rusak jika dicuci sendiri.
+                  Disini kita juga menggunakan tiga macam cara pengerjaan yaitu proses wet clean, dry clean , dan wet & dry.
+                </p>
+              </div >
+            </div>
+          </div>
+          <div  class="timeline-4 right-4">
+            <div class="card gradient-custom-4">
+              <div class="card-body p-4">
+               <img src="cowboy.png" alt="">
+                <h4 style="color:white ;">TOPI</h4>
+                <p  id="tas">Di melaundry kita bisa menangani pencucian khusus untuk topi. 
+                  Disini kita melakukan teknik handwash secara manual sehingga aman untuk semua jenis topi.
+                  Dengan berbagai macam pewangi yang telah kami sediakan! 
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-4 left-4">
+            <div class="card gradient-custom">
+              <div class="card-body p-4">
+                <img src="backpack.png" style="width: 60px;" alt="">
+                <h4 style="color:white ;" >TAS </h4>
+                <p  id="bedcover" >Di melaundry kita siap melayani semua jenis tas yang anda berikan! kita akan menyesuaikan metode serta bahan pembersih 
+                  dan perawatan sesuai jenis tas yang anda berikan.
+                </p>
+              </div>
+            </div>
+            
+          </div>
+          
+          <div class="timeline-4 right-4">
+            <div class="card gradient-custom-4">
+              <div class="card-body p-4">
+                <img src="blanket.png" style="width: 60px ;" alt="">
+                <h4 style="color:white ;">BED COVER </h4>
+                <p>Di melaundry kita melayani semua jenis BED COVER yang anda berikan!
+                Kita menggunakan proses pencucian dengan menggunakan peralatan modern, dengan berbagai macam pewangi yang telah kami sediakan!
+                Dijamin BED COVER anda bersih & wangi!
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-<!-- order -->
+    <!-- history end -->
     
     <!-- Footer Start -->
     <div class="container-fluid bg-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
@@ -236,10 +208,10 @@ lakukan pembayaran dalam 1x25 menit.
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="mb-4">MeLaundry</h5>
-                    <a class="btn btn-link" href="index.html">Home</a>
-                    <a class="btn btn-link" href="order.html">Order</a>
-                    <a class="btn btn-link" href="activity.html">Activity</a>
-                    <a class="btn btn-link" href="account.html">Account</a>
+                    <a class="btn btn-link" href="index.php">Home</a>
+                    <a class="btn btn-link" href="order.php">Order</a>
+                    <a class="btn btn-link" href="activity.php">Activity</a>
+                    <a class="btn btn-link" href="account.php">Account</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="mb-4">Bantuan & Panduan</h5>
@@ -267,7 +239,7 @@ lakukan pembayaran dalam 1x25 menit.
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a href="http://127.0.0.1:5500/index.html">Nedroid</a> Distributed By <a
+                        Designed By <a href="http://127.0.0.1:5500/index.php">Nedroid</a> Distributed By <a
                             href="https://themewagon.com">Melaundry</a>
                     </div>
                 </div>
@@ -281,7 +253,7 @@ lakukan pembayaran dalam 1x25 menit.
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
             class="bi bi-arrow-up"></i></a>
 
-         <!-- partial:index.partial.html -->
+         <!-- partial:index.partial.php -->
          <div  class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             
           <div class="modal-dialog modal-dialog-centered" role="document">
@@ -322,7 +294,7 @@ lakukan pembayaran dalam 1x25 menit.
               </div>
             </div>
               <div class="modal-footer d-flex justify-content-center">
-                <div class="signup-section">Don't have an account? <a href="login.html" class="text-info"> Sign Up</a>.</div>
+                <div class="signup-section">Don't have an account? <a href="login.php" class="text-info"> Sign Up</a>.</div>
               </div>
           </div>
         </div>
@@ -336,17 +308,16 @@ lakukan pembayaran dalam 1x25 menit.
     <script src="waypoints.min.js"></script>
     <script src="owl.carousel.min.js"></script>
     <script src="counterup.min.js"></script>
-
+<!-- jQuery -->
+<script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'></script>
+<!-- Popper JS -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js'></script>
+<!-- Bootstrap JS -->
+<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
+ <!-- Custom Script -->      
+<script  src="js/script.js"></script>
     <!-- Template Javascript -->
     <script src="main.js"></script>
-          <!-- jQuery -->
-  <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'></script>
-  <!-- Popper JS -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js'></script>
-  <!-- Bootstrap JS -->
-  <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
-   <!-- Custom Script -->      
-  <script  src="js/script.js"></script>
 </body>
 
 </html>

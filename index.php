@@ -67,7 +67,7 @@
     <nav
       class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 px-4 px-lg-5"
     >
-      <a href="index.html" class="navbar-brand d-flex align-items-center">
+      <a href="index.php" class="navbar-brand d-flex align-items-center">
         <h2 class="m-0 text-primary">
           <img
             class="img-fluid me-2"
@@ -87,15 +87,15 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto py-4 py-lg-0">
-          <a href="index.html" class="nav-item nav-link active">Home</a>
-          <a href="order.html" class="nav-item nav-link">Order</a>
-          <a href="activity.html" class="nav-item nav-link">Activity</a>
+          <a href="index.php" class="nav-item nav-link active">Home</a>
+          <a href="order.php" class="nav-item nav-link">Order</a>
+          <a href="activity.php" class="nav-item nav-link">Activity</a>
           <div class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Features</a>
             <div class="dropdown-menu shadow-sm m-0">
-                <a href="account.html" class="dropdown-item">Account</a>
-                <a href="menu.html" class="dropdown-item">Menu</a>
-                <a href="moreinfo.html" class="dropdown-item">More info</a>
+                <a href="account.php" class="dropdown-item">Account</a>
+                <a href="menu.php" class="dropdown-item">Menu</a>
+                <a href="moreinfo.php" class="dropdown-item">More info</a>
             </div>
         </div>
             <nav class="collapse navbar-collapse"> 
@@ -114,6 +114,7 @@
               DAFTAR<br />
               SEKARANG
             </h1>
+            
             <p class="animated slideInDown">
               Daftar dan dapatkan promo menarik dari MeLaundry & nikmati fitur
               menarik dari MeLaundry Sekarang Juga!!! Cucianmu menjadi Tanggung
@@ -244,7 +245,7 @@
           </div>
           <div class="col-lg-6wowfadeInUp" data-wow-delay="0.5s">
             <img class="img-fluid animated pulse infinite ms-auto " src="labellangganan.png" id="fotolangganan"  alt="" />
-            <a class="btn btn-primary py-3 px-4 animated pulse infinite ms-auto" id="tombollangganan" href="order.html">Berlangganan</a>
+            <a class="btn btn-primary py-3 px-4 animated pulse infinite ms-auto" id="tombollangganan" href="order.php">Berlangganan</a>
             </div>
           </div>
         </div>
@@ -371,7 +372,7 @@
                         <h5 class="mb-3">Pakaian</h5>
                         <p>
                         </p>
-                        <a href="moreinfo.html#pakaian">Read More <i class="fa fa-arrow-right ms-2"></i></a>
+                        <a href="moreinfo.php#pakaian">Read More <i class="fa fa-arrow-right ms-2"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -379,7 +380,7 @@
                         <img class="img-fluid mb-4" src="https://cdn-icons-png.flaticon.com/512/4100/4100930.png" alt="" style="width: 100px;">
                         <h5 class="mb-3">Boneka</h5>
                         <p></p>
-                        <a href="moreinfo.html#boneka">Read More <i class="fa fa-arrow-right ms-2"></i></a>
+                        <a href="moreinfo.php#boneka">Read More <i class="fa fa-arrow-right ms-2"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
@@ -387,7 +388,7 @@
                         <img class="img-fluid mb-4" src="https://cdn-icons-png.flaticon.com/512/1108/1108832.png" alt="" style="width: 100px;">
                         <h5 class="mb-3">Sepatu</h5>
                         <p></p>
-                        <a href="moreinfo.html#sepatu">Read More <i class="fa fa-arrow-right ms-2"></i></a>
+                        <a href="moreinfo.php#sepatu">Read More <i class="fa fa-arrow-right ms-2"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -395,7 +396,7 @@
                         <img class="img-fluid mb-4" src="https://cdn-icons-png.flaticon.com/512/7133/7133102.png" alt="" style="width: 100px;">
                         <h5 class="mb-3">Topi</h5>
                         <p></p>
-                        <a href="moreinfo.html#topi">Read More <i class="fa fa-arrow-right ms-2"></i></a>
+                        <a href="moreinfo.php#topi">Read More <i class="fa fa-arrow-right ms-2"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -403,7 +404,7 @@
                         <img class="img-fluid mb-4" src="https://cdn-icons-png.flaticon.com/512/4101/4101055.png" alt="" style="width: 100px;">
                         <h5 class="mb-3">Tas</h5>
                         <p></p>
-                        <a href="moreinfo.html#tas">Read More <i class="fa fa-arrow-right ms-2"></i></a>
+                        <a href="moreinfo.php#tas">Read More <i class="fa fa-arrow-right ms-2"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
@@ -411,7 +412,7 @@
                         <img class="img-fluid mb-4" src="https://cdn-icons-png.flaticon.com/512/1820/1820620.png" alt="" style="width: 100px;">
                         <h5 class="mb-3">Bedcover</h5>
                         <p></p>
-                        <a href="moreinfo.html#bedcover">Read More <i class="fa fa-arrow-right ms-2"></i></a>
+                        <a href="moreinfo.php#bedcover">Read More <i class="fa fa-arrow-right ms-2"></i></a>
                     </div>
                 </div>
             </div>
@@ -648,10 +649,10 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="mb-4">MeLaundry</h5>
-                    <a class="btn btn-link" href="index.html">Home</a>
-                    <a class="btn btn-link" href="order.html">Order</a>
-                    <a class="btn btn-link" href="activity.html">Activity</a>
-                    <a class="btn btn-link" href="account.html">Account</a>
+                    <a class="btn btn-link" href="index.php">Home</a>
+                    <a class="btn btn-link" href="order.php">Order</a>
+                    <a class="btn btn-link" href="activity.php">Activity</a>
+                    <a class="btn btn-link" href="account.php">Account</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="mb-4">Bantuan & Panduan</h5>
@@ -679,7 +680,7 @@
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a href="http://127.0.0.1:5500/index.html">Nedroid</a> Distributed By <a
+                        Designed By <a href="http://127.0.0.1:5500/index.php">Nedroid</a> Distributed By <a
                             href="https://themewagon.com">Melaundry</a>
                     </div>
                 </div>
@@ -692,7 +693,7 @@
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
             class="bi bi-arrow-up"></i></a>
-         <!-- partial:index.partial.html -->
+         <!-- partial:index.partial.php -->
          <div  class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             
             <div class="modal-dialog modal-dialog-centered" role="document">
@@ -707,14 +708,14 @@
                     <h4>Login</h4>
                   </div>
                   <div class="d-flex flex-column text-center">
-                    <form>
+                    <form action="validatelogin.php" method="post">
                       <div class="form-group">
-                        <input type="email" class="form-control" id="email1"placeholder="Your email address...">
+                        <input type="email" class="form-control" id="email1"placeholder="Your email address..." name="loginemail">
                       </div>
                       <div class="form-group">
-                        <input type="password" class="form-control" id="password1" placeholder="Your password...">
+                        <input type="password" class="form-control" id="password1" placeholder="Your password..." name="loginpassword">
                       </div>
-                      <button style="color: white;" type="button" class="btn btn-info btn-block btn-round">Login</button>
+                      <button style="color: white;" type="submit" class="btn btn-info btn-block btn-round" name="login">Login</button>
                     </form>
                     
                     <div class="text-center text-muted delimiter">or connect with</div>
@@ -733,7 +734,7 @@
                 </div>
               </div>
                 <div class="modal-footer d-flex justify-content-center">
-                  <div class="signup-section">Don't have an account? <a href="login.html" class="text-info"> Sign Up</a>.</div>
+                  <div class="signup-section">Don't have an account? <a href="login.php" class="text-info"> Sign Up</a>.</div>
                 </div>
             </div>
           </div>
