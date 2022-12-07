@@ -7,9 +7,8 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="" name="keywords" />
     <meta content="" name="description" />
-
     <!-- Favicon -->   <link rel="stylesheet" href="voucher.css">
-
+    <link rel="stylesheet" href="randomcode.css">
     <link href="Logo.png" rel="icon" />
  <!-- Bootstrap CSS -->
  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'>
@@ -139,38 +138,27 @@
     </div>
     <!-- Header End -->
     <!-- voucer -->
-
         <div class="row1">
           <div class="coll-1-of-3">
             <div class="card1">
               <div class="card__side card__side--front-1">
-                <div class="card__title card__title--1">
-                  <i class="fas fa-paper-plane"></i>
-                  <h4 class="card__heading">Basic</h4>
-                </div>
-  
-                <div class="card__details">
-                  <ul>
-                    <li>1 Website</li>
-                    <li>50 GB SSD Storage</li>
-                    <li>Unmetered Bandwidth</li>
-                    <li>Free SSL Certificate</li>
-                    <li>1 Included Domain</li>
-                    <li>1 Included Domain</li>
-                  </ul>
-                </div>
+         <img src="voucher winter.png" style="width:337px ;" alt="">
               </div>
               <div class="card__side card__side--back card__side--back-1">
+                <img src="voucher winter back.png" style="width:337px ;" alt="">
                 <div class="card__cta">
                   <div class="card__price-box">
-                    <p class="card__price-only">Only</p>
-                    <p class="card__price-value">$2.95/mo*</p>
+                  <FORM NAME="WordForm">  
+                    <INPUT TYPE=TEXT NAME="WordBox" id="wordbox" class="form-control" ><br>
+                    <INPUT TYPE=BUTTON VALUE="SHOW" onClick="PickRandomWord(document.WordForm);" id="button11">
+                  </FORM>
                   </div>
-                  <a href="#popup" class="btn1 btn1--white">Select</a>
+            
                 </div>
               </div>
             </div>
           </div>
+    
   
           <div class="coll-1-of-3">
             <div class="card1">
@@ -749,6 +737,7 @@
     <script src="waypoints.min.js"></script>
     <script src="owl.carousel.min.js"></script>
     <script src="counterup.min.js"></script>
+    <script src="randomcode.js"></script>
 
     <!-- Template Javascript -->
     <script src="main.js"></script>

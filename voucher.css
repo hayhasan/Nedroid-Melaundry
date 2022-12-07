@@ -99,7 +99,7 @@
 }
 
 .btn1--white {
-  background-color: #fff;
+  background-color: rgb(118, 22, 22);
   color: #777;
 }
 
@@ -325,8 +325,8 @@
   width: calc((100% - 2 * 6rem) / 3);
 }
 
-@media screen and (max-width: 780px){
-  .card1{
+@media screen and (max-width: 780px) {
+  .card1 {
     display: block;
     width: auto;
   }
