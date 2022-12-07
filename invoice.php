@@ -103,103 +103,119 @@
     </nav id="pakaian">
     <!-- Navbar End -->
 
-    <!-- history -->
-    <section class="vh-100" style="background-color: #8c9eff;">
-        <div class="container py-5 h-100">
-          <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col-12">
-              <div class="card card-stepper text-black" style="border-radius: 16px;">
-      
-                <div class="card-body p-5">
-      
-                  <div class="d-flex justify-content-between align-items-center mb-5">
-                    <div>
-                      <h5 class="mb-0">INVOICE <a href="invoice.php" class="text-primary font-weight-bold">#Y34XDHR</a></h5>
-                    </div>
-                    <div class="text-end">
-                      <p class="mb-0">Expected Arrival <span><!-- Display the countdown timer in an element -->
-                        <p id="demo"></p>
-                        
-                        <script>
-                        // Set the date we're counting down to
-                        var countDownDate = new Date("Jan 5, 2024 13:00:25").getTime();
-                        
-                        // Update the count down every 1 second
-                        var x = setInterval(function() {
-                        
-                          // Get today's date and time
-                          var now = new Date().getTime();
-                        
-                          // Find the distance between now and the count down date
-                          var distance = countDownDate - now;
-                        
-                          // Time calculations for days, hours, minutes and seconds
-                          
-                          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                        
-                          // Display the result in the element with id="demo"
-                          document.getElementById("demo").innerHTML = hours + "h "
-                          + minutes + "m " + seconds + "s ";
-                        
-                          // If the count down is finished, write some text
-                          if (distance < 0) {
-                            clearInterval(x);
-                            document.getElementById("demo").innerHTML = "EXPIRED";
-                          }
-                        }, 1000);
-                        </script></span></p>
-                    
-                    </div>
-                  </div>
-      
-                  <ul id="progressbar-2" class="d-flex justify-content-between mx-0 mt-0 mb-5 px-0 pt-0 pb-2">
-                    <li class="step0 active text-center" id="step1"></li>
-                    <li class="step0 active text-center" id="step2"></li>
-                    <li class="step0 active text-center" id="step3"></li>
-                    <li class="step0 text-muted text-end" id="step4"></li>
-                  </ul>
-      
-                  <div class="d-flex justify-content-between">
-                    <div class="d-lg-flex align-items-center">
-                      <i class="fas fa-clipboard-list fa-3x me-lg-4 mb-3 mb-lg-0"></i>
-                      <div>
-                        <p class="fw-bold mb-1">Order</p>
-                        <p class="fw-bold mb-0">Processed</p>
-                      </div>
-                    </div>
-                    <div class="d-lg-flex align-items-center">
-                      <i class="fas fa-box-open fa-3x me-lg-4 mb-3 mb-lg-0"></i>
-                      <div>
-                        <p class="fw-bold mb-1">Order</p>
-                        <p class="fw-bold mb-0">Shipped</p>
-                      </div>
-                    </div>
-                    <div class="d-lg-flex align-items-center">
-                      <i class="fas fa-shipping-fast fa-3x me-lg-4 mb-3 mb-lg-0"></i>
-                      <div>
-                        <p class="fw-bold mb-1">Order</p>
-                        <p class="fw-bold mb-0">En Route</p>
-                      </div>
-                    </div>
-                    <div class="d-lg-flex align-items-center">
-                      <i class="fas fa-home fa-3x me-lg-4 mb-3 mb-lg-0"></i>
-                      <div>
-                        <p class="fw-bold mb-1">Order</p>
-                        <p class="fw-bold mb-0">Arrived</p>
-                      </div>
-                    </div>
-                  </div>
-      
-                </div>
-      
-              </div>
-            </div>
+    <!-- invoice -->
+    <div class="card">
+  <div class="card-body">
+    <div class="container mb-5 mt-3">
+      <div class="row d-flex align-items-baseline">
+        <div class="col-xl-9">
+          <p style="color: #7e8d9f;font-size: 20px;">Invoice >> <strong>ID: #123-123</strong></p>
+        </div>
+        <div class="col-xl-3 float-end">
+         
+        </div>
+        <hr>
+      </div>
+
+      <div class="container">
+        <div class="col-md-12">
+          <div class="text-center">
+            <i class="fab fa-mdb fa-4x ms-0" style="color:#5d9fc5 ;"></i>
+            <p class="pt-0">Melaundry</p>
+          </div>
+
+        </div>
+
+
+        <div class="row">
+          <div class="col-xl-8">
+            <ul class="list-unstyled">
+              <li class="text-muted">To: <span style="color:#5d9fc5 ;">John Lorem</span></li>
+              <li class="text-muted">Street, City</li>
+              <li class="text-muted">State, Country</li>
+              <li class="text-muted"><i class="fas fa-phone"></i> 123-456-789</li>
+            </ul>
+          </div>
+          <div class="col-xl-4">
+            <p class="text-muted">Invoice</p>
+            <ul class="list-unstyled">
+              <li class="text-muted"><i class="fas fa-circle" style="color:#84B0CA ;"></i> <span
+                  class="fw-bold">ID:</span>#123-456</li>
+              <li class="text-muted"><i class="fas fa-circle" style="color:#84B0CA ;"></i> <span
+                  class="fw-bold">Creation Date: </span>Jun 23,2021</li>
+              <li class="text-muted"><i class="fas fa-circle" style="color:#84B0CA ;"></i> <span
+                  class="me-1 fw-bold">Status:</span><span class="badge badge-pill badge-success">
+                  succes</span></li>
+            </ul>
           </div>
         </div>
-      </section>
-    <!-- history end -->
+
+        <div class="row my-2 mx-1 justify-content-center">
+          <table class="table table-striped table-borderless">
+            <thead style="background-color:#84B0CA ;" class="text-white">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Description</th>
+                <th scope="col">Qty</th>
+                <th scope="col">Unit Price</th>
+                <th scope="col">Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Pro Package</td>
+                <td>4</td>
+                <td>$200</td>
+                <td>$800</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Web hosting</td>
+                <td>1</td>
+                <td>$10</td>
+                <td>$10</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Consulting</td>
+                <td>1 year</td>
+                <td>$300</td>
+                <td>$300</td>
+              </tr>
+            </tbody>
+
+          </table>
+        </div>
+        <div class="row">
+          <div class="col-xl-8">
+            <p class="ms-3">Add additional notes and payment information</p>
+
+          </div>
+          <div class="col-xl-3">
+            <ul class="list-unstyled">
+              <li class="text-muted ms-3"><span class="text-black me-4">SubTotal</span>$1110</li>
+              <li class="text-muted ms-3 mt-2"><span class="text-black me-4">Tax(15%)</span>$111</li>
+            </ul>
+            <p class="text-black float-start"><span class="text-black me-3"> Total Amount</span><span
+                style="font-size: 25px;">$1221</span></p>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-xl-10">
+            <p>Thank you for your purchase</p>
+          </div>
+          <div class="col-xl-2">
+            
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- invoice end -->
     
     <!-- Footer Start -->
     <div class="container-fluid bg-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
