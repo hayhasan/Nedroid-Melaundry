@@ -94,23 +94,28 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto py-4 py-lg-0">
         <?php
-
               if(! $_SESSION['login']){
-                echo "<button data-toggle='modal' data-target='#loginModal' class='btn btn-outline-success' style='color: rgb(0, 213, 255);width: 90px; border-color: rgb(0, 213, 255);' type='button' >Login</button>";
+                echo "<a href='index.php' class='nav-item nav-link active'>Home</a>
+                <a href='order.php' class='nav-item nav-link disabled'>Order</a>
+                <a href='activity.php' class='nav-item nav-link disabled'>Activity</a>
+                <div class='nav-item dropdown'>
+                  <a href='#' class='nav-link dropdown-toggle' data-bs-toggle='dropdown'>Features</a>
+                  <div class='dropdown-menu shadow-sm m-0'>
+                      <a href='menu.php' class='dropdown-item'>Menu</a>
+                      <a href='moreinfo.php' class='dropdown-item'>More info</a>";
               }
               else{
-                echo "<a href='http://localhost/nedroid_melaundry/controller_logout.php' class='btn btn-outline-success' style='color: rgb(0, 213, 255);width: 90px; border-color: rgb(0, 213, 255);' >Logout</a>";
+                echo "<a href='index.php' class='nav-item nav-link active'>Home</a>
+                <a href='order.php' class='nav-item nav-link'>Order</a>
+                <a href='activity.php' class='nav-item nav-link'>Activity</a>
+                <div class='nav-item dropdown'>
+                  <a href='#' class='nav-link dropdown-toggle' data-bs-toggle='dropdown'>Features</a>
+                  <div class='dropdown-menu shadow-sm m-0'>
+                      <a href='account.php' class='dropdown-item'>Account</a>
+                      <a href='menu.php' class='dropdown-item'>Menu</a>
+                      <a href='moreinfo.php' class='dropdown-item'>More info</a>";
               }
         ?>
-          <a href="index.php" class="nav-item nav-link active">Home</a>
-          <a href="order.php" class="nav-item nav-link">Order</a>
-          <a href="activity.php" class="nav-item nav-link">Activity</a>
-          <div class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Features</a>
-            <div class="dropdown-menu shadow-sm m-0">
-                <a href="account.php" class="dropdown-item">Account</a>
-                <a href="menu.php" class="dropdown-item">Menu</a>
-                <a href="moreinfo.php" class="dropdown-item">More info</a>
             </div>
         </div>
             <nav class="collapse navbar-collapse"> 
