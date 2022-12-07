@@ -1,12 +1,9 @@
 <?php
-$host = "localhost";
-$user = "root";
-$pass = "";
-$db = "nedroid";
+$mysql_host = "localhost";
+$mysql_user = "root";
+$mysql_pass = "";
+$mysl_database = "nedroid";
 
-$conn = mysqli_connect($host, $user, $pass, $db);
-if (mysqli_connect_errno()) {
-    echo "Failed to connect to MySQL: " . mysqli_connect_error();
-    exit();
-  }
+$conn = mysql_connect($mysql_host, $mysql_user, $mysql_pass);
+mysql_select_db($mysl_database, $conn);
 ?>
