@@ -9,15 +9,15 @@ $koneksi = mysqli_connect("localhost","root","","nedroid");
 
 $strSql = "select * from dataUser where email = '$loginemail' and password = '$loginpassword'  ";
 $hasil = mysqli_query($koneksi,$strSql);
-$name = "select firstname from dataUser where email ='$loginemail' ";
-$hasilname = mysqli_query($koneksi,$name);
 
 $cek = mysqli_num_rows($hasil);
 
 if($cek>0){
-    while($rowData = $hasilname->fetch_array()){
+    while($rowData = $hasil->fetch_array()){
+    //var_dump($rowData['lastName']);    
     session_start();
-    $_SESSION['hasil'] = $hasilname;
+    $_SESSION['login'] = true;
+    $_SESSION['user'] = $rowData; 
     echo "<script type='text/javascript'>alert('Login Berhasil');</script>";
     header("Location:account.php");
     }

@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(! $_SESSION['login']){
+  header("Location:index.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -113,13 +120,15 @@
             </div>
         </div>
             <nav class="collapse navbar-collapse"> 
-                <a href="login.php" class="btn btn-outline-success" style="color: rgb(0, 213, 255);width: 90px; border-color: rgb(0, 213, 255);" type="button" >Logout</a >             </nav>
+                <a href="login.php" class="btn btn-outline-success" style="color: rgb(0, 213, 255);width: 90px; border-color: rgb(0, 213, 255);" type="button" >Logout</a >  </nav>
     </nav>
     <!-- Navbar End -->
 <!-- info -->
 
 <body class="profile-page">
-  
+<?php 
+$user = $_SESSION['user'];
+?>
   <div class="page-header header-filter" data-parallax="true" style="background-image:url('http://wallpapere.org/wp-content/uploads/2012/02/black-and-white-city-night.png');"></div>
   <div class="main main-raised">
   <div class="profile-content">
@@ -131,7 +140,7 @@
                             <img src="https://images.unsplash.com/photo-1544435253-f0ead49638fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="Circle Image" class="img-raised rounded-circle img-fluid">
                         </div>
                         <div class="name">
-                            <h3 class="title">Haikal Jamal</h3>
+                            <h3 class="title"><?php echo $user['firstName']; ?></h3>
               <h5>Gold Pass</h5>
               <a href="#pablo" class="btn btn-just-icon btn-link btn-dribbble"><i class="fa fa-dribbble"></i></a>
                               <a href="#pablo" class="btn btn-just-icon btn-link btn-twitter"><i class="fa fa-twitter"></i></a>
@@ -141,7 +150,7 @@
                 </div>
               </div>
               <div class="description text-center">
-                  <p>Jln.Kaliurang km 7 joho,Belakang pasar Kolombo </p>
+                  <p><?php echo $user['address']; ?> </p>
               </div>
       <div class="row">
         <div class="col-md-6 ml-auto mr-auto">
