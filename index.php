@@ -1,3 +1,10 @@
+<?php
+  session_start();
+  if (! isset($_SESSION['login'])){
+    $_SESSION['login'] = false;
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -87,6 +94,15 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto py-4 py-lg-0">
+        <?php
+
+              if(! $_SESSION['login']){
+                echo "<button data-toggle='modal' data-target='#loginModal' class='btn btn-outline-success' style='color: rgb(0, 213, 255);width: 90px; border-color: rgb(0, 213, 255);' type='button' >Login</button>";
+              }
+              else{
+                echo "<a href='http://localhost/nedroid_melaundry/controller_logout.php' class='btn btn-outline-success' style='color: rgb(0, 213, 255);width: 90px; border-color: rgb(0, 213, 255);' >Logout</a>";
+              }
+        ?>
           <a href="index.php" class="nav-item nav-link active">Home</a>
           <a href="order.php" class="nav-item nav-link">Order</a>
           <a href="activity.php" class="nav-item nav-link">Activity</a>
@@ -99,7 +115,16 @@
             </div>
         </div>
             <nav class="collapse navbar-collapse"> 
-                  <button data-toggle="modal" data-target="#loginModal" class="btn btn-outline-success" style="color: rgb(0, 213, 255);width: 90px; border-color: rgb(0, 213, 255);" type="button" >Login</button> 
+            <?php
+
+              if(! $_SESSION['login']){
+                echo "<button data-toggle='modal' data-target='#loginModal' class='btn btn-outline-success' style='color: rgb(0, 213, 255);width: 90px; border-color: rgb(0, 213, 255);' type='button' >Login</button>";
+              }
+              else{
+                echo "<a href='http://localhost/nedroid_melaundry/controller_logout.php' class='btn btn-outline-success' style='color: rgb(0, 213, 255);width: 90px; border-color: rgb(0, 213, 255);' >Logout</a>";
+              }
+            ?>
+                  <!-- <button data-toggle="modal" data-target="#loginModal" class="btn btn-outline-success" style="color: rgb(0, 213, 255);width: 90px; border-color: rgb(0, 213, 255);" type="button" >Login</button>  -->
               </nav>
               
     </nav>
