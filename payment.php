@@ -215,7 +215,7 @@
               </div>
               <div class="border-top px-2 mx-2"></div>
               <div class="p-2 d-flex pt-3">
-                <div class="col-8">Total Deductible, Coinsurance, and Copay</div>
+                <div class="col-8">Total Deductsdasadadsasdasdadsasdible, Coinsurance, and Copay</div>
                 <div class="ms-auto">$40.00</div>
               </div>
               <div class="p-2 d-flex">
