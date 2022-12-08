@@ -189,7 +189,6 @@
             </div>
           </div>
 
-<<<<<<< HEAD
                                 </span>Pending </p>
                                  <p class="fw-bold mb-3">
                                     <span class="fas fa-dollar-sign pe-1">
@@ -308,7 +307,6 @@
                                                                                                     </div>
                                                                                                  </div> 
     <!-- history end -->
-=======
           <div class="col-md-5 col-xl-4 offset-xl-1">
             <div class="py-4 d-flex justify-content-end">
               <h6><a href="index.php">Cancel and return to website</a></h6>
@@ -368,7 +366,6 @@
   </div>
 </section>
     <!--aaa invoice end -->
->>>>>>> 855fba988af4c760b17c3f4ea70dce31efb6a4d1
     
     <!-- Footer Start -->
     <div class="container-fluid bg-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
