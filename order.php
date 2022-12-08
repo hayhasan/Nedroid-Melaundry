@@ -171,6 +171,10 @@
                     <label for="inputZip">Berat</label>
                     <input placeholder="                kg" type="text" class="form-control" id="inputZip">
                   </div>
+                  <div class="form-group col-md-2">
+                    <label for="inputZip">Kode Voucher</label>
+                    <input type="text" class="form-control" id="inputZip">
+                  </div>
                 </div>
                 <div class="form-group">
                   <div class="form-check">
