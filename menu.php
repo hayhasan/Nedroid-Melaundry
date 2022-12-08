@@ -232,7 +232,7 @@
                       <div class="card-content d-flex flex-column align-items-center">
                           <h4 class="pt-2">Khusus Untuk Anda </h4>
                           <h5>Pelanggan Setia Kami</h5>
-      
+                          <a type="submit" style="background-color: #00c8ff; border-color: white;height: auto; width: auto; margin-top: 10px;" class="btn btn-primary" href="order.php">Cuci Sekarang</a>
                           <ul class="social-icons d-flex justify-content-center">
                               <li style="--i:1">
                                   <a href="#">
@@ -263,6 +263,7 @@
                 <div class="card-content d-flex flex-column align-items-center" >
                     <h4 class="pt-2">Dapatkan keuntungan khusus</h4>
                     <h5>Dengan menjadi Member kami</h5>
+                    <a type="submit" style="background-color: #FE2EC8; border-color: white;height: auto; width: auto; margin-top: 10px;" class="btn btn-primary" href="order.php">Cuci Sekarang</a>
                     <ul class="social-icons d-flex justify-content-center">
                         <li style="--i:1">
                             <a href="#">
@@ -292,7 +293,7 @@
                 <div class="card-content d-flex flex-column align-items-center">
                     <h4 class="pt-2">Dapatkan harga termurah</h4>
                     <h5>Untuk Pakaian anda</h5>
-                    <a type="submit" style="background-color: #00c8ff; border-color: white;height: 30px; width: 100px; margin-top: 10px;" class="btn btn-primary" href="order.php"></a>
+                    <a type="submit" style="background-color: #FE9A2E; border-color: white;height: auto; width: auto; margin-top: 10px;" class="btn btn-primary" href="order.php">Cuci Sekarang</a>
 
                     <ul class="social-icons d-flex justify-content-center">
                         <li style="--i:1">

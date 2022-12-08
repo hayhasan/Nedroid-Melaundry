@@ -192,12 +192,12 @@
                                                                                   
                                                                                 </div> 
                                                                                 <div class="col-2 text-center p-0">
-                                                                                     <p class="textmuted p-2">Qty</p>
+                                                                                     <p class="textmuted p-2">Jumlah</p>
                                                                                       <span class="d-block p-2 border-bottom">1</span>
                                                                                      
                                                                                      </div> 
                                                                                      <div class="col-2 p-0 text-center h8 border-end"> 
-                                                                                        <p class="textmuted p-2">Price</p> 
+                                                                                        <p class="textmuted p-2">Harga</p> 
                                                                                         <span class="d-block border-bottom py-2">
                                                                                             <span class="fas" >Rp </span>250.000</span> 
                                                                                             <span class="d-block py-2 ">
@@ -211,7 +211,7 @@
                                                                                                 </div> 
                                                                                             </div> 
                                                                                             <div class="d-flex h7 mb-2"> 
-                                                                                                <p class="">Total Amount</p>
+                                                                                                <p class="">Total</p>
                                                                                                  <p class="ms-auto">
                                                                                                     <span class="fas">Rp </span>250.000</p>
                                                                                                  </div>
@@ -220,23 +220,23 @@
                                                                                                      </div>
                                                                                                      </div> 
                                                                                                      <div class="">
-                                                                                                         <p class="h7 fw-bold mb-1">Pay this Invoice</p>
-                                                                                                          <p class="textmuted h8 mb-2">Make payment for this invoice by filling in the details</p> 
+                                                                                                         <p class="h7 fw-bold mb-1">Pembayaran</p>
+                                                                                                          <p class="textmuted h8 mb-2">Lengkapi data dibawah</p> 
                                                                                                           <div class="form">
                                                                                                              <div class="row"> 
                                                                                                                 <div class="col-12">
                                                                                                                      <div class="card border-0">
-                                                                                                                         <input class="form-control ps-5" type="text" placeholder="Card number">
+                                                                                                                         <input class="form-control ps-5" type="text" placeholder="Nomor Kartu">
                                                                                                                           <span class="far fa-credit-card"></span> 
                                                                                                                         </div> 
                                                                                                                     </div>
                                                                                                                      <div class="col-6"> 
-                                                                                                                        <input class="form-control my-3" type="text" placeholder="MM/YY"> 
+                                                                                                                        <input class="form-control my-3" type="text" placeholder="xxxx-xxxx-xxxx-xxxx"> 
                                                                                                                     </div> 
                                                                                                                     <div class="col-6"> 
-                                                                                                                        <input class="form-control my-3" type="text" placeholder="cvv"> 
+                                                                                                                        <input class="form-control my-3" type="text" placeholder="xxx"> 
                                                                                                                     </div>
-                                                                                                                     <p class="p-blue h8 fw-bold mb-3">MORE PAYMENT METHODS</p>
+                                                                                                                     <p class="p-blue h8 fw-bold mb-3">Metode Pembayaran Lain</p>
                                                                                                                      </div>
                                                                                                                       <div class="btn btn-primary d-block h8">Bayar Sekarang 
                                                                                                                         <span class="fas">Rp 
