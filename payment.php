@@ -189,7 +189,6 @@
             </div>
           </div>
 
-<<<<<<< HEAD
                                 </span>Pending </p>
                                  <p class="fw-bold mb-3">
                                     <span class="fas fa-dollar-sign pe-1">
@@ -308,67 +307,6 @@
                                                                                                     </div>
                                                                                                  </div> 
     <!-- history end -->
-=======
-          <div class="col-md-5 col-xl-4 offset-xl-1">
-            <div class="py-4 d-flex justify-content-end">
-              <h6><a href="index.php">Cancel and return to website</a></h6>
-            </div>
-            <div class="rounded d-flex flex-column p-2" style="background-color: #f8f9fa;">
-              <div class="p-2 me-3">
-                <h4>Order Recap</h4>
-              </div>
-              <div class="p-2 d-flex">
-                <div class="col-8">Contracted Price</div>
-                <div class="ms-auto">$186.76</div>
-              </div>
-              <div class="p-2 d-flex">
-                <div class="col-8">Amount toward deductible</div>
-                <div class="ms-auto">$0.00</div>
-              </div>
-              <div class="p-2 d-flex">
-                <div class="col-8">Coinsurance( 0% )</div>
-                <div class="ms-auto">+ $0.00</div>
-              </div>
-              <div class="p-2 d-flex">
-                <div class="col-8">Copayment</div>
-                <div class="ms-auto">+ $40.00</div>
-              </div>
-              <div class="border-top px-2 mx-2"></div>
-              <div class="p-2 d-flex pt-3">
-                <div class="col-8">Total Deductible, Coinsurance, and Copay</div>
-                <div class="ms-auto">$40.00</div>
-              </div>
-              <div class="p-2 d-flex">
-                <div class="col-8">
-                  Maximum out-of-pocket on Insurance Policy (not reached)
-                </div>
-                <div class="ms-auto">$6500.00</div>
-              </div>
-              <div class="border-top px-2 mx-2"></div>
-              <div class="p-2 d-flex pt-3">
-                <div class="col-8">Insurance Responsibility</div>
-                <div class="ms-auto"><b>$71.76</b></div>
-              </div>
-              <div class="p-2 d-flex">
-                <div class="col-8">
-                  Patient Balance <span class="fa fa-question-circle text-dark"></span>
-                </div>
-                <div class="ms-auto"><b>$71.76</b></div>
-              </div>
-              <div class="border-top px-2 mx-2"></div>
-              <div class="p-2 d-flex pt-3">
-                <div class="col-8"><b>Total</b></div>
-                <div class="ms-auto"><b class="text-success">$85.00</b></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-    <!-- invoice end -->
->>>>>>> 3aaa78a9f21da63a55f041670378a197b2df3216
     
     <!-- Footer Start -->
     <div class="container-fluid bg-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
