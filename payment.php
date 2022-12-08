@@ -189,6 +189,124 @@
             </div>
           </div>
 
+                                </span>Pending </p>
+                                 <p class="fw-bold mb-3">
+                                    <span class="fas fa-dollar-sign pe-1">
+
+                                    </span>1254 <span class="textmuted">.50</span> 
+                                </p> <p class="p-org"><span class="fas fa-circle pe-2">
+
+                                </span>On drafts</p> <p class="fw-bold">
+                                    <span class="fas fa-dollar-sign pe-1">
+
+                                    </span>00<span class="textmuted">.00</span>
+                                </p> </div> </div> </div> <div class="col-12 px-0 mb-4">
+                                     <div class="box-right"> <div class="d-flex pb-2">
+                                         <p class="fw-bold h7">
+                                            <span class="textmuted">quickpay.to/</span>Publicnote</p>
+                                             <p class="ms-auto p-blue">
+                                                <span class=" bg btn btn-primary fas fa-pencil-alt me-3"></span>
+                                                 <span class=" bg btn btn-primary far fa-clone"></span> 
+                                                </p> </div> <div class="bg-blue p-2"> 
+                                                    <P class="h8 textmuted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum recusandae dolorem voluptas nemo, modi eos minus nesciunt.
+                                                         <p class="p-blue bg btn btn-primary h8">LEARN MORE</p>
+                                                         </P> 
+                                                        </div> 
+                                                    </div>
+                                                 </div>
+                                                  <div class="col-12 px-0"> 
+                                                    <div class="box-right"> 
+                                                        <div class="d-flex mb-2"> 
+                                                            <p class="fw-bold">Create new invoice</p>
+                                                             <p class="ms-auto textmuted">
+                                                                <span class="fas fa-times">
+
+                                                                </span></p> 
+                                                            </div> <div class="d-flex mb-2">
+                                                                 <p class="h7">#AL2545</p>
+                                                                  <p class="ms-auto bg btn btn-primary p-blue h8">
+                                                                    <span class="far fa-clone pe-2"></span>COPY PAYMENT LINK </p>
+                                                                 </div> <div class="row"> <div class="col-12 mb-2"> 
+                                                                    <p class="textmuted h8">Project / Description</p>
+                                                                     <input class="form-control" type="text" placeholder="Legal Consulting"> </div> 
+                                                                     <div class="col-6"> <p class="textmuted h8">Issused on</p>
+                                                                         <input class="form-control" type="text" placeholder="Oct 25, 2020"> </div> 
+                                                                         <div class="col-6"> <p class="textmuted h8">Due on</p>
+                                                                             <input class="form-control" type="text" placeholder="Oct 25, 2020"> </div> 
+                                                                            </div> 
+                                                                        </div> 
+                                                                    </div>
+                                                                 </div> 
+                                                                </div> 
+                                                                <div class="col-md-5 col-12 ps-md-5 p-0 ">
+                                                                     <div class="box-left"> 
+                                                                        <p class="textmuted h8">Invoice</p>
+                                                                         <p class="fw-bold h7">Hasan Rama Sagita</p> 
+                                                                         <p class="textmuted h8">Jl.Kaliurang km 7 joho,Belakang pasar Kolombo</p>
+                                                                          <p class="textmuted h8 mb-2">Ngaglik Kab.Sleman DIY</p>
+                                                                           <div class="h8"> <div class="row m-0 border mb-3">
+                                                                             <div class="col-6 h8 pe-0 ps-2"> 
+                                                                                <p class="textmuted py-2">Items</p>
+                                                                                 <span class="d-block py-2 border-bottom">Royale Pass</span>
+                                                                                  
+                                                                                </div> 
+                                                                                <div class="col-2 text-center p-0">
+                                                                                     <p class="textmuted p-2">Jumlah</p>
+                                                                                      <span class="d-block p-2 border-bottom">1</span>
+                                                                                     
+                                                                                     </div> 
+                                                                                     <div class="col-2 p-0 text-center h8 border-end"> 
+                                                                                        <p class="textmuted p-2">Harga</p> 
+                                                                                        <span class="d-block border-bottom py-2">
+                                                                                            <span class="fas" >Rp </span>250.000</span> 
+                                                                                            <span class="d-block py-2 ">
+                                                                                               
+                                                                                             </div> 
+                                                                                             <div class="col-2 p-0 text-center"> 
+                                                                                                <p class="textmuted p-2">Total</p> 
+                                                                                                <span class="d-block py-2 border-bottom">
+                                                                                                    <span class="fas">Rp </span>250.000</span> 
+                                                                                                
+                                                                                                </div> 
+                                                                                            </div> 
+                                                                                            <div class="d-flex h7 mb-2"> 
+                                                                                                <p class="">Total</p>
+                                                                                                 <p class="ms-auto">
+                                                                                                    <span class="fas">Rp </span>250.000</p>
+                                                                                                 </div>
+                                                                                                  <div class="h8 mb-5">
+                                                                                                     <p class="textmuted">Dengan ini saya telah menyetujui berlangganan Royale Pass Melaundry.  </p>
+                                                                                                     </div>
+                                                                                                     </div> 
+                                                                                                     <div class="">
+                                                                                                         <p class="h7 fw-bold mb-1">Pembayaran</p>
+                                                                                                          <p class="textmuted h8 mb-2">Lengkapi data dibawah</p> 
+                                                                                                          <div class="form">
+                                                                                                             <div class="row"> 
+                                                                                                                <div class="col-12">
+                                                                                                                     <div class="card border-0">
+                                                                                                                         <input class="form-control ps-5" type="text" placeholder="Nomor Kartu">
+                                                                                                                          <span class="far fa-credit-card"></span> 
+                                                                                                                        </div> 
+                                                                                                                    </div>
+                                                                                                                     <div class="col-6"> 
+                                                                                                                        <input class="form-control my-3" type="text" placeholder="xxxx-xxxx-xxxx-xxxx"> 
+                                                                                                                    </div> 
+                                                                                                                    <div class="col-6"> 
+                                                                                                                        <input class="form-control my-3" type="text" placeholder="xxx"> 
+                                                                                                                    </div>
+                                                                                                                     <p class="p-blue h8 fw-bold mb-3">Metode Pembayaran Lain</p>
+                                                                                                                     </div>
+                                                                                                                      <div class="btn btn-primary d-block h8">Bayar Sekarang 
+                                                                                                                        <span class="fas">Rp 
+                                                                                                                        </span>250.000<span class="ms-3 fas fa-arrow-right"></span>
+                                                                                                                    </div> 
+                                                                                                                </div> 
+                                                                                                            </div> 
+                                                                                                        </div> 
+                                                                                                    </div>
+                                                                                                 </div> 
+    <!-- history end -->
           <div class="col-md-5 col-xl-4 offset-xl-1">
             <div class="py-4 d-flex justify-content-end">
               <h6><a href="index.php">Cancel and return to website</a></h6>
