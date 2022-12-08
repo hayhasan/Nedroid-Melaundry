@@ -180,10 +180,9 @@
                   <div class="card__price-box">
                   <FORM NAME="WordForm">  
                     <INPUT TYPE=TEXT NAME="WordBox" id="wordbox" class="form-control" ><br>
-                    <INPUT TYPE=BUTTON VALUE="SHOW" onClick="PickRandomWord(document.WordForm);" id="button11">
+                    <a onClick="PickRandomWord(document.WordForm);" id="button11">SHOW</a>
                   </FORM>
                   </div>
-            
                 </div>
               </div>
             </div>
@@ -193,29 +192,19 @@
           <div class="coll-1-of-3">
             <div class="card1">
               <div class="card__side card__side--front-2">
-                <div class="card__title card__title--2">
-                  <i class="fas fa-plane"></i>
-                  <h4 class="card__heading">Plus</h4>
-                </div>
-  
-                <div class="card__details">
-                  <ul>
-                    <li>Includes Basic Package Features</li>
-                    <li>Unlimited Websites</li>
-                    <li>Unlimited SSD Storage</li>
-                    <li>Unlimited Domains</li>
-                    <li>Unlimited Parked Domains</li>
-                    <li>Unlimited Sub Domains</li>
-                  </ul>
-                </div>
+                
+         <img src="newyear front.png" style="width:338px ;" alt="">
               </div>
               <div class="card__side card__side--back card__side--back-2">
+              <img src="newyear back.png" style="width:341px ;" alt="">
                 <div class="card__cta">
-                  <div class="card__price-box">
-                    <p class="card__price-only">Only</p>
-                    <p class="card__price-value">$5.45/mo*</p>
-                  </div>
-                  <a href="#popup" class="btn1 btn1--white">Select</a>
+                  <!-- <FORM NAME="WordForm">  
+                    <INPUT TYPE=TEXT NAME="WordBox2" id="wordbox" class="form-control" ><br>
+                    <INPUT TYPE=BUTTON VALUE="SHOW" onClick="PickRandomWord(document.WordForm);" id="button11">
+                  </FORM> -->
+
+                  
+                  
                 </div>
               </div>
             </div>
@@ -224,29 +213,12 @@
           <div class="coll-1-of-3">
             <div class="card1">
               <div class="card__side card__side--front-3">
-                <div class="card__title card__title--3">
-                  <i class="fas fa-rocket"></i>
-                  <h4 class="card__heading">Pro</h4>
+              <img src="motherday front.png" style="width:338px ;" alt="">
                 </div>
-  
-                <div class="card__details">
-                  <ul>
-                    <li>Includes Plus Plan Features</li>
-                    <li>High Performance</li>
-                    <li>2 Spam Experts</li>
-                    <li>Free SSL Certificate</li>
-                    <li>Domain Privacy</li>
-                    <li>Site Backup - CodeGuard Basic</li>
-                  </ul>
-                </div>
-              </div>
               <div class="card__side card__side--back card__side--back-3">
                 <div class="card__cta">
-                  <div class="card__price-box">
-                    <p class="card__price-only">Only</p>
-                    <p class="card__price-value">$13.95/mo</p>
-                  </div>
-                  <a href="#popup" class="btn1 btn1--white">Select</a>
+                <img src="motherday back.png" style="width:338px; margin-left:-17px ;" alt="">
+                </div>
                 </div>
               </div>
             </div>
@@ -263,7 +235,7 @@
           </div>
           <div class="col-lg-6wowfadeInUp" data-wow-delay="0.5s">
             <img class="img-fluid animated pulse infinite ms-auto " src="labellangganan.png" id="fotolangganan"  alt="" />
-            <a class="btn btn-primary py-3 px-4 animated pulse infinite ms-auto" id="tombollangganan" href="order.php">Berlangganan</a>
+            <a class="btn btn-primary py-3 px-4 animated pulse infinite ms-auto" id="tombollangganan" href="payment.php">Berlangganan</a>
             </div>
           </div>
         </div>
@@ -767,8 +739,9 @@
     <script src="waypoints.min.js"></script>
     <script src="owl.carousel.min.js"></script>
     <script src="counterup.min.js"></script>
-    <script src="randomcode.js"></script>
-
+    <script src="randomcode1.js"></script>
+    <script src="randomcode2.js"></script>
+    <script src="randomcode3.js"></script>
     <!-- Template Javascript -->
     <script src="main.js"></script>
       <!-- jQuery -->

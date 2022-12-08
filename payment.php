@@ -1,10 +1,3 @@
-<?php
-  session_start();
-  if (! isset($_SESSION['login'])){
-    $_SESSION['login'] = false;
-  }
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +9,7 @@
     <meta content="" name="description" />
 
     <!-- Favicon -->
-    <link rel="stylesheet" href="payment.css">
+   
     <link href="Logo.png" rel="icon" />
     <!-- Bootstrap CSS -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'>
@@ -55,7 +48,8 @@
       <link rel="stylesheet" href="stylepopup.css">
       <!-- Demo CSS -->
       <link rel="stylesheet" href="css/demo.css">
-      <link rel="stylesheet" href="map.css">
+      
+
     
   </head>
 
@@ -106,30 +100,96 @@
             </div>
         </div>
             <nav class="collapse navbar-collapse"> 
-            <a href='controller_logout.php' class='btn btn-outline-success' style='color: rgb(0, 213, 255);width: 90px; border-color: rgb(0, 213, 255);' >Logout</a>       
-            </nav>
+              <button data-toggle="modal" data-target="#loginModal"  class="btn btn-outline-success" style="color: rgb(0, 213, 255);width: 90px; border-color: rgb(0, 213, 255);" type="button" >Login</button >       </nav>
     </nav id="pakaian">
     <!-- Navbar End -->
 
-    <!-- history -->
-    
-    <div class="container"> 
-        <div class="row m-0"> 
-            <div class="col-md-7 col-12">
-                 <div class="row"> <div class="col-12 mb-4">
-                     <div class="row box-right">
-                         <div class="col-md-8 ps-0 "> 
-                            <p class="ps-3 textmuted fw-bold h6 mb-0">TOTAL RECIEVED</p> 
-                            <p class="h1 fw-bold d-flex"> 
-                                <span class=" fas fa-dollar-sign textmuted pe-1 h6 align-text-top mt-1">
+    <!-- invoice -->
+    <section style="background-color: #eee;">
+  <div class="container py-5">
+    <div class="card">
+      <div class="card-body">
+        <div class="row d-flex justify-content-center pb-5">
+          <div class="col-md-7 col-xl-5 mb-4 mb-md-0">
+            <div class="py-4 d-flex flex-row">
+              <h5><span class="far fa-check-square pe-2"></span><b>ELIGIBLE</b> |</h5>
+              <span class="ps-2">Pay</span>
+            </div>
+            <h4 class="text-success">$85.00</h4>
+            <h4>Diabetes Pump & Supplies</h4>
+            <div class="d-flex pt-2">
+              <div>
+                <p>
+                  <b>Insurance Responsibility <span class="text-success">$71.76</span></b>
+                </p>
+              </div>
+              <div class="ms-auto">
+                <p class="text-primary">
+                  <i class="fas fa-plus-circle text-primary pe-1"></i>Add insurance card
+                </p>
+              </div>
+            </div>
+            <p>
+              Insurance claims and all necessary dependencies will be submitted to your
+              insurer for the coverred portion of this order
+            </p>
+            <div class="rounded d-flex" style="background-color: #f8f9fa;">
+              <div class="p-2">Aetna-Open Access</div>
+              <div class="ms-auto p-2">OAP</div>
+            </div>
+            <hr />
+            <div class="pt-2">
+              <div class="d-flex pb-2">
+                <div>
+                  <p>
+                    <b>Patient Balance <span class="text-success">$13.24</span></b>
+                  </p>
+                </div>
+                <div class="ms-auto">
+                  <p class="text-primary">
+                    <i class="fas fa-plus-circle text-primary pe-1"></i>Add payment card
+                  </p>
+                </div>
+              </div>
+              <p>
+                This is an estimate for the portion of your order (not covered by
+                insurance) due today . once insurance finalizes their review refunds
+                and/or balances will reconcile automatically.
+              </p>
+              <form class="pb-3">
+                <div class="d-flex flex-row pb-3">
+                  <div class="d-flex align-items-center pe-2">
+                    <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1"
+                      value="" aria-label="..." checked />
+                  </div>
+                  <div class="rounded border d-flex w-100 p-3 align-items-center">
+                    <p class="mb-0">
+                      <i class="fab fa-cc-visa fa-lg text-primary pe-2"></i>Visa Debit
+                      Card
+                    </p>
+                    <div class="ms-auto">************3456</div>
+                  </div>
+                </div>
 
-                                </span>84,254 
-                                <span class="textmuted">.58</span> 
-                            </p> <p class="ms-3 px-2 bg-green">+10% since last month</p> 
-                        </div> <div class="col-md-4">
-                             <p class="p-blue"> 
-                                <span class="fas fa-circle pe-2">
+                <div class="d-flex flex-row">
+                  <div class="d-flex align-items-center pe-2">
+                    <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel2"
+                      value="" aria-label="..." />
+                  </div>
+                  <div class="rounded border d-flex w-100 p-3 align-items-center">
+                    <p class="mb-0">
+                      <i class="fab fa-cc-mastercard fa-lg text-dark pe-2"></i>Mastercard
+                      Office
+                    </p>
+                    <div class="ms-auto">************1038</div>
+                  </div>
+                </div>
+              </form>
+              <input type="button" value="Proceed to payment" class="btn btn-primary btn-block btn-lg" />
+            </div>
+          </div>
 
+<<<<<<< HEAD
                                 </span>Pending </p>
                                  <p class="fw-bold mb-3">
                                     <span class="fas fa-dollar-sign pe-1">
@@ -248,6 +308,67 @@
                                                                                                     </div>
                                                                                                  </div> 
     <!-- history end -->
+=======
+          <div class="col-md-5 col-xl-4 offset-xl-1">
+            <div class="py-4 d-flex justify-content-end">
+              <h6><a href="index.php">Cancel and return to website</a></h6>
+            </div>
+            <div class="rounded d-flex flex-column p-2" style="background-color: #f8f9fa;">
+              <div class="p-2 me-3">
+                <h4>Order Recap</h4>
+              </div>
+              <div class="p-2 d-flex">
+                <div class="col-8">Contracted Price</div>
+                <div class="ms-auto">$186.76</div>
+              </div>
+              <div class="p-2 d-flex">
+                <div class="col-8">Amount toward deductible</div>
+                <div class="ms-auto">$0.00</div>
+              </div>
+              <div class="p-2 d-flex">
+                <div class="col-8">Coinsurance( 0% )</div>
+                <div class="ms-auto">+ $0.00</div>
+              </div>
+              <div class="p-2 d-flex">
+                <div class="col-8">Copayment</div>
+                <div class="ms-auto">+ $40.00</div>
+              </div>
+              <div class="border-top px-2 mx-2"></div>
+              <div class="p-2 d-flex pt-3">
+                <div class="col-8">Total Deductible, Coinsurance, and Copay</div>
+                <div class="ms-auto">$40.00</div>
+              </div>
+              <div class="p-2 d-flex">
+                <div class="col-8">
+                  Maximum out-of-pocket on Insurance Policy (not reached)
+                </div>
+                <div class="ms-auto">$6500.00</div>
+              </div>
+              <div class="border-top px-2 mx-2"></div>
+              <div class="p-2 d-flex pt-3">
+                <div class="col-8">Insurance Responsibility</div>
+                <div class="ms-auto"><b>$71.76</b></div>
+              </div>
+              <div class="p-2 d-flex">
+                <div class="col-8">
+                  Patient Balance <span class="fa fa-question-circle text-dark"></span>
+                </div>
+                <div class="ms-auto"><b>$71.76</b></div>
+              </div>
+              <div class="border-top px-2 mx-2"></div>
+              <div class="p-2 d-flex pt-3">
+                <div class="col-8"><b>Total</b></div>
+                <div class="ms-auto"><b class="text-success">$85.00</b></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <!-- invoice end -->
+>>>>>>> 3aaa78a9f21da63a55f041670378a197b2df3216
     
     <!-- Footer Start -->
     <div class="container-fluid bg-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">

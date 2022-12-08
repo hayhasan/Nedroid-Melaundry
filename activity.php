@@ -15,6 +15,7 @@
     <meta content="" name="keywords" />
     <meta content="" name="description" />
 
+    <link rel="stylesheet" href="activity.css">
     <!-- Favicon -->
     <link href="Logo.png" rel="icon" />
     <!-- Bootstrap CSS -->
@@ -49,7 +50,6 @@
 
     <!-- Template Stylesheet -->
     <link href="style.css" rel="stylesheet" />
-    <link rel="stylesheet" href="nedroid.css">
       <!-- Style CSS -->
       <link rel="stylesheet" href="stylepopup.css">
       <!-- Demo CSS -->
@@ -107,88 +107,51 @@
             </nav>
     </nav>
     <!-- Navbar End -->
-    <!-- history -->
-    <div class="container py-5">
-        <div  class="main-timeline-4 text-white">
-          <div class="timeline-4 left-4">
-            <div  class="card gradient-custom">
-              <div class="card-body p-4">
-                <img src="cargo.png" alt="">
-                <h4 style="color:white ;" >15:00</h4>
-                <p class="small text-white-50 mb-4">20 Oktober</p>
-                <p>Horee! cucianmu sudah Selesai,kurir akan langsung mengantarkannya padamu
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="timeline-4 right-4">
-            <div class="card gradient-custom-4">
-              <div class="card-body p-4">
-                <img src="iron.png" alt="">
-                <h4 style="color:white ;">14:00 </h4>
-                <p class="small text-white-50 mb-4">20 Oktober</p>
-                <p>cucianmu sedang disetrika
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="timeline-4 left-4">
-            <div class="card gradient-custom">
-              <div class="card-body p-4">
-                <img src="drying.png" alt="">
-                <h4 style="color:white ;">13:00 </h4>
-                <p class="small text-white-50 mb-4">20 Oktober</p>
-                <p>Cucianmu sedang dikeringkan
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="timeline-4 right-4">
-            <div class="card gradient-custom-4">
-              <div class="card-body p-4">
-               <img src="time.png" alt="">
-                <h4 style="color:white ;">12:20 </h4>
-                <p class="small text-white-50 mb-4">20 Oktober</p>
-                <p>Cucianmu masih dalam pengerjaan
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="timeline-4 left-4">
-            <div class="card gradient-custom">
-              <div class="card-body p-4">
-                <img src="nyucii.png" style="width: 60px;" alt="">
-                <h4 style="color:white ;" >11:20 </h4>
-                <p class="small text-white-50 mb-4">20 Oktober</p>
-                <p>Cucian tiba di Melaundry dan langsung dikerjakan
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="timeline-4 right-4">
-            <div class="card gradient-custom-4">
-              <div class="card-body p-4">
-                <img src="antaarrr.png" style="width: 60px ;" alt="">
-                <h4 style="color:white ;">11:00 </h4>
-                <p class="small text-white-50 mb-4">20 Oktober</p>
-                <p>Pesanan diambil oleh kurir.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="timeline-4 left-4">
-            <div class="card gradient-custom">
-              <div class="card-body p-4">
-                <img src="online-shopping (1).png" style="width: 45px ;" alt="">
-                <h4 style="color:white ;">10:30 </h4>
-                <p class="small text-white-50 mb-4">20 Oktober</p>
-                <p>Konsumen melakukan pemesanan di Web.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <H1>ORDER ACTIVITY</H1>
+    <div class="form-group pull-right">
+    <input type="text" class="search form-control" placeholder="What you looking for?">
+</div>
+<span class="counter pull-right"></span>
+<table class="table table-hover table-bordered results">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th class="col-md-5 col-xs-5">Name / Surname</th>
+      <th class="col-md-4 col-xs-4">Job</th>
+      <th class="col-md-3 col-xs-3">City</th>
+    </tr>
+    <tr class="warning no-result">
+      <td colspan="4"><i class="fa fa-warning"></i> No result</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Vatanay Özbeyli</td>
+      <td>UI & UX</td>
+      <td>Istanbul</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Burak Özkan</td>
+      <td>Software Developer</td>
+      <td>Istanbul</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Egemen Özbeyli</td>
+      <td>Purchasing</td>
+      <td>Kocaeli</td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td>Engin Kızıl</td>
+      <td>Sales</td>
+      <td>Bozuyük</td>
+    </tr>
+  </tbody>
+</table>
+<!-- Editable table -->
     <!-- history end -->
     
     <!-- Footer Start -->
@@ -319,6 +282,7 @@
     <script src="waypoints.min.js"></script>
     <script src="owl.carousel.min.js"></script>
     <script src="counterup.min.js"></script>
+    <script src="activity.js" ></script>
 <!-- jQuery -->
 <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'></script>
 <!-- Popper JS -->
