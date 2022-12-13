@@ -1,3 +1,11 @@
+<?php
+$koneksi = mysqli_connect("localhost","root","","melaundry");
+session_start();
+if(! $_SESSION['login']){
+  header("Location:login.php");
+}
+?>
+
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
   <head>
@@ -67,7 +75,7 @@
             <!-- ============================================================== -->
             <!-- Logo -->
             <!-- ============================================================== -->
-            <a class="navbar-brand" href="dashboard.html">
+            <a class="navbar-brand" href="dashboard.php">
               <!-- Logo icon -->
               <b class="logo-icon">
                 <!-- Dark Logo icon -->
@@ -127,13 +135,19 @@
               <!-- User profile and search -->
               <!-- ============================================================== -->
               <li>
+              <?php 
+                $user = $_SESSION['user'];
+                $id = $user['id'];
+                $sqledit = "Select * from data_user where id='$id'";
+                $hasiledit = $koneksi->query($sqledit); //memproses query
+              ?>
                 <a class="profile-pic" href="#">
                   <img
                     src="plugins/images/users/varun.jpg"
                     alt="user-img"
                     width="36"
                     class="img-circle"
-                  /><span class="text-white font-medium">Steave</span></a
+                  /><span class="text-white font-medium"><?php echo $user['firstName']; ?></span></a
                 >
               </li>
               <!-- ============================================================== -->
@@ -159,7 +173,7 @@
               <li class="sidebar-item pt-2">
                 <a
                   class="sidebar-link waves-effect waves-dark sidebar-link"
-                  href="dashboard.html"
+                  href="dashboard.php"
                   aria-expanded="false"
                 >
                   <i class="far fa-clock" aria-hidden="true"></i>
@@ -169,7 +183,7 @@
               <li class="sidebar-item">
                 <a
                   class="sidebar-link waves-effect waves-dark sidebar-link"
-                  href="profile.html"
+                  href="profile.php"
                   aria-expanded="false"
                 >
                   <i class="fa fa-user" aria-hidden="true"></i>
@@ -179,11 +193,11 @@
               <li class="sidebar-item">
                 <a
                   class="sidebar-link waves-effect waves-dark sidebar-link"
-                  href="basic-table.html"
+                  href="basic-table.php"
                   aria-expanded="false"
                 >
                   <i class="fa fa-table" aria-hidden="true"></i>
-                  <span class="hide-menu">Basic Table</span>
+                  <span class="hide-menu">Data User</span>
                 </a>
               </li>
             </ul>
@@ -225,63 +239,46 @@
             <div class="col-sm-12">
               <div class="white-box">
                 <h3 class="box-title">Basic Table</h3>
-                <p class="text-muted">Add class <code>.table</code></p>
+                
                 <div class="table-responsive">
                   <table class="table text-nowrap">
                     <thead>
                       <tr>
                         <th class="border-top-0">#</th>
-                        <th class="border-top-0">First Name</th>
-                        <th class="border-top-0">Last Name</th>
-                        <th class="border-top-0">Username</th>
-                        <th class="border-top-0">Role</th>
+                        <th class="border-top-0">Name</th>
+                        <th class="border-top-0">Email</th>
+                        <th class="border-top-0">Address</th>
+                        <th class="border-top-0">Phone Number</th>
+                        <th class="border-top-0">Action</th>
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>Deshmukh</td>
-                        <td>Prohaska</td>
-                        <td>@Genelia</td>
-                        <td>admin</td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>Deshmukh</td>
-                        <td>Gaylord</td>
-                        <td>@Ritesh</td>
-                        <td>member</td>
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                        <td>Sanghani</td>
-                        <td>Gusikowski</td>
-                        <td>@Govinda</td>
-                        <td>developer</td>
-                      </tr>
-                      <tr>
-                        <td>4</td>
-                        <td>Roshan</td>
-                        <td>Rogahn</td>
-                        <td>@Hritik</td>
-                        <td>supporter</td>
-                      </tr>
-                      <tr>
-                        <td>5</td>
-                        <td>Joshi</td>
-                        <td>Hickle</td>
-                        <td>@Maruti</td>
-                        <td>member</td>
-                      </tr>
-                      <tr>
-                        <td>6</td>
-                        <td>Nigam</td>
-                        <td>Eichmann</td>
-                        <td>@Sonu</td>
-                        <td>supporter</td>
-                      </tr>
+                    <?php
+                    $sql = "SELECT * from data_user"; 
+                    $hasil = $koneksi->query($sql); //memproses query
+    if ($hasil->num_rows > 0) {
+       //menampilkan data setiap barisnya
+       while ($baris = $hasil->fetch_assoc()) {
+                       $id = $baris['id'];
+                       $name = $baris['firstName'];
+                       $lname = $baris['lastName'];
+                       $email =$baris['email'];
+                       $province = $baris['province'];
+                       $city = $baris['city'];
+                       $address = $baris['address'];
+                       $phone = $baris['phone'];
+                       echo "<tr><td>$id</td>";
+                       echo "<td>$name $lname</td><td>$email</td><td>$province, $city, $address</td>><td>$phone</td><td> <a href='ubahdepartemen.php?id=$id'>Edit</a> | "; ?>
+             <a href="hapusdepartemen.php?id=<?php echo $id; ?>" onClick="return confirm('Anda yakin akan mengapus data ini?');">Delete</a></td></tr>
                     </tbody>
-                  </table>
+                    <?php          
+       }	
+       echo "</table>";
+    } else {
+            echo "Data tidak ditemukan";
+    }
+    $koneksi->close(); // menutup koneksi
+?>
                 </div>
               </div>
             </div>

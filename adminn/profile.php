@@ -1,3 +1,11 @@
+<?php
+$koneksi = mysqli_connect("localhost","root","","melaundry");
+session_start();
+if(! $_SESSION['login']){
+  header("Location:login.php");
+}
+?>
+
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
   <head>
@@ -14,7 +22,7 @@
       content="Ample Admin Lite is powerful and clean admin dashboard template, inpired from Bootstrap Framework"
     />
     <meta name="robots" content="noindex,nofollow" />
-    <title>Admin Melaundry</title>
+    <title>adminprofile</title>
     <link
       rel="canonical"
       href="https://www.wrappixel.com/templates/ample-admin-lite/"
@@ -27,16 +35,13 @@
       href="plugins/images/favicon.png"
     />
     <!-- Custom CSS -->
-    <link
-      href="plugins/bower_components/chartist/dist/chartist.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.css"
-    />
-    <!-- Custom CSS -->
     <link href="css/style.min.css" rel="stylesheet" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
 
   <body>
@@ -70,7 +75,7 @@
             <!-- ============================================================== -->
             <!-- Logo -->
             <!-- ============================================================== -->
-            <a class="navbar-brand" href="dashboard.html">
+            <a class="navbar-brand" href="dashboard.php">
               <!-- Logo icon -->
               <b class="logo-icon">
                 <!-- Dark Logo icon -->
@@ -98,6 +103,15 @@
             id="navbarSupportedContent"
             data-navbarbg="skin5"
           >
+            <ul class="navbar-nav d-none d-md-block d-lg-none">
+              <li class="nav-item">
+                <a
+                  class="nav-toggler nav-link waves-effect waves-light text-white"
+                  href="javascript:void(0)"
+                  ><i class="ti-menu ti-close"></i
+                ></a>
+              </li>
+            </ul>
             <!-- ============================================================== -->
             <!-- Right side toggle and nav items -->
             <!-- ============================================================== -->
@@ -121,13 +135,19 @@
               <!-- User profile and search -->
               <!-- ============================================================== -->
               <li>
+              <?php 
+                $user = $_SESSION['user'];
+                $id = $user['id'];
+                $sqledit = "Select * from data_user where id='$id'";
+                $hasiledit = $koneksi->query($sqledit); //memproses query
+              ?>
                 <a class="profile-pic" href="#">
                   <img
                     src="plugins/images/users/varun.jpg"
                     alt="user-img"
                     width="36"
                     class="img-circle"
-                  /><span class="text-white font-medium">Steave</span></a
+                  /><span class="text-white font-medium"><?php echo $user['firstName']; ?></span></a
                 >
               </li>
               <!-- ============================================================== -->
@@ -153,7 +173,7 @@
               <li class="sidebar-item pt-2">
                 <a
                   class="sidebar-link waves-effect waves-dark sidebar-link"
-                  href="dashboard.html"
+                  href="dashboard.php"
                   aria-expanded="false"
                 >
                   <i class="far fa-clock" aria-hidden="true"></i>
@@ -163,7 +183,7 @@
               <li class="sidebar-item">
                 <a
                   class="sidebar-link waves-effect waves-dark sidebar-link"
-                  href="profile.html"
+                  href="profile.php"
                   aria-expanded="false"
                 >
                   <i class="fa fa-user" aria-hidden="true"></i>
@@ -173,11 +193,11 @@
               <li class="sidebar-item">
                 <a
                   class="sidebar-link waves-effect waves-dark sidebar-link"
-                  href="basic-table.html"
+                  href="basic-table.php"
                   aria-expanded="false"
                 >
                   <i class="fa fa-table" aria-hidden="true"></i>
-                  <span class="hide-menu">User</span>
+                  <span class="hide-menu">Data User</span>
                 </a>
               </li>
             </ul>
@@ -194,210 +214,167 @@
       <!-- ============================================================== -->
       <div class="page-wrapper">
         <!-- ============================================================== -->
+        <!-- Bread crumb and right sidebar toggle -->
+        <!-- ============================================================== -->
+        <div class="page-breadcrumb bg-white">
+          <div class="row align-items-center">
+            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+              <h4 class="page-title">Profile page</h4>
+            </div>
+            <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+              <div class="d-md-flex">
+                <ol class="breadcrumb ms-auto">
+                  <li><a href="#" class="fw-normal">Dashboard</a></li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <!-- /.col-lg-12 -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Bread crumb and right sidebar toggle -->
         <!-- ============================================================== -->
         <!-- ============================================================== -->
         <!-- Container fluid  -->
         <!-- ============================================================== -->
         <div class="container-fluid">
           <!-- ============================================================== -->
-          <!-- Three charts -->
+          <!-- Start Page Content -->
           <!-- ============================================================== -->
-          <div class="row justify-content-center">
-            <div class="col-lg-4 col-md-12">
-              <div class="white-box analytics-info">
-                <h3 class="box-title">Total Member</h3>
-                <ul class="list-inline two-part d-flex align-items-center mb-0">
-                  <li>
-                    <div id="sparklinedash">
-                      <canvas
-                        width="67"
-                        height="30"
-                        style="
-                          display: inline-block;
-                          width: 67px;
-                          height: 30px;
-                          vertical-align: top;
-                        "
-                      ></canvas>
-                    </div>
-                  </li>
-                  <li class="ms-auto">
-                    <span class="counter text-success">659</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-12">
-              <div class="white-box analytics-info">
-                <h3 class="box-title">Total Sales</h3>
-                <ul class="list-inline two-part d-flex align-items-center mb-0">
-                  <li>
-                    <div id="sparklinedash2">
-                      <canvas
-                        width="67"
-                        height="30"
-                        style="
-                          display: inline-block;
-                          width: 67px;
-                          height: 30px;
-                          vertical-align: top;
-                        "
-                      ></canvas>
-                    </div>
-                  </li>
-                  <li class="ms-auto">
-                    <span class="counter text-purple">869</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-12">
-              <div class="white-box analytics-info">
-                <h3 class="box-title">Total Orders</h3>
-                <ul class="list-inline two-part d-flex align-items-center mb-0">
-                  <li>
-                    <div id="sparklinedash3">
-                      <canvas
-                        width="67"
-                        height="30"
-                        style="
-                          display: inline-block;
-                          width: 67px;
-                          height: 30px;
-                          vertical-align: top;
-                        "
-                      ></canvas>
-                    </div>
-                  </li>
-                  <li class="ms-auto">
-                    <span class="counter text-info">911</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <!-- ============================================================== -->
-          <!-- PRODUCTS YEARLY SALES -->
-          <!-- ============================================================== -->
+          <!-- Row -->
           <div class="row">
-            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+            <!-- Column -->
+            <div class="col-lg-4 col-xlg-3 col-md-12">
               <div class="white-box">
-                <h3 class="box-title">Products Monthly Sales</h3>
-                <div class="d-md-flex">
-                  <ul class="list-inline d-flex ms-auto">
-                    <li class="ps-3">
-                      <h5><i class="fa fa-circle me-1 text-info"></i>Subscription</h5>
-                    </li>
-                    <li class="ps-3">
-                      <h5>
-                        <i class="fa fa-circle me-1 text-inverse"></i
-                        >User
-                      </h5>
-                    </li>
-                  </ul>
+                <div class="user-bg">
+                  <img
+                    width="100%"
+                    alt="user"
+                    src="plugins/images/large/img1.jpg"
+                  />
+                  <div class="overlay-box">
+                    <div class="user-content">
+                      <a href="javascript:void(0)"
+                        ><img
+                          src="plugins/images/users/genu.jpg"
+                          class="thumb-lg img-circle"
+                          alt="img"
+                      /></a>
+                      <h4 class="text-white mt-2">User Name</h4>
+                      <h5 class="text-white mt-2">info@myadmin.com</h5>
+                    </div>
+                  </div>
                 </div>
-                <div id="ct-visits" style="height: 405px">
-                  <div class="chartist-tooltip" style="top: -17px; left: -12px">
-                    <span class="chartist-tooltip-value">6</span>
+                <div class="user-btm-box mt-5 d-md-flex">
+                  <div class="col-md-4 col-sm-4 text-center">
+                    <h1>258</h1>
+                  </div>
+                  <div class="col-md-4 col-sm-4 text-center">
+                    <h1>125</h1>
+                  </div>
+                  <div class="col-md-4 col-sm-4 text-center">
+                    <h1>556</h1>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <!-- ============================================================== -->
-          <!-- RECENT SALES -->
-          <!-- ============================================================== -->
-          <div class="row">
-            <div class="col-md-12 col-lg-12 col-sm-12">
-              <div class="white-box">
-                <div class="d-md-flex mb-3">
-                  <h3 class="box-title mb-0">Order List</h3>
-                  <div class="col-md-3 col-sm-4 col-xs-6 ms-auto">
-                    <select class="form-select shadow-none row border-top">
-                      <option>January 2022</option>
-                      <option>February 2022</option>
-                      <option>March 2022</option>
-                      <option>April 2022</option>
-                      <option>May 2022</option>
-                      <option>June 2022</option>
-                      <option>July 2022</option>
-                      <option>August 2022</option>
-                      <option>September 2022</option>
-                      <option>October 2022</option>
-                      <option>November 2022</option>
-                      <option>December 2021</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="table-responsive">
-                  <table class="table no-wrap">
-                    <thead>
-                      <tr>
-                        <th class="border-top-0">#</th>
-                        <th class="border-top-0">Name</th>
-                        <th class="border-top-0">Status</th>
-                        <th class="border-top-0">Address</th>
-                        <th class="border-top-0">Order</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td class="txt-oflo">Elite admin</td>
-                        <td>SALE</td>
-                        <td class="txt-oflo">April 18, 2021</td>
-                        <td><span class="text-success">$24</span></td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td class="txt-oflo">Real Homes WP Theme</td>
-                        <td>EXTENDED</td>
-                        <td class="txt-oflo">April 19, 2021</td>
-                        <td><span class="text-info">$1250</span></td>
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                        <td class="txt-oflo">Ample Admin</td>
-                        <td>EXTENDED</td>
-                        <td class="txt-oflo">April 19, 2021</td>
-                        <td><span class="text-info">$1250</span></td>
-                      </tr>
-                      <tr>
-                        <td>4</td>
-                        <td class="txt-oflo">Medical Pro WP Theme</td>
-                        <td>TAX</td>
-                        <td class="txt-oflo">April 20, 2021</td>
-                        <td><span class="text-danger">-$24</span></td>
-                      </tr>
-                      <tr>
-                        <td>5</td>
-                        <td class="txt-oflo">Hosting press html</td>
-                        <td>SALE</td>
-                        <td class="txt-oflo">April 21, 2021</td>
-                        <td><span class="text-success">$24</span></td>
-                      </tr>
-                      <tr>
-                        <td>6</td>
-                        <td class="txt-oflo">Digital Agency PSD</td>
-                        <td>SALE</td>
-                        <td class="txt-oflo">April 23, 2021</td>
-                        <td><span class="text-danger">-$14</span></td>
-                      </tr>
-                      <tr>
-                        <td>7</td>
-                        <td class="txt-oflo">Helping Hands WP Theme</td>
-                        <td>MEMBER</td>
-                        <td class="txt-oflo">April 22, 2021</td>
-                        <td><span class="text-success">$64</span></td>
-                      </tr>
-                    </tbody>
-                  </table>
+            <!-- Column -->
+            <!-- Column -->
+            <div class="col-lg-8 col-xlg-9 col-md-12">
+              <div class="card">
+                <div class="card-body">
+                  <form class="form-horizontal form-material">
+                    <div class="form-group mb-4">
+                      <label class="col-md-12 p-0">Full Name</label>
+                      <div class="col-md-12 border-bottom p-0">
+                        <input
+                          type="text"
+                          placeholder="Johnathan Doe"
+                          class="form-control p-0 border-0"
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group mb-4">
+                      <label for="example-email" class="col-md-12 p-0"
+                        >Email</label
+                      >
+                      <div class="col-md-12 border-bottom p-0">
+                        <input
+                          type="email"
+                          placeholder="johnathan@admin.com"
+                          class="form-control p-0 border-0"
+                          name="example-email"
+                          id="example-email"
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group mb-4">
+                      <label class="col-md-12 p-0">Password</label>
+                      <div class="col-md-12 border-bottom p-0">
+                        <input
+                          type="password"
+                          value="password"
+                          class="form-control p-0 border-0"
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group mb-4">
+                      <label class="col-md-12 p-0">Phone No</label>
+                      <div class="col-md-12 border-bottom p-0">
+                        <input
+                          type="text"
+                          placeholder="123 456 7890"
+                          class="form-control p-0 border-0"
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group mb-4">
+                      <label class="col-md-12 p-0">Message</label>
+                      <div class="col-md-12 border-bottom p-0">
+                        <textarea
+                          rows="5"
+                          class="form-control p-0 border-0"
+                        ></textarea>
+                      </div>
+                    </div>
+                    <div class="form-group mb-4">
+                      <label class="col-sm-12">Select Country</label>
+
+                      <div class="col-sm-12 border-bottom">
+                        <select
+                          class="form-select shadow-none p-0 border-0 form-control-line"
+                        >
+                          <option>London</option>
+                          <option>India</option>
+                          <option>Usa</option>
+                          <option>Canada</option>
+                          <option>Thailand</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group mb-4">
+                      <div class="col-sm-12">
+                        <button class="btn btn-success">Update Profile</button>
+                      </div>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
+            <!-- Column -->
           </div>
+          <!-- Row -->
           <!-- ============================================================== -->
-          
+          <!-- End PAge Content -->
+          <!-- ============================================================== -->
+          <!-- ============================================================== -->
+          <!-- Right sidebar -->
+          <!-- ============================================================== -->
+          <!-- .right-sidebar -->
+          <!-- ============================================================== -->
+          <!-- End Right sidebar -->
+          <!-- ============================================================== -->
+        </div>
         <!-- ============================================================== -->
         <!-- End Container fluid  -->
         <!-- ============================================================== -->
@@ -405,8 +382,10 @@
         <!-- footer -->
         <!-- ============================================================== -->
         <footer class="footer text-center">
-            Designed By Nedroid Distributed By Melaundry
-          <a href="https://www.wrappixel.com/">© MeLaundry, All Right Reserved.</a>
+          Designed By Nedroid Distributed By Melaundry
+          <a href="https://www.wrappixel.com/"
+            >© MeLaundry, All Right Reserved.</a
+          >
         </footer>
         <!-- ============================================================== -->
         <!-- End footer -->
@@ -426,17 +405,11 @@
     <!-- Bootstrap tether Core JavaScript -->
     <script src="bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/app-style-switcher.js"></script>
-    <script src="plugins/bower_components/jquery-sparkline/jquery.sparkline.min.js"></script>
     <!--Wave Effects -->
     <script src="js/waves.js"></script>
     <!--Menu sidebar -->
     <script src="js/sidebarmenu.js"></script>
     <!--Custom JavaScript -->
     <script src="js/custom.js"></script>
-    <!--This page JavaScript -->
-    <!--chartis chart-->
-    <script src="plugins/bower_components/chartist/dist/chartist.min.js"></script>
-    <script src="plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
-    <script src="js/pages/dashboards/dashboard1.js"></script>
   </body>
 </html>

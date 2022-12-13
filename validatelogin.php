@@ -11,21 +11,17 @@ $strSql = "select * from data_user where email = '$loginemail' and password = '$
 $hasil = mysqli_query($koneksi,$strSql);
 
 $cek = mysqli_num_rows($hasil);
-$row = mysqli_fetch_array($hasil);
 
 if($cek>0){
-    if($row['usertype']=='admin'){
-        session_start();
-        $_SESSION['login'] = true;
-        $_SESSION['user'] = $rowData; 
-        echo "<script type='text/javascript'>alert('Login Admin Berhasil');</script>";
-        header("Location:adminn/dashboard.html");
-    }else{
-        while($rowData = $hasil->fetch_array()){
-        //var_dump($rowData['lastName']);    
-        session_start();
-        $_SESSION['login'] = true;
-        $_SESSION['user'] = $rowData; 
+    while($rowData = $hasil->fetch_array()){
+    //var_dump($rowData['lastName']);    
+    session_start();
+    $_SESSION['login'] = true;
+    $_SESSION['user'] = $rowData;
+    if($rowData["usertype"]=="admin"){
+        echo "<script type='text/javascript'>alert('Login Berhasil');</script>";
+        header("Location:adminn/dashboard.php");
+    } else{
         echo "<script type='text/javascript'>alert('Login Berhasil');</script>";
         header("Location:account.php");
     }
