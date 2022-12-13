@@ -199,16 +199,12 @@
               <img src="newyear back.png" style="width:341px ;" alt="">
                 <div class="card__cta">
                   <div class="card__price-box">
-                  <FORM NAME="WordForm">  
+                  <FORM NAME="WordForm1">  
                     <INPUT TYPE=TEXT NAME="WordBox" id="wordbox" class="form-control" ><br>
-                    <a onClick="PickRandomWordd(document.WordForm);" id="button11">SHOW</a>
+                    <a onClick="PickRandomWord(document.WordForm1);" id="button11">SHOW</a>
                   </FORM>
                   </div>
-                  <!-- <FORM NAME="WordForm">  
-                    <INPUT TYPE=TEXT NAME="WordBox2" id="wordbox" class="form-control" ><br>
-                    <INPUT TYPE=BUTTON VALUE="SHOW" onClick="PickRandomWord(document.WordForm);" id="button11">
-                  </FORM> -->
-
+                  
                   
                   
                 </div>
@@ -222,9 +218,16 @@
               <img src="motherday front.png" style="width:338px ;" alt="">
                 </div>
               <div class="card__side card__side--back card__side--back-3">
+              <img src="motherday back.png" style="width:343px ;" alt="">
+               
                 <div class="card__cta">
-                <img src="motherday back.png" style="width:338px; margin-left:-17px ;" alt="">
-                </div>
+                <div class="card__price-box">
+                  <FORM NAME="WordForm2">  
+                    <INPUT TYPE=TEXT NAME="WordBox" id="wordbox" class="form-control" ><br>
+                    <a onClick="PickRandomWord(document.WordForm2);" id="button11">SHOW</a>
+                  </FORM>
+                    
+              </div>
                 </div>
               </div>
             </div>
@@ -261,7 +264,7 @@
             data-wow-delay="0.1s"
           >
             <img class="img-fluid mb-4" src="shop.png" style="width:90px ;" alt="" />
-            <h1 class="display-4" data-toggle="counter-up">120</h1>
+            <h1 class="display-4" data-toggle="counter-up">3280</h1>
             <p class="fs-5 text-primary mb-0">Jabodetabek</p>
           </div>
           <div
@@ -269,7 +272,7 @@
             data-wow-delay="0.3s"
           >
             <img class="img-fluid mb-4" src="https://cdn-icons-png.flaticon.com/512/6190/6190586.png" style="width: 90px ;" alt="" />
-            <h1 class="display-4" data-toggle="counter-up">3097</h1>
+            <h1 class="display-4" data-toggle="counter-up">5858</h1>
             <p class="fs-5 text-primary mb-0">Luar Jabodetabek</p>
           </div>
           <div
@@ -277,7 +280,7 @@
             data-wow-delay="0.5s"
           >
             <img class="img-fluid mb-4" src="https://cdn-icons-png.flaticon.com/512/2942/2942077.png" style="width: 90px ;" alt="" />
-            <h1 class="display-4" data-toggle="counter-up">9738316</h1>
+            <h1 class="display-4" data-toggle="counter-up">9738</h1>
             <p class="fs-5 text-primary mb-0">Seluruh Indonesia</p>
           </div>
         </div>
@@ -449,13 +452,13 @@
                 </div>
                 <div class="roadmap-item">
                     <div class="roadmap-point"><span></span></div>
-                    <h5>Alip Cepmek</h5>
-                    <span>"Kamu Nanyeaa??"</span>
+                    <h5>Sofia Elisya</h5>
+                    <span>"Membantu banget buat anak kost yang mager cuci pakaian!!"</span>
                 </div>
                 <div class="roadmap-item">
                     <div class="roadmap-point"><span></span></div>
-                    <h5>Master Limbad</h5>
-                    <span>"...."</span>
+                    <h5>Ridwan oktavia</h5>
+                    <span>"langganan royale pass bisa cuci sepuasnya selama sebulan"</span>
                 </div>
             </div>
         </div>
@@ -473,7 +476,7 @@
             <div class="row g-3">
                 <div class="col-6 col-md-3 wow fadeIn" data-wow-delay="0.1s">
                     <div class="bg-white text-center p-3">
-                        <h1 class="mb-0">1229</h1>
+                        <h1 class="mb-0">1209</h1>
                         <span class="text-primary fs-5">Dalam Antrian</span>
                     </div>
                 </div>
@@ -491,7 +494,7 @@
                 </div>
                 <div class="col-6 col-md-3 wow fadeIn" data-wow-delay="0.7s">
                     <div class="bg-white text-center p-3">
-                        <h1 class="mb-0">10021</h1>
+                        <h1 class="mb-0">11021</h1>
                         <span class="text-primary fs-5">Selesai</span>
                     </div>
                 </div>

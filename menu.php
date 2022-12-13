@@ -132,21 +132,7 @@
                           <h5>Pelanggan Setia Kami</h5>
       
                           <ul class="social-icons d-flex justify-content-center">
-                              <li style="--i:1">
-                                  <a href="#">
-                                      <span class="fab fa-facebook"></span>
-                                  </a>
-                              </li>
-                              <li style="--i:2">
-                                  <a href="#">
-                                      <span class="fab fa-twitter"></span>
-                                  </a>
-                              </li>
-                              <li style="--i:3">
-                                  <a href="#">
-                                      <span class="fab fa-instagram"></span>
-                                  </a>
-                              </li>
+                          <a type="submit" style="background-color: #02FFD9 ; border-color: white;height: auto; width: auto; margin-top: 10px;" class="btn btn-primary" href="paymentreguler.php">Cuci Sekarang</a>
                           </ul>
                       </div>
                   </div>
@@ -162,21 +148,7 @@
                     <h4 class="pt-2">Dapatkan keuntungan khusus</h4>
                     <h5>Dengan menjadi Member kami</h5>
                     <ul class="social-icons d-flex justify-content-center">
-                        <li style="--i:1">
-                            <a href="#">
-                                <span class="fab fa-facebook"></span>
-                            </a>
-                        </li>
-                        <li style="--i:2">
-                            <a href="#">
-                                <span class="fab fa-twitter"></span>
-                            </a>
-                        </li>
-                        <li style="--i:3">
-                            <a href="#">
-                                <span class="fab fa-instagram"></span>
-                            </a>
-                        </li>
+                    <a type="submit" style="background-color: #FE2EC8; border-color: white;height: auto; width: auto; margin-top: 10px;" class="btn btn-primary" href="paymentroyale.php">Cuci Sekarang</a>
                     </ul>
                 </div>
             </div>
@@ -192,21 +164,7 @@
                     <h5>Untuk Pakaian anda</h5>
 
                     <ul class="social-icons d-flex justify-content-center">
-                        <li style="--i:1">
-                            <a href="#">
-                                <span class="fab fa-facebook"></span>
-                            </a>
-                        </li>
-                        <li style="--i:2">
-                            <a href="#">
-                                <span class="fab fa-twitter"></span>
-                            </a>
-                        </li>
-                        <li style="--i:3">
-                            <a href="#">
-                                <span class="fab fa-instagram"></span>
-                            </a>
-                        </li>
+                    <a type="submit" style="background-color: #FE9A2E; border-color: white;height: auto; width: auto; margin-top: 10px;" class="btn btn-primary" href="paymentgold.php">Cuci Sekarang</a>
                     </ul>
                 </div>
             </div>
