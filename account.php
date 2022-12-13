@@ -1,4 +1,5 @@
 <?php
+$koneksi = mysqli_connect("localhost","root","","melaundry");
 session_start();
 if(! $_SESSION['login']){
   header("Location:index.php");
@@ -128,6 +129,9 @@ if(! $_SESSION['login']){
 <body class="profile-page">
 <?php 
 $user = $_SESSION['user'];
+$id = $user['id'];
+$sqledit = "Select * from data_user where id='$id'";
+$hasiledit = $koneksi->query($sqledit); //memproses query
 ?>
   <div class="page-header header-filter" data-parallax="true" style="background-image:url('http://wallpapere.org/wp-content/uploads/2012/02/black-and-white-city-night.png');"></div>
   <div class="main main-raised">
@@ -140,7 +144,7 @@ $user = $_SESSION['user'];
                             <img src="https://images.unsplash.com/photo-1544435253-f0ead49638fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="Circle Image" class="img-raised rounded-circle img-fluid">
                         </div>
                         <div class="name">
-                            <h3 class="title"><?php echo $user['firstName']; ?></h3>
+                            <h3 class="title"><?php echo $user['firstName'], " ", $user['lastName']; ?></h3>
               <h5>Gold Pass</h5>
               <a href="#pablo" class="btn btn-just-icon btn-link btn-dribbble"><i class="fa fa-dribbble"></i></a>
                               <a href="#pablo" class="btn btn-just-icon btn-link btn-twitter"><i class="fa fa-twitter"></i></a>
@@ -200,19 +204,19 @@ $user = $_SESSION['user'];
                 <div class="col-xl-6">
                   <div class="card-body p-md-5 text-black">
                     <h3 class="mb-5 text-uppercase">Edit Profile</h3>
-    
+                    <form action="editprofile.php" method="post">
                     <div class="row">
                       <div class="col-md-6 mb-4">
                         <div class="form-outline">
                           <label class="form-label" for="form3Example1m">First name</label>
-                          <input type="text" id="form3Example1m" class="form-control form-control-lg" />
+                          <input type="text" id="form3Example1m" class="form-control form-control-lg" value="<?php echo $user['firstName'] ?>" name="firstName"/>
 
                         </div>
                       </div>
                       <div class="col-md-6 mb-4">
                         <div class="form-outline">
                           <label class="form-label" for="form3Example1n">Last name</label>
-                          <input type="text" id="form3Example1n" class="form-control form-control-lg" />
+                          <input type="text" id="form3Example1n" class="form-control form-control-lg" value="<?php echo $user['lastName'] ?>" name="lastName" />
 
                         </div>
                       </div>
@@ -221,7 +225,7 @@ $user = $_SESSION['user'];
                     
                     <div class="form-outline mb-4">
                       <label class="form-label" for="form3Example8">Email</label>
-                      <input type="text" id="form3Example8" class="form-control form-control-lg" />
+                      <input type="text" id="form3Example8" class="form-control form-control-lg" value="<?php echo $user['email'] ?>" name="email"/>
 
                     </div>
     
@@ -230,14 +234,14 @@ $user = $_SESSION['user'];
                       <h6 class="mb-0 me-4">Gender: </h6>
     
                       <div class="form-check form-check-inline mb-0 me-4">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender"
-                          value="option1" />
+                        <input class="form-check-input" type="radio" name="gender" id="femaleGender"
+                          value="Male" />
                         <label class="form-check-label" for="femaleGender">Female</label>
                       </div>
     
                       <div class="form-check form-check-inline mb-0 me-4">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
-                          value="option2" />
+                        <input class="form-check-input" type="radio" name="gender" id="maleGender"
+                          value="Female" />
                         <label class="form-check-label" for="maleGender">Male</label>
                       </div>
     
@@ -246,52 +250,44 @@ $user = $_SESSION['user'];
                     <div class="row">
                       <div class="col-md-6 mb-4">
                         <label class="form-label" for="form3Example8" >Province</label><br>
-                        <select class="btn btn-secondary dropdown-toggle " style="background-color:white ; width: 200px;">
-                          <option value="1">Jawa Tengah</option>
-                          <option value="2">Jawa Barat</option>
-                          <option value="3">Jawa Timur</option>
-                          <option value="4">Daerah Istimewa Yogyakarta</option>
+                        <select class="btn btn-secondary dropdown-toggle " style="background-color:white ; width: 200px;" name="province">
+                          <option value="Jawa Tengah">Jawa Tengah</option>
+                          <option value="Jawa Barat">Jawa Barat</option>
+                          <option value="Jawa Timur">Jawa Timur</option>
+                          <option value="DI Yogyakarta">Daerah Istimewa Yogyakarta</option>
                         </select>
     
                       </div>
                       <div class="col-md-6 mb-4">
-                        <label class="form-label" for="form3Example8" >Province</label><br>
-                        <select class="btn btn-secondary dropdown-toggle " style="background-color:white ; width: 200px;">
-                          <option value="1">Jawa Tengah</option>
-                          <option value="2">Jawa Barat</option>
-                          <option value="3">Jawa Timur</option>
-                          <option value="4">Daerah Istimewa Yogyakarta</option>
-                        </select>
-    
-              
-    
+                        <label class="form-label" for="form3Example8" >City</label><br>
+                        <select class="btn btn-secondary dropdown-toggle " style="background-color:white ; width: 200px;" name="city">
+                          <option value="Magelang">Magelang</option>
+                          <option value="Semarang">Semarang</option>
+                          <option value="Pacitan">Pacitan</option>
+                          <option value="Kudus">Kudus</option>
+                        </select>   
                       </div>
                     </div>
-    
                     <div class="form-outline mb-4">
                       <label class="form-label" for="form3Example9">Phone number</label>
-                      <input type="text" id="form3Example9" class="form-control form-control-lg" />
- 
+                      <input type="text" id="form3Example9" class="form-control form-control-lg" value="<?php echo $user['phone'] ?>" name="phone" />
                     </div>
-    
                     <div class="form-outline mb-4">
                       <label class="form-label" for="form3Example90">Address</label>
-                      <input type="textarea" id="form3Example90" class="form-control form-control-lg" />
+                      <input type="textarea" id="form3Example90" class="form-control form-control-lg" value="<?php echo $user['address'] ?>" name="address"/>
                     </div>
-    
                     <div class="form-outline mb-4">
                       <label class="form-label" for="form3Example99">Password</label>
-                      <input type="password" id="form3Example99" class="form-control form-control-lg" />
+                      <input type="password" id="form3Example99" class="form-control form-control-lg" name="password"  />
                     </div>
-    
                     <div class="form-outline mb-4">
                       <label class="form-label" for="form3Example97">Repeat Password</label>
-                      <input type="password" id="form3Example97" class="form-control form-control-lg" />
+                      <input type="password" id="form3Example97" class="form-control form-control-lg" name="repassword" />
                     </div>
-    
                     <div class="d-flex justify-content-end pt-3">
-                      <button  class="btn btn-outline-success" style="color:white;width: 90px; background-color:rgb(0, 213, 255) ; border-color: rgb(0, 213, 255);">Sign Up</button>
+                      <button  class="btn btn-outline-success" style="color:white;width: 90px; background-color:rgb(0, 213, 255) ; border-color: rgb(0, 213, 255);">Submit</button>
                     </div>
+                    </form>
                   </div>
                 </div>
               </div>
