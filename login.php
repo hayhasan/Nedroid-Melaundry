@@ -85,12 +85,11 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto py-4 py-lg-0">
           <a href="index.php" class="nav-item nav-link ">Home</a>
-          <a href="order.php" class="nav-item nav-link ">Order</a>
-          <a href="activity.php" class="nav-item nav-link ">Activity</a>
+          <a href="order.php" class="nav-item nav-link disabled" >Order</a>
+          <a href="activity.php" class="nav-item nav-link disabled">Activity</a>
           <div class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Features</a>
             <div class="dropdown-menu shadow-sm m-0">
-                <a href="account.php" class="dropdown-item">Account</a>
                 <a href="menu.php" class="dropdown-item">Menu</a>
                 <a href="moreinfo.php" class="dropdown-item">More info</a>
             </div>
@@ -311,7 +310,7 @@
                   <h4>Login</h4>
                 </div>
                 <div class="d-flex flex-column text-center">
-                  <form>
+                  <form action="validatelogin.php" method="post">
                     <div class="form-group">
                       <input type="email" class="form-control" id="email1"placeholder="Your email address...">
                     </div>

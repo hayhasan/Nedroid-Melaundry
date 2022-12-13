@@ -10,10 +10,10 @@
     $password = $_POST['password'];
     $repassword = $_POST['repassword'];
     
-    $conn = mysqli_connect("localhost","root","","nedroid");
+    $conn = mysqli_connect("localhost","root","","melaundry");
 
     if($password == $repassword){
-        $query = "INSERT INTO dataUser (firstname,lastname,email,gender,province,city,phone,address,password) VALUES ('".$firstName."', '".$lastName."', '".$email."', '".$gender."', '".$province."', '".$city."', '".$phone."', '".$address."', '".$password."')";
+        $query = "INSERT INTO data_user (firstname,lastname,email,gender,province,city,phone,address,password) VALUES ('".$firstName."', '".$lastName."', '".$email."', '".$gender."', '".$province."', '".$city."', '".$phone."', '".$address."', '".$password."')";
         if($result = mysqli_query($conn, $query)){
             echo "<script>alert('Berhasil registrasi, menuju halaman utama');  window.location = 'index.php'; </script>";
         }else{
