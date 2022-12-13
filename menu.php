@@ -219,8 +219,6 @@
 <!-- account -->
 
 <!-- account -->
-<h1 style="text-align:center ; color: rgb(255, 217, 0); margin-top: 50px; margin-bottom: -70px;">MELAUNDRY PASS</h1>
-
         <div class="container">
           <div class="row">
               <div class="col-lg-4">
@@ -316,8 +314,7 @@
             </div>
         </div>
 
-        <h1 style="text-align:center ; color: rgb(255, 217, 0); margin-top: 50px; margin-bottom: -70px;">OUR PACKAGE</h1>
-
+      
     </div>
 </div>
     
