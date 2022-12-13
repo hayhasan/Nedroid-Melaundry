@@ -125,7 +125,7 @@
                 echo "<button data-toggle='modal' data-target='#loginModal' class='btn btn-outline-success' style='color: rgb(0, 213, 255);width: 90px; border-color: rgb(0, 213, 255);' type='button' >Login</button>";
               }
               else{
-                echo "<a href='http://localhost/nedroid_melaundry/controller_logout.php' class='btn btn-outline-success' style='color: rgb(0, 213, 255);width: 90px; border-color: rgb(0, 213, 255);' >Logout</a>";
+                echo "<a href='controller_logout.php' class='btn btn-outline-success' style='color: rgb(0, 213, 255);width: 90px; border-color: rgb(0, 213, 255);' >Logout</a>";
               }
             ?>
                   <!-- <button data-toggle="modal" data-target="#loginModal" class="btn btn-outline-success" style="color: rgb(0, 213, 255);width: 90px; border-color: rgb(0, 213, 255);" type="button" >Login</button>  -->
@@ -241,7 +241,15 @@
           </div>
           <div class="col-lg-6wowfadeInUp" data-wow-delay="0.5s">
             <img class="img-fluid animated pulse infinite ms-auto " src="labellangganan.png" id="fotolangganan"  alt="" />
-            <a class="btn btn-primary py-3 px-4 animated pulse infinite ms-auto" id="tombollangganan" href="payment.php">Berlangganan</a>
+            <?php
+
+              if(! $_SESSION['login']){
+                echo "<a class='btn btn-primary py-3 px-4 animated pulse infinite ms-auto' id='tombollangganan' href='login.php'>Berlangganan</a>";
+              }
+              else{
+                echo "<a class='btn btn-primary py-3 px-4 animated pulse infinite ms-auto' id='tombollangganan' href='payment.php'>Berlangganan</a>";
+              }
+            ?>
             </div>
           </div>
         </div>

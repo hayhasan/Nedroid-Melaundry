@@ -5,9 +5,9 @@ $loginemail = $_POST['loginemail'];
 $loginpassword = $_POST['loginpassword'];
 
 
-$koneksi = mysqli_connect("localhost","root","","nedroid");
+$koneksi = mysqli_connect("localhost","root","","melaundry");
 
-$strSql = "select * from dataUser where email = '$loginemail' and password = '$loginpassword'  ";
+$strSql = "select * from data_user where email = '$loginemail' and password = '$loginpassword'  ";
 $hasil = mysqli_query($koneksi,$strSql);
 
 $cek = mysqli_num_rows($hasil);
