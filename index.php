@@ -198,6 +198,12 @@
               <div class="card__side card__side--back card__side--back-2">
               <img src="newyear back.png" style="width:341px ;" alt="">
                 <div class="card__cta">
+                  <div class="card__price-box">
+                  <FORM NAME="WordForm">  
+                    <INPUT TYPE=TEXT NAME="WordBox" id="wordbox" class="form-control" ><br>
+                    <a onClick="PickRandomWordd(document.WordForm);" id="button11">SHOW</a>
+                  </FORM>
+                  </div>
                   <!-- <FORM NAME="WordForm">  
                     <INPUT TYPE=TEXT NAME="WordBox2" id="wordbox" class="form-control" ><br>
                     <INPUT TYPE=BUTTON VALUE="SHOW" onClick="PickRandomWord(document.WordForm);" id="button11">
