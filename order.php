@@ -144,14 +144,12 @@
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="inputState">Pilihan Paket</label><br>
-                    <select style="background-color: white;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  >
+                    <select name="paket"style="background-color: white;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  >
                       Pilihan Paket
                     </button>
                       <option>Reguler</option>
-                      <option>Cepat</option>
                       <option>Kilat</option>
                       <option>Express</option>
-                      <option>Premium</option>
                     </select>
                   </div>
                   <div class="form-group col-md-5">
@@ -169,7 +167,7 @@
                   </div>
                   <div class="form-group col-md-2">
                     <label for="inputZip">Berat</label>
-                    <input placeholder="                kg" type="text" class="form-control" id="inputZip">
+                    <input placeholder="                kg" type="text" name="berat" class="form-control" id="inputZip">
                   </div>
                   <div class="form-group col-md-2">
                     <label for="inputZip">Kode Voucher</label>
@@ -185,8 +183,21 @@ lakukan pembayaran dalam 1x25 menit.
                     </label>
                   </div>
                 </div>
-                <a type="submit" style="background-color: #b856df; border-color: #b856df;" class="btn btn-primary" href="map.php">Pesan</a>
+                <a type="submit"name="submit"value="submit" style="background-color: #b856df; border-color: #b856df;" class="btn btn-primary" href = "map.php">Pesan</a>
               </form>
+              <!-- <?php
+                    // $berat = $_GET['berat'];
+                    // $paket = $_GET['paket'];
+                    // $regu
+                    // if ($paket == "Regular"){
+                    //   echo "reg";
+                    // }elseif($paket == "Kilat"){
+                    //   echo "k";
+                    // }elseif($paket == "Express"){
+                    //   echo "e";
+                    // }
+                
+              ?> -->
               <div class="d-flex justify-content-between pt-2">
                 <p class="fw-bold mb-0">Rincian</p>
                 

@@ -1,4 +1,5 @@
 <?php
+$koneksi = mysqli_connect("localhost","root","","melaundry");
   session_start();
   if (! isset($_SESSION['login'])){
     $_SESSION['login'] = false;
@@ -135,24 +136,47 @@
     <!-- Navbar End -->
 
     <!-- Header Start -->
+    <?php 
+      $user = $_SESSION['user'];
+      $id = $user['id'];
+      $sqledit = "Select * from data_user where id='$id'";
+      $hasiledit = $koneksi->query($sqledit); //memproses query
+    ?>
     <div class="container-fluid hero-header bg-light py-5 mb-5">
       <div class="container py-5">
         <div class="row g-5 align-items-center">
           <div class="col-lg-6">
-            <h1 class="display-4 mb-3 animated slideInDown">
+          <?php
+            if(! $_SESSION['login']){
+              echo "<h1 class='display-4 mb-3 animated slideInDown'>
               DAFTAR<br />
               SEKARANG
             </h1>
             
-            <p class="animated slideInDown">
+            <p class='animated slideInDown'>
               Daftar dan dapatkan promo menarik dari MeLaundry & nikmati fitur
               menarik dari MeLaundry Sekarang Juga!!! Cucianmu menjadi Tanggung
               Jawab Kami.
             </p>
-            <a style="color:white ;" data-toggle="modal" data-target="#loginModal" class="btn btn-primary py-3 px-4 animated slideInDown" data-toggle="modal" data-target="signupPage"
-              >DAFTAR SEKARANG</a
-            >
+            <a style='color:white ;' data-toggle='modal' data-target='#loginModal' class='btn btn-primary py-3 px-4 animated slideInDown' data-toggle='modal' data-target='signupPage'
+              >DAFTAR SEKARANG</a>";
+            }
+            else{
+              echo "<h1 class='display-4 mb-3 animated slideInDown'>
+              Welcome<br />"; ?>
+
+              <?php echo $user['firstName'], " ", $user['lastName']; ?>
+              <?php
+              echo"
+            </h1>
             
+            <p class='animated slideInDown'>
+              Mari berbelanja sekarang juga, dan dapatkan promo menarik lainnya.
+            </p>
+            <a style='color:white ;'  class='btn btn-primary py-3 px-4 animated slideInDown' href = 'order.php'
+              >ORDER SEKARANG</a>";
+            }
+          ?>
           </div>
           
           <div class="col-lg-6 animated fadeIn">
