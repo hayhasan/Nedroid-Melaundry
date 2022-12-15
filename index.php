@@ -3,6 +3,11 @@ $koneksi = mysqli_connect("localhost","root","","melaundry");
   session_start();
   if (! isset($_SESSION['login'])){
     $_SESSION['login'] = false;
+  }else{
+    $user = $_SESSION['user'];
+    $id = $user['id'];
+    $sqledit = "Select * from data_user where id='$id'";
+    $hasiledit = $koneksi->query($sqledit); //memproses query
   }
 ?>
 
@@ -137,10 +142,7 @@ $koneksi = mysqli_connect("localhost","root","","melaundry");
 
     <!-- Header Start -->
     <?php 
-      $user = $_SESSION['user'];
-      $id = $user['id'];
-      $sqledit = "Select * from data_user where id='$id'";
-      $hasiledit = $koneksi->query($sqledit); //memproses query
+      
     ?>
     <div class="container-fluid hero-header bg-light py-5 mb-5">
       <div class="container py-5">
