@@ -162,7 +162,7 @@
       }
     </script>
       <select
-        onclick="multiplyBy()"
+      onclick="multiplyBy()"
         name="paket"
         style="background-color: white"
         class="btn btn-secondary dropdown-toggle"
@@ -201,7 +201,7 @@
                 </div>
                 <div class="form-group">
                   <div class="form-check">
-                    <input  class="form-check-input" type="checkbox" id="gridCheck" onclick="randomString();">
+                    <input class="form-check-input" type="checkbox" id="gridCheck" onclick="randomString();multiplyBy();">
                     <label class="form-check-label" for="gridCheck" >
                       Pastikan semua data telah terisi dengan benar, Apabila menggunakan metode cashless 
 lakukan pembayaran dalam 1x25 menit.
