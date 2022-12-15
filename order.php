@@ -143,14 +143,42 @@
   </div>
                 <div class="form-row">
                   <div class="form-group col-md-6">
-                    <label for="inputState">Pilihan Paket</label><br>
-                    <select name="paket"style="background-color: white;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  >
-                      Pilihan Paket
-                    </button>
-                      <option>Reguler</option>
-                      <option>Kilat</option>
-                      <option>Express</option>
-                    </select>
+                  <form name="hasil">
+      <label for="inputState">Pilihan Paket</label><br />
+      <script>
+      function multiplyBy() {
+        oper = document.getElementById("operator").value;
+
+        num1 = document.getElementById("firstNumber").value;
+        if (oper === "reguler") {
+          document.getElementById("result").innerHTML = num1 * 5000;
+        }
+        if (oper === "kilat") {
+          document.getElementById("result").innerHTML = num1 * 8000;
+        }
+        if (oper === "express") {
+          document.getElementById("result").innerHTML = num1 * 10000;
+        }
+      }
+    </script>
+      <select
+        onclick="multiplyBy()"
+        name="paket"
+        style="background-color: white"
+        class="btn btn-secondary dropdown-toggle"
+        type="button"
+        id="operator"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        Pilihan Paket
+        <option selected disabled value="pilih paket">pilih paket</option>
+        <option value="reguler">Reguler</option>
+        <option value="kilat">Kilat</option>
+        <option value="express">Express</option>
+      </select>
+    </form>
                   </div>
                   <div class="form-group col-md-5">
                     <label for="inputState">Pilihan Pewangi</label><br>
@@ -163,27 +191,24 @@
                       <option>Chocolate</option>
                       <option>Cinnamon</option>
                     </select>
-                   
+                  
                   </div>
+                  
                   <div class="form-group col-md-2">
                     <label for="inputZip">Berat</label>
-                    <input placeholder="                kg" type="text" name="berat" class="form-control" id="inputZip">
-                  </div>
-                  <div class="form-group col-md-2">
-                    <label for="inputZip">Kode Voucher</label>
-                    <input type="text" class="form-control" id="inputZip">
+                    <input placeholder="                kg" type="text" name="berat" class="form-control" id="firstNumber">
                   </div>
                 </div>
                 <div class="form-group">
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck">
-                    <label class="form-check-label" for="gridCheck">
+                    <input  class="form-check-input" type="checkbox" id="gridCheck" onclick="randomString();">
+                    <label class="form-check-label" for="gridCheck" >
                       Pastikan semua data telah terisi dengan benar, Apabila menggunakan metode cashless 
 lakukan pembayaran dalam 1x25 menit.
                     </label>
                   </div>
                 </div>
-                <a type="submit"name="submit"value="submit" style="background-color: #b856df; border-color: #b856df;" class="btn btn-primary" href = "map.php">Pesan</a>
+                <a type="submit"name="submit"value="submit" style="background-color: #b856df; width:110px; border-color: #b856df;" class="btn btn-primary" href = "map.php">Pesan</a>
               </form>
               <!-- <?php
                     // $berat = $_GET['berat'];
@@ -204,24 +229,44 @@ lakukan pembayaran dalam 1x25 menit.
               </div>
   
               <div class="d-flex justify-content-between pt-2">
-                <p class="text-muted mb-0">Nomor Nota : 230551</p>
-                <p class="text-muted mb-0"><span class="fw-bold me-4">Total</span> Rp 120.000</p>
-              </div>
+                <p class="text-muted mb-0">Nomor Nota : <label  style="font-size: 16px;" id="randomfield">-</p>
+                </div>
+                <script>
+      function randomString() {
+        //define a variable consisting alphabets in small and capital letter
+        var characters = "ABCDEFGHIJKLMNOPQRSTUVWXTZ0123456789";
+
+        //specify the length for the new string
+        var lenString = 7;
+        var randomstring = "";
+
+        //loop to select a new character in each iteration
+        for (var i = 0; i < lenString; i++) {
+          var rnum = Math.floor(Math.random() * characters.length);
+          randomstring += characters.substring(rnum, rnum + 1);
+        }
+
+        //display the generated string
+        document.getElementById("randomfield").innerHTML = randomstring;
+      }
+    </script>
+  
   
               <div class="d-flex justify-content-between">
-                <p class="text-muted mb-0">Tanggal Nota : 22 Oktober,2022</p>
-                <p class="text-muted mb-0"><span class="fw-bold me-4">Discount</span> Rp 20.000</p>      
-              </div>
-  
-              <div class="d-flex justify-content-between mb-5">
-                <p class="text-muted mb-0">Recepits Voucher : 4KU-62IIK</p>
-                <p class="text-muted mb-0"><span class="fw-bold me-4"> Antar Jemput pakaian </span> Gratis </p>
+                <p class="text-muted mb-0" >Tanggal Nota : <label  style="font-size: 16px;" id="date">-</p>
+                <script>
+                
+                n =  new Date();
+y = n.getFullYear();
+m = n.getMonth() + 1;
+d = n.getDate();
+document.getElementById("date").innerHTML = d + "/" + m + "/" + y;</script>
               </div>
             </div>
             <div class="card-footer border-0 px-4 py-5"
               style="background-color: #b856df; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
-              <h5  class="d-flex align-items-center justify-content-end text-white text-uppercase mb-0">Total
-                Biaya: <span style="color:white ;" class="h2 mb-0 ms-2">Rp 100.000</span></h5>
+              <h5  class="d-flex align-items-center justify-content-end text-white mb-0">TOTAL
+                BIAYA : Rp <span style="color:white ;" class="h2 mb-0 ms-2"> <label style="font-size:24px;" id="result">0</label></span></h5>
             </div>
           </div>
         </div>
