@@ -54,7 +54,23 @@
       <link rel="stylesheet" href="stylepopup.css">
       <!-- Demo CSS -->
       <link rel="stylesheet" href="css/demo.css">
-    
+    <!-- bootstrap css -->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<!-- style css -->
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<!-- Responsive-->
+<link rel="stylesheet" href="css/responsive.css">
+<!-- fevicon -->
+<link rel="icon" href="images/fevicon.png" type="image/gif" />
+<!-- Scrollbar Custom CSS -->
+<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+<!-- Tweaks for older IEs-->
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+<!-- owl stylesheets --> 
+<link rel="stylesheet" href="css/owl.carousel.min.css">
+<link rel="stylesheet" href="css/owl.theme.default.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+
   </head>
 
   <body>
@@ -122,86 +138,97 @@
             </nav>
     </nav id="pakaian">
     <!-- Navbar End -->
-    <!-- history -->
-    <h1 id="WOM" style="text-align: center ; color: rgb(255, 221, 0);  margin-bottom: -100px; margin-top: 50px;">What's on Melaundry?</h1>
-    <div   class="container py-5">
-        <div class="main-timeline-4 text-white">
-          <div class="timeline-4 left-4">
-            <div class="card gradient-custom">
-              <div class="card-body p-4">
-                <img src="fashion.png" alt="">
-                <h4 style="color:white ;" >PAKAIAN</h4>
-                <p  id="boneka"> Di melaundry kita bisa mencuci pakaian dengan jenis jenis kain yang sangat beragam.
+    <!-- team section start -->
+    <div class="team_section layout_padding">
+      <div class="container">
+        <h1 class="choose_taital"><span style="color: #811FE4">What's on </span> <img src="images/washing-machine.png" style="width : 45px;opacity: 70%"> <span style="color: gold"> Melaundry?</span></h1>
+        
+        
+        <div class="team_section_2 layout_padding">
+          <div class="container">
+            <div class="images_main_1">
+              <div class="row">
+                <div class="col-sm-5">
+                  <div class="image_4"><img src="images/bajoo.jpg"></div>
+                </div>             
+                <div class="col-sm-7">
+                  <h2 class="consectetur_text">PAKAIAN</h2>
+                  <p class="dummy_text">Di melaundry kita bisa mencuci pakaian dengan jenis jenis kain yang sangat beragam.
                   Mulai dari kain pakaian yang lembut,sedikit kasar ,hingga betul - betul berteksur.
-                  Dengan berbagai macam pewangi yang telah kami sediakan!
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="timeline-4 right-4">
-            <div class="card gradient-custom-4">
-              <div class="card-body p-4">
-                <img src="bear.png" alt="">
-                <h4 style="color:white ;">BONEKA </h4>
-                <p  id="sepatu">Di melaundry kita bisa mencuci boneka dengan berbagai macam ukuran.
-                  Kami menggunakan teknik handwash secara manual untuk menjaga bulu boneka anda mengalami kerusakan.
-                  Dengan berbagai macam pewangi yang telah kami sediakan!
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="timeline-4 left-4">
-            <div class="card gradient-custom">
-              <div class="card-body p-4">
-                <img src="shoes.png" alt="">
-                <h4  style="color:white ;">SEPATU</h4>
-                <p  id="topi" >Di melaundry kita bisa menangani sepatu anda secara prefesional agar sepatu anda tidak rusak jika dicuci sendiri.
-                  Disini kita juga menggunakan tiga macam cara pengerjaan yaitu proses wet clean, dry clean , dan wet & dry.
-                </p>
-              </div >
-            </div>
-          </div>
-          <div  class="timeline-4 right-4">
-            <div class="card gradient-custom-4">
-              <div class="card-body p-4">
-               <img src="cowboy.png" alt="">
-                <h4 style="color:white ;">TOPI</h4>
-                <p  id="tas">Di melaundry kita bisa menangani pencucian khusus untuk topi. 
-                  Disini kita melakukan teknik handwash secara manual sehingga aman untuk semua jenis topi.
-                  Dengan berbagai macam pewangi yang telah kami sediakan! 
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="timeline-4 left-4">
-            <div class="card gradient-custom">
-              <div class="card-body p-4">
-                <img src="backpack.png" style="width: 60px;" alt="">
-                <h4 style="color:white ;" >TAS </h4>
-                <p  id="bedcover" >Di melaundry kita siap melayani semua jenis tas yang anda berikan! kita akan menyesuaikan metode serta bahan pembersih 
-                  dan perawatan sesuai jenis tas yang anda berikan.
-                </p>
+                  Dengan berbagai macam pewangi yang telah kami sediakan!</div>
               </div>
             </div>
             
-          </div>
-          
-          <div class="timeline-4 right-4">
-            <div class="card gradient-custom-4">
-              <div class="card-body p-4">
-                <img src="blanket.png" style="width: 60px ;" alt="">
-                <h4 style="color:white ;">BED COVER </h4>
-                <p>Di melaundry kita melayani semua jenis BED COVER yang anda berikan!
-                Kita menggunakan proses pencucian dengan menggunakan peralatan modern, dengan berbagai macam pewangi yang telah kami sediakan!
-                Dijamin BED COVER anda bersih & wangi!
-                </p>
+            <div class="images_main">
+              <div class="row">
+                <div class="col-sm-7">
+                  <h2 class="consectetur_text_1">BONEKA</h2>
+                  <p class="dummy_text_1">Di melaundry kita bisa mencuci boneka dengan berbagai macam ukuran.
+                  Kami menggunakan teknik handwash secara manual untuk menjaga bulu boneka anda mengalami kerusakan.
+                  Dengan berbagai macam pewangi yang telah kami sediakan!</div>
+                <div class="col-sm-5">
+                  <div class="image_4"><img src="images/boneka.jpg"></div>
+                </div>
               </div>
             </div>
+            <div class="images_main_1">
+              <div class="row">
+                <div class="col-sm-5">
+                  <div class="image_4"><img src="images/shoes.jpg"></div>
+                  
+                </div>
+                <div class="col-sm-7">
+                  <h2 class="consectetur_text">SEPATU</h2>
+                  <p class="dummy_text">Di melaundry kita bisa menangani sepatu anda secara prefesional agar sepatu anda tidak rusak jika dicuci sendiri.
+                  Disini kita juga menggunakan tiga macam cara pengerjaan yaitu proses wet clean, dry clean , dan wet & dry.
+                </p>
+                </div>
+              </div>
+            </div>
+            <div class="images_main">
+              <div class="row">
+                <div class="col-sm-7">
+                  <h2 class="consectetur_text_1">TOPI</h2>
+                  <p class="dummy_text_1">Di melaundry kita bisa menangani pencucian khusus untuk topi. 
+                  Disini kita melakukan teknik handwash secara manual sehingga aman untuk semua jenis topi.
+                  Dengan berbagai macam pewangi yang telah kami sediakan! </p>
+                </div>
+                <div class="col-sm-5">
+                  <div class="image_4"><img src="images/topai.jpg" style="width:450px"></div>
+                </div>
+              </div>
+            </div>
+            <div class="images_main_1">
+              <div class="row">
+                <div class="col-sm-5">
+                  <div class="image_4"><img src="images/Bag.jpeg"></div>
+                </div>             
+                <div class="col-sm-7">
+                  <h2 class="consectetur_text">TAS</h2>
+                  <p class="dummy_text">Di melaundry kita siap melayani semua jenis tas yang anda berikan! kita akan menyesuaikan metode serta bahan pembersih 
+                  dan perawatan sesuai jenis tas yang anda berikan.</div>
+              </div>
+            </div>
+            <div class="images_main">
+              <div class="row">
+                <div class="col-sm-7">
+                  <h2 class="consectetur_text_1">BED COVER</h2>
+                  <p class="dummy_text_1">Di melaundry kita melayani semua jenis BED COVER yang anda berikan!
+                Kita menggunakan proses pencucian dengan menggunakan peralatan modern, dengan berbagai macam pewangi yang telah kami sediakan!
+                Dijamin BED COVER anda bersih & wangi!</p>
+                </div>
+
+                <div class="col-sm-5">
+                  <div class="image_4"><img src="images/badcover.jpg" style="width:450px"></div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
-    <!-- history end -->
-    
+    </div>
+    <!-- team section end -->
     <!-- Footer Start -->
     <div class="container-fluid bg-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
