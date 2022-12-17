@@ -133,6 +133,7 @@
                   <div class="form-group col-md-6">
                     <label for="inputEmail4">Email</label>
                     <input type="email" class="form-control" id="inputEmail4" placeholder="Email" value="<?php echo $user['email'] ?>" name="email"/>
+                    <input type="hidden" class="form-control" id="inputEmail4" placeholder="Email" value="<?php echo $user['id'] ?>" name="id_user"/>
                   </div>
                   <div class="form-group col-md-6">
                     <label for="inputEmail4">Name</label>
