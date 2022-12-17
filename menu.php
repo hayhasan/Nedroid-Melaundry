@@ -379,13 +379,13 @@
                   </div>
                   <div class="d-flex flex-column text-center">
                     <form action="validatelogin.php" method="post">
-                      <div class="form-group">
-                        <input type="email" class="form-control" id="email1"placeholder="Your email address...">
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="email1"placeholder="Your email address..." name="loginemail">
                       </div>
                       <div class="form-group">
-                        <input type="password" class="form-control" id="password1" placeholder="Your password...">
+                        <input type="password" class="form-control" id="password1" placeholder="Your password..." name="loginpassword">
                       </div>
-                      <button style="color:white ;" type="button" class="btn btn-info btn-block btn-round">Login</button>
+                      <button style="color: white;" type="submit" class="btn btn-info btn-block btn-round" name="login">Login</button>
                     </form>
                     
                     <div class="text-center text-muted delimiter">or connect with</div>
