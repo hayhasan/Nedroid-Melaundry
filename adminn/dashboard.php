@@ -347,12 +347,12 @@ if(! $_SESSION['login']){
                   <table class="table no-wrap">
                     <thead>
                       <tr>
-                        <th class="border-top-0">#</th>
+                        <th class="border-top-0">Invoice</th>
                         <th class="border-top-0">Name</th>
                         <th class="border-top-0">Phone Number</th>
-                        <th class="border-top-0">Address</th>
+                        <th class="border-top-0">Pickup Address</th>
                         <th class="border-top-0">Price</th>
-                        <th class="border-top-0">Invoice</th>
+                        <th class="border-top-0">Date Order</th>
                         <th class="border-top-0">Action</th>
                       </tr>
                     </thead>
@@ -369,8 +369,9 @@ if(! $_SESSION['login']){
                        $address =$baris['address'];
                        $price = $baris['price'];
                        $nota = $baris['nota'];
-                       echo "<tr><td>$id</td>";
-                       echo "<td>$name</td><td>$phone</td><td>$address</td>><td>$price</td><td>$nota</td><td> <a href='ubahdepartemen.php?id=$id'>Edit</a> | "; ?>
+                       $tanggal = $baris['tanggal'];
+                       echo "<tr><td>$nota</td>";
+                       echo "<td>$name</td><td>$phone</td><td>$address</td>><td>$price</td><td>$tanggal</td><td> <a href='ubahdepartemen.php?id=$id'>Edit</a> | "; ?>
              <a href="hapusdepartemen.php?id=<?php echo $id; ?>" onClick="return confirm('Anda yakin akan mengapus data ini?');">Delete</a></td></tr>
                     </tbody>
                     <?php          

@@ -172,6 +172,14 @@
         } 
       }
     </script>
+    <?php if(!$user['status'] == null){
+      echo "<script>
+          function multiplyBy() {
+          document.getElementById('result').innerHTML = 0;
+          document.getElementById('resultsc').value = 0;
+          }
+      </script>";
+    }?>
       <select
       onclick="multiplyBy()"
         name="paket"
@@ -287,6 +295,7 @@ lakukan pembayaran dalam 1x25 menit.
               style="background-color: #b856df; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
               <h5  class="d-flex align-items-center justify-content-end text-white mb-0">TOTAL
                 BIAYA : Rp <span style="color:white ;" class="h2 mb-0 ms-2"> <label  style="font-size:24px;" id="result">0</label></span></h5>
+                <input type="hidden" class="form-control" id="datesc" placeholder="0" value="<?php echo date('Y-m-d'); ?>"  name="tanggal"/>
                 <input type="hidden" class="form-control" id="resultsc" placeholder="0"  name="price"/>
                 <input type="hidden" class="form-control" id="randomfieldsc" placeholder="0"  name="nota"/>
                 
