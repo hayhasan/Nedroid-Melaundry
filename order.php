@@ -200,6 +200,11 @@
                       <option>Cookies</option>
                       <option>Chocolate</option>
                       <option>Cinnamon</option>
+                      <option>Lavender</option>
+                      <option>Melon</option>
+                      <option>Semangka</option>
+                      <option>Oreo</option>
+                      <option>Teh</option>
                     </select>
                   
                   </div>

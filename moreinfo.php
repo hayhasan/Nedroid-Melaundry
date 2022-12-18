@@ -144,14 +144,14 @@
         <h1 class="choose_taital"><span style="color: #811FE4">What's on </span> <img src="images/washing-machine.png" style="width : 45px;opacity: 70%"> <span style="color: gold"> Melaundry?</span></h1>
         
         
-        <div class="team_section_2 layout_padding">
+        <div  class="team_section_2 layout_padding">
           <div class="container">
             <div class="images_main_1">
               <div class="row">
                 <div class="col-sm-5">
                   <div class="image_4"><img src="images/bajoo.jpg"></div>
                 </div>             
-                <div class="col-sm-7">
+                <div id="pakaian" class="col-sm-7">
                   <h2 class="consectetur_text">PAKAIAN</h2>
                   <p class="dummy_text">Di melaundry kita bisa mencuci pakaian dengan jenis jenis kain yang sangat beragam.
                   Mulai dari kain pakaian yang lembut,sedikit kasar ,hingga betul - betul berteksur.
@@ -161,7 +161,7 @@
             
             <div class="images_main">
               <div class="row">
-                <div class="col-sm-7">
+                <div id="boneka" class="col-sm-7">
                   <h2 class="consectetur_text_1">BONEKA</h2>
                   <p class="dummy_text_1">Di melaundry kita bisa mencuci boneka dengan berbagai macam ukuran.
                   Kami menggunakan teknik handwash secara manual untuk menjaga bulu boneka anda mengalami kerusakan.
@@ -177,7 +177,7 @@
                   <div class="image_4"><img src="images/shoes.jpg"></div>
                   
                 </div>
-                <div class="col-sm-7">
+                <div id="sepatu" class="col-sm-7">
                   <h2 class="consectetur_text">SEPATU</h2>
                   <p class="dummy_text">Di melaundry kita bisa menangani sepatu anda secara prefesional agar sepatu anda tidak rusak jika dicuci sendiri.
                   Disini kita juga menggunakan tiga macam cara pengerjaan yaitu proses wet clean, dry clean , dan wet & dry.
@@ -187,7 +187,7 @@
             </div>
             <div class="images_main">
               <div class="row">
-                <div class="col-sm-7">
+                <div id="topi" class="col-sm-7">
                   <h2 class="consectetur_text_1">TOPI</h2>
                   <p class="dummy_text_1">Di melaundry kita bisa menangani pencucian khusus untuk topi. 
                   Disini kita melakukan teknik handwash secara manual sehingga aman untuk semua jenis topi.
@@ -203,7 +203,7 @@
                 <div class="col-sm-5">
                   <div class="image_4"><img src="images/Bag.jpeg"></div>
                 </div>             
-                <div class="col-sm-7">
+                <div id="tas" class="col-sm-7">
                   <h2 class="consectetur_text">TAS</h2>
                   <p class="dummy_text">Di melaundry kita siap melayani semua jenis tas yang anda berikan! kita akan menyesuaikan metode serta bahan pembersih 
                   dan perawatan sesuai jenis tas yang anda berikan.</div>
@@ -211,7 +211,7 @@
             </div>
             <div class="images_main">
               <div class="row">
-                <div class="col-sm-7">
+                <div id="bedcover" class="col-sm-7">
                   <h2 class="consectetur_text_1">BED COVER</h2>
                   <p class="dummy_text_1">Di melaundry kita melayani semua jenis BED COVER yang anda berikan!
                 Kita menggunakan proses pencucian dengan menggunakan peralatan modern, dengan berbagai macam pewangi yang telah kami sediakan!
