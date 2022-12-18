@@ -269,7 +269,7 @@ if(! $_SESSION['login']){
                        $phone = $baris['phone'];
                        echo "<tr><td>$id</td>";
                        echo "<td>$name $lname</td><td>$email</td><td>$province, $city, $address</td>><td>$phone</td><td> <a href='ubahdepartemen.php?id=$id'>Edit</a> | "; ?>
-             <a href="hapusdepartemen.php?id=<?php echo $id; ?>" onClick="return confirm('Anda yakin akan mengapus data ini?');">Delete</a></td></tr>
+             <a href="hapususer.php?id=<?php echo $id; ?>" onClick="return confirm('Anda yakin akan mengapus data ini?');">Delete</a></td></tr>
                     </tbody>
                     <?php          
        }	

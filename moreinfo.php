@@ -134,7 +134,15 @@
             </div>
         </div>
             <nav class="collapse navbar-collapse"> 
-            <a href='controller_logout.php' class='btn btn-outline-success' style='color: rgb(0, 213, 255);width: 90px; border-color: rgb(0, 213, 255);' >Logout</a>       
+            <?php
+
+              if(! $_SESSION['login']){
+                echo "<button data-toggle='modal' data-target='#loginModal' class='btn btn-outline-success' style='color: rgb(0, 213, 255);width: 90px; border-color: rgb(0, 213, 255);' type='button' >Login</button>";
+              }
+              else{
+                echo "<a href='controller_logout.php' class='btn btn-outline-success' style='color: rgb(0, 213, 255);width: 90px; border-color: rgb(0, 213, 255);' >Logout</a>";
+              }
+            ?>      
             </nav>
     </nav id="pakaian">
     <!-- Navbar End -->
@@ -318,14 +326,14 @@
                 </div>
                 <div class="d-flex flex-column text-center">
                   <form action="validatelogin.php" method="post">
-                    <div class="form-group">
-                      <input type="email" class="form-control" id="email1"placeholder="Your email address...">
-                    </div>
-                    <div class="form-group">
-                      <input type="password" class="form-control" id="password1" placeholder="Your password...">
-                    </div>
-                    <button style="color:white ;" type="button" class="btn btn-info btn-block btn-round">Login</button>
-                  </form>
+                  <div class="form-group">
+                        <input type="email" class="form-control" id="email1"placeholder="Your email address..." name="loginemail">
+                      </div>
+                      <div class="form-group">
+                        <input type="password" class="form-control" id="password1" placeholder="Your password..." name="loginpassword">
+                      </div>
+                      <button style="color: white;" type="submit" class="btn btn-info btn-block btn-round" name="login">Login</button>
+                    </form>
                   
                   <div class="text-center text-muted delimiter">or connect with</div>
                   <div class="d-flex justify-content-center social-buttons">
