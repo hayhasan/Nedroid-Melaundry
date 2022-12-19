@@ -204,7 +204,7 @@ if(! $_SESSION['login']){
               <li class="sidebar-item">
                 <a
                   class="sidebar-link waves-effect waves-dark sidebar-link"
-                  href="Nedroid-Melaundry/index.php"
+                  href="../controller_logout.php"
                   aria-expanded="false"
                 >
                 <i class="far fa-sign-out" aria-hidden="true"></i>
