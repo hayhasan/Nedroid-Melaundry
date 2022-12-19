@@ -206,7 +206,7 @@ $koneksi = mysqli_connect("localhost","root","","melaundry");
                 <div class="card__cta">
                   <div class="card__price-box">
                   <FORM NAME="WordForm">  
-                    <INPUT TYPE=TEXT value="ASHIO" NAME="WordBox" id="wordbox" class="form-control" disabled><br>
+                    <INPUT TYPE=TEXT value="ASHIO" id="voucher15" NAME="WordBox" id="wordbox" class="form-control" disabled><br>
                     
                   </FORM>
                   </div>
@@ -227,7 +227,7 @@ $koneksi = mysqli_connect("localhost","root","","melaundry");
                 <div class="card__cta">
                   <div class="card__price-box">
                   <FORM NAME="WordForm1"> 
-                  <INPUT TYPE=TEXT value="HSP9W" NAME="WordBox" id="wordbox" class="form-control" disabled><br>
+                  <INPUT TYPE=TEXT value="HSP9W" id="voucher30" NAME="WordBox" id="wordbox" class="form-control" disabled><br>
                     
                   </FORM>
                   </div>
@@ -250,7 +250,7 @@ $koneksi = mysqli_connect("localhost","root","","melaundry");
                 <div class="card__cta">
                 <div class="card__price-box">
                   <FORM NAME="WordForm2">  
-                  <INPUT TYPE=TEXT value="JAOEP" NAME="WordBox" id="wordbox" class="form-control" disabled><br>
+                  <INPUT TYPE=TEXT value="JAOEP" id="voucher20" NAME="WordBox" id="wordbox" class="form-control" disabled><br>
                     
                   </FORM>
                     

@@ -156,6 +156,7 @@
       <label for="inputState">Pilihan Paket</label><br />
       <script>
       function multiplyBy() {
+        
         oper = document.getElementById("operator").value;
 
         num1 = document.getElementById("firstNumber").value;
