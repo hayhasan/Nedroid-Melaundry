@@ -1,14 +1,18 @@
 <?php
-$koneksi = mysqli_connect("localhost","root","","melaundry");
-session_start();
-if(! $_SESSION['login']){
-  header("Location:index.php");
-}else{
-  $user = $_SESSION['user'];
-  $id = $user['id'];
-  $name = $user['firstName'];
-  $image = $user['image'];
-}
+  $koneksi = mysqli_connect("localhost","root","","melaundry");
+  session_start();
+  if (! isset($_SESSION['login'])){
+    $_SESSION['login'] = false;
+  }else{
+    $user = $_SESSION['user'];
+    $id = $user['id'];
+    $query = " select * from data_user where id= '$id' ";
+    $result = mysqli_query($koneksi, $query);
+    $user = mysqli_fetch_assoc($result);
+
+    $name = $user["firstName"];
+    $image = $user["image"];
+  }
 ?>
 
 <!DOCTYPE html>
