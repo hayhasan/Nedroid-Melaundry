@@ -6,11 +6,6 @@ if(! $_SESSION['login']){
 }else{
   $user = $_SESSION['user'];
   $id = $user['id'];
-  
-  $query = " select * from data_user where id= '$id' ";
-  $result = mysqli_query($koneksi, $query);
-  $user = mysqli_fetch_assoc($result);
-
   $name = $user['firstName'];
   $image = $user['image'];
 }
@@ -236,7 +231,7 @@ if(! $_SESSION['login']){
                           <li class="nav-item">
                               <a class="nav-link active" href="#studio" role="tab" data-toggle="tab">
                                 <i class="material-icons">history </i>
-                                Detail Account
+                                Riwayat Cucian
                               </a>
                           </li>
                           <li class="nav-item">
@@ -251,6 +246,10 @@ if(! $_SESSION['login']){
           </div>
           </div>
       
+        <div class="tab-content tab-space">
+          <div class="tab-pane active text-center gallery" id="studio">
+        <div class="row">
+          
     <div class="container-xxl bg-light py-5 my-5">
         <div class="container py-5">
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
@@ -285,6 +284,8 @@ if(! $_SESSION['login']){
             </div>
         </div>
     </div>
+        </div>
+      </div>
           <div class="tab-pane text-center gallery" id="works">
           <div class="row">
            <div>
@@ -345,28 +346,7 @@ if(! $_SESSION['login']){
                       <div class="col-md-6 mb-4">
                         <label class="form-label" for="form3Example8" >Province</label><br>
                         <select class="btn btn-secondary dropdown-toggle " style="background-color:white ; width: 200px;" name="province">
-                        <option value="Aceh">Aceh</option>
-                        <option value="Sumatera Utara">Sumatera Utara</option>
-                        <option value="Sumatera Selatan">Sumatera Selatan</option>
-                        <option value="Sumatera Barat">Sumatera Barat</option>
-                        <option value="Bengkulu">Bengkulu</option>
-                        <option value="Riau">Riau</option>  
-                        <option value="Kepulauan Riau">Kep. Riau</option>
-                        <option value="Jambi">Jambi</option>
-                        <option value="Lampung">Lampung</option>
-                        <option value="Bangka Belitung">Bangka Belitung</option>
-                        <option value="Kalimantan Barat">Kalimantan Barat</option>
-                        <option value="Jawa Tengah">Jawa Tengah</option>
-                        <option value="Jawa Tengah">Jawa Tengah</option>
-                        <option value="Jawa Tengah">Jawa Tengah</option>
-                        <option value="Jawa Tengah">Jawa Tengah</option>
-                        <option value="Jawa Tengah">Jawa Tengah</option>
-                        <option value="Jawa Tengah">Jawa Tengah</option>
-                        <option value="Jawa Tengah">Jawa Tengah</option>
-                        <option value="Jawa Tengah">Jawa Tengah</option>
-                        <option value="Jawa Tengah">Jawa Tengah</option>
-                        <option value="Jawa Tengah">Jawa Tengah</option>
-                        <option value="Jawa Tengah">Jawa Tengah</option>
+                          <option value="Jawa Tengah">Jawa Tengah</option>
                           <option value="Jawa Barat">Jawa Barat</option>
                           <option value="Jawa Timur">Jawa Timur</option>
                           <option value="DI Yogyakarta">Daerah Istimewa Yogyakarta</option>
