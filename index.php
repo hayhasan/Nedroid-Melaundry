@@ -206,8 +206,8 @@ $koneksi = mysqli_connect("localhost","root","","melaundry");
                 <div class="card__cta">
                   <div class="card__price-box">
                   <FORM NAME="WordForm">  
-                    <INPUT TYPE=TEXT NAME="WordBox" id="wordbox" class="form-control" ><br>
-                    <a onClick="PickRandomWord(document.WordForm);" id="button11">SHOW</a>
+                    <INPUT TYPE=TEXT value="ASHIO" NAME="WordBox" id="wordbox" class="form-control" disabled><br>
+                    
                   </FORM>
                   </div>
                 </div>
@@ -226,9 +226,9 @@ $koneksi = mysqli_connect("localhost","root","","melaundry");
               <img src="newyear back.png" style="width:341px ;" alt="">
                 <div class="card__cta">
                   <div class="card__price-box">
-                  <FORM NAME="WordForm1">  
-                    <INPUT TYPE=TEXT NAME="WordBox" id="wordbox" class="form-control" ><br>
-                    <a onClick="PickRandomWord(document.WordForm1);" id="button11">SHOW</a>
+                  <FORM NAME="WordForm1"> 
+                  <INPUT TYPE=TEXT value="HSP9W" NAME="WordBox" id="wordbox" class="form-control" disabled><br>
+                    
                   </FORM>
                   </div>
                   
@@ -250,8 +250,8 @@ $koneksi = mysqli_connect("localhost","root","","melaundry");
                 <div class="card__cta">
                 <div class="card__price-box">
                   <FORM NAME="WordForm2">  
-                    <INPUT TYPE=TEXT NAME="WordBox" id="wordbox" class="form-control" ><br>
-                    <a onClick="PickRandomWord(document.WordForm2);" id="button11">SHOW</a>
+                  <INPUT TYPE=TEXT value="JAOEP" NAME="WordBox" id="wordbox" class="form-control" disabled><br>
+                    
                   </FORM>
                     
               </div>
