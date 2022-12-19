@@ -198,7 +198,7 @@
                     <div class="ms-auto">089620150272</div>
                   </div>
                 </div>
-                <button value="Lanjutkan Pembayaran" name="payment" class="btn btn-primary btn-block btn-lg">Lanjutkan Pembayaran</button>
+                <button  href="success.php" value="Lanjutkan Pembayaran" name="payment" class="btn btn-primary btn-block btn-lg">Lanjutkan Pembayaran</button>
               </form>         
             </div>
           </div>
