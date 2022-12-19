@@ -22,6 +22,7 @@ $id = $user['id'];
             echo "Error updating record: " . $koneksi->error;
           }
     }
-    
-    mysqli_close($koneksi);
+    $hasil = mysqli_query($koneksi,$sqledit);
+    $rowData = $hasil->fetch_array();
+    $_SESSION['user'] = $rowData;
 ?>

@@ -13,7 +13,7 @@
     $conn = mysqli_connect("localhost","root","","melaundry");
 
     if($password == $repassword){
-        $query = "INSERT INTO data_user (firstname,lastname,email,gender,province,city,phone,address,password) VALUES ('".$firstName."', '".$lastName."', '".$email."', '".$gender."', '".$province."', '".$city."', '".$phone."', '".$address."', '".$password."')";
+        $query = "INSERT INTO data_user (firstname,lastname,email,gender,province,city,phone,address,password,image) VALUES ('".$firstName."', '".$lastName."', '".$email."', '".$gender."', '".$province."', '".$city."', '".$phone."', '".$address."', '".$password."', 'noprofil.jpg')";
         if($result = mysqli_query($conn, $query)){
             echo "<script>alert('Berhasil registrasi, menuju halaman utama');  window.location = 'index.php'; </script>";
         }else{
