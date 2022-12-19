@@ -1,11 +1,5 @@
-<?php
-  session_start();
-  if (! isset($_SESSION['login'])){
-    $_SESSION['login'] = false;
-  }
-?>
 
-<!DOCTYPE html>
+            <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -14,24 +8,10 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="" name="keywords" />
     <meta content="" name="description" />
-<!-- bootstrap css -->
-<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-<!-- style css -->
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<!-- Responsive-->
-<link rel="stylesheet" href="css/responsive.css">
-<!-- fevicon -->
-<link rel="icon" href="images/fevicon.png" type="image/gif" />
-<!-- Scrollbar Custom CSS -->
-<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
-<!-- Tweaks for older IEs-->
-<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-<!-- owl stylesheets --> 
-<link rel="stylesheet" href="css/owl.carousel.min.css">
-<link rel="stylesheet" href="css/owl.theme.default.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
 
     <!-- Favicon -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
     <link href="Logo.png" rel="icon" />
     <!-- Bootstrap CSS -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'>
@@ -65,11 +45,13 @@
 
     <!-- Template Stylesheet -->
     <link href="style.css" rel="stylesheet" />
-    <link rel="stylesheet" href="nedroid.css">
+
       <!-- Style CSS -->
       <link rel="stylesheet" href="stylepopup.css">
       <!-- Demo CSS -->
       <link rel="stylesheet" href="css/demo.css">
+      
+
     
   </head>
 
@@ -108,135 +90,42 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto py-4 py-lg-0">
-        <?php
-              if(! $_SESSION['login']){
-                echo "<a href='index.php' class='nav-item nav-link active'>Home</a>
-                <a href='order.php' class='nav-item nav-link disabled'>Order</a>
-                <a href='activity.php' class='nav-item nav-link disabled'>Activity</a>
-                <div class='nav-item dropdown'>
-                  <a href='#' class='nav-link dropdown-toggle' data-bs-toggle='dropdown'>Features</a>
-                  <div class='dropdown-menu shadow-sm m-0'>
-                      <a href='menu.php' class='dropdown-item'>Menu</a>
-                      <a href='moreinfo.php' class='dropdown-item'>More info</a>";
-              }
-              else{
-                echo "<a href='index.php' class='nav-item nav-link active'>Home</a>
-                <a href='order.php' class='nav-item nav-link'>Order</a>
-                <a href='activity.php' class='nav-item nav-link'>Activity</a>
-                <div class='nav-item dropdown'>
-                  <a href='#' class='nav-link dropdown-toggle' data-bs-toggle='dropdown'>Features</a>
-                  <div class='dropdown-menu shadow-sm m-0'>
-                      <a href='account.php' class='dropdown-item'>Account</a>
-                      <a href='menu.php' class='dropdown-item'>Menu</a>
-                      <a href='moreinfo.php' class='dropdown-item'>More info</a>";
-              }
-        ?>
+          <a href="index.php" class="nav-item nav-link ">Home</a>
+          <a href="order.php" class="nav-item nav-link ">Order</a>
+          <a href="activity.php" class="nav-item nav-link ">Activity</a>
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" >Features</a>
+            <div class="dropdown-menu shadow-sm m-0">
+                <a href="account.php" class="dropdown-item">Account</a>
+                <a href="menu.php" class="dropdown-item">Menu</a>
+                <a href="moreinfo.php" class="dropdown-item">More info</a>
             </div>
         </div>
             <nav class="collapse navbar-collapse"> 
-            <?php
-
-              if(! $_SESSION['login']){
-                echo "<button data-toggle='modal' data-target='#loginModal' class='btn btn-outline-success' style='color: rgb(0, 213, 255);width: 90px; border-color: rgb(0, 213, 255);' type='button' >Login</button>";
-              }
-              else{
-                echo "<a href='controller_logout.php' class='btn btn-outline-success' style='color: rgb(0, 213, 255);width: 90px; border-color: rgb(0, 213, 255);' >Logout</a>";
-              }
-            ?>      
-            </nav>
+              <button data-toggle="modal" data-target="#loginModal"  class="btn btn-outline-success" style="color: rgb(0, 213, 255);width: 90px; border-color: rgb(0, 213, 255);" type="button" >Login</button >       </nav>
     </nav id="pakaian">
     <!-- Navbar End -->
-    <!-- team section start -->
-    <div class="team_section layout_padding">
-      <div class="container">
-        <h1 class="choose_taital"><span style="color: #811FE4">What's on </span> <img src="images/washing-machine.png" style="width : 45px;opacity: 70%"> <span style="color: gold"> Melaundry?</span></h1>
-        
-        
-        <div  class="team_section_2 layout_padding">
-          <div class="container">
-            <div class="images_main_1">
-              <div class="row">
-                <div class="col-sm-5">
-                  <div class="image_4"><img src="images/bajoo.jpg"></div>
-                </div>             
-                <div id="pakaian" class="col-sm-7">
-                  <h2 class="consectetur_text">PAKAIAN</h2>
-                  <p class="dummy_text">Di melaundry kita bisa mencuci pakaian dengan jenis jenis kain yang sangat beragam.
-                  Mulai dari kain pakaian yang lembut,sedikit kasar ,hingga betul - betul berteksur.
-                  Dengan berbagai macam pewangi yang telah kami sediakan!</div>
-              </div>
-            </div>
-            
-            <div class="images_main">
-              <div class="row">
-                <div id="boneka" class="col-sm-7">
-                  <h2 class="consectetur_text_1">BONEKA</h2>
-                  <p class="dummy_text_1">Di melaundry kita bisa mencuci boneka dengan berbagai macam ukuran.
-                  Kami menggunakan teknik handwash secara manual untuk menjaga bulu boneka anda mengalami kerusakan.
-                  Dengan berbagai macam pewangi yang telah kami sediakan!</div>
-                <div class="col-sm-5">
-                  <div class="image_4"><img src="images/boneka.jpg"></div>
-                </div>
-              </div>
-            </div>
-            <div class="images_main_1">
-              <div class="row">
-                <div class="col-sm-5">
-                  <div class="image_4"><img src="images/shoes.jpg"></div>
-                  
-                </div>
-                <div id="sepatu" class="col-sm-7">
-                  <h2 class="consectetur_text">SEPATU</h2>
-                  <p class="dummy_text">Di melaundry kita bisa menangani sepatu anda secara prefesional agar sepatu anda tidak rusak jika dicuci sendiri.
-                  Disini kita juga menggunakan tiga macam cara pengerjaan yaitu proses wet clean, dry clean , dan wet & dry.
-                </p>
-                </div>
-              </div>
-            </div>
-            <div class="images_main">
-              <div class="row">
-                <div id="topi" class="col-sm-7">
-                  <h2 class="consectetur_text_1">TOPI</h2>
-                  <p class="dummy_text_1">Di melaundry kita bisa menangani pencucian khusus untuk topi. 
-                  Disini kita melakukan teknik handwash secara manual sehingga aman untuk semua jenis topi.
-                  Dengan berbagai macam pewangi yang telah kami sediakan! </p>
-                </div>
-                <div class="col-sm-5">
-                  <div class="image_4"><img src="images/topai.jpg" style="width:450px"></div>
-                </div>
-              </div>
-            </div>
-            <div class="images_main_1">
-              <div class="row">
-                <div class="col-sm-5">
-                  <div class="image_4"><img src="images/Bag.jpeg"></div>
-                </div>             
-                <div id="tas" class="col-sm-7">
-                  <h2 class="consectetur_text">TAS</h2>
-                  <p class="dummy_text">Di melaundry kita siap melayani semua jenis tas yang anda berikan! kita akan menyesuaikan metode serta bahan pembersih 
-                  dan perawatan sesuai jenis tas yang anda berikan.</div>
-              </div>
-            </div>
-            <div class="images_main">
-              <div class="row">
-                <div id="bedcover" class="col-sm-7">
-                  <h2 class="consectetur_text_1">BED COVER</h2>
-                  <p class="dummy_text_1">Di melaundry kita melayani semua jenis BED COVER yang anda berikan!
-                Kita menggunakan proses pencucian dengan menggunakan peralatan modern, dengan berbagai macam pewangi yang telah kami sediakan!
-                Dijamin BED COVER anda bersih & wangi!</p>
-                </div>
 
-                <div class="col-sm-5">
-                  <div class="image_4"><img src="images/badcover.jpg" style="width:450px"></div>
+    <!-- invoice -->
+    <section style="background-color:white;">
+    <div class="vh-100 d-flex justify-content-center align-items-center">
+            <div>
+                <div class="mb-4 text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="text-success" width="75" height="75"
+                        fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                    </svg>
                 </div>
-              </div>
+                <div class="text-center">
+                    <h1>Thank You !</h1>
+                    <p>Thanks for order our service. If you have any questions about your order, contact us anytime.</p>
+                    <button class="btn btn-primary">Back Home</button>
+                </div>
             </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- team section end -->
+</section>
+    <!--aaa invoice end -->
+    
     <!-- Footer Start -->
     <div class="container-fluid bg-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
@@ -325,15 +214,15 @@
                   <h4>Login</h4>
                 </div>
                 <div class="d-flex flex-column text-center">
-                  <form action="validatelogin.php" method="post">
-                  <div class="form-group">
-                        <input type="email" class="form-control" id="email1"placeholder="Your email address..." name="loginemail">
-                      </div>
-                      <div class="form-group">
-                        <input type="password" class="form-control" id="password1" placeholder="Your password..." name="loginpassword">
-                      </div>
-                      <button style="color: white;" type="submit" class="btn btn-info btn-block btn-round" name="login">Login</button>
-                    </form>
+                  <form>
+                    <div class="form-group">
+                      <input type="email" class="form-control" id="email1"placeholder="Your email address...">
+                    </div>
+                    <div class="form-group">
+                      <input type="password" class="form-control" id="password1" placeholder="Your password...">
+                    </div>
+                    <button style="color:white ;" type="button" class="btn btn-info btn-block btn-round">Login</button>
+                  </form>
                   
                   <div class="text-center text-muted delimiter">or connect with</div>
                   <div class="d-flex justify-content-center social-buttons">
@@ -365,16 +254,17 @@
     <script src="waypoints.min.js"></script>
     <script src="owl.carousel.min.js"></script>
     <script src="counterup.min.js"></script>
-<!-- jQuery -->
-<script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'></script>
-<!-- Popper JS -->
-<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js'></script>
-<!-- Bootstrap JS -->
-<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
- <!-- Custom Script -->      
-<script  src="js/script.js"></script>
-    <!-- Template Javascript -->
-    <script src="main.js"></script>
+        <!-- Template Javascript -->
+        <script src="main.js"></script>
+        <!-- jQuery -->
+    <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'></script>
+    <!-- Popper JS -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js'></script>
+    <!-- Bootstrap JS -->
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
+     <!-- Custom Script -->      
+    <script  src="js/script.js"></script>
+
 </body>
 
 </html>

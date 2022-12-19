@@ -324,7 +324,28 @@ if(! $_SESSION['login']){
                       <div class="col-md-6 mb-4">
                         <label class="form-label" for="form3Example8" >Province</label><br>
                         <select class="btn btn-secondary dropdown-toggle " style="background-color:white ; width: 200px;" name="province">
-                          <option value="Jawa Tengah">Jawa Tengah</option>
+                        <option value="Aceh">Aceh</option>
+                        <option value="Sumatera Utara">Sumatera Utara</option>
+                        <option value="Sumatera Selatan">Sumatera Selatan</option>
+                        <option value="Sumatera Barat">Sumatera Barat</option>
+                        <option value="Bengkulu">Bengkulu</option>
+                        <option value="Riau">Riau</option>  
+                        <option value="Kepulauan Riau">Kep. Riau</option>
+                        <option value="Jambi">Jambi</option>
+                        <option value="Lampung">Lampung</option>
+                        <option value="Bangka Belitung">Bangka Belitung</option>
+                        <option value="Kalimantan Barat">Kalimantan Barat</option>
+                        <option value="Jawa Tengah">Jawa Tengah</option>
+                        <option value="Jawa Tengah">Jawa Tengah</option>
+                        <option value="Jawa Tengah">Jawa Tengah</option>
+                        <option value="Jawa Tengah">Jawa Tengah</option>
+                        <option value="Jawa Tengah">Jawa Tengah</option>
+                        <option value="Jawa Tengah">Jawa Tengah</option>
+                        <option value="Jawa Tengah">Jawa Tengah</option>
+                        <option value="Jawa Tengah">Jawa Tengah</option>
+                        <option value="Jawa Tengah">Jawa Tengah</option>
+                        <option value="Jawa Tengah">Jawa Tengah</option>
+                        <option value="Jawa Tengah">Jawa Tengah</option>
                           <option value="Jawa Barat">Jawa Barat</option>
                           <option value="Jawa Timur">Jawa Timur</option>
                           <option value="DI Yogyakarta">Daerah Istimewa Yogyakarta</option>
