@@ -107,7 +107,7 @@
             </nav>
     </nav>
     <!-- Navbar End -->
-    <H1>ORDER ACTIVITY</H1>
+    <H1 style="color:gold;">ORDER ACTIVITY</H1>
     <div class="form-group pull-right">
     <input type="text" class="search form-control" placeholder="What you looking for?">
 </div>
@@ -116,9 +116,9 @@
   <thead>
     <tr>
       <th>#</th>
-      <th class="col-md-5 col-xs-5">Name / Surname</th>
-      <th class="col-md-4 col-xs-4">Job</th>
-      <th class="col-md-3 col-xs-3">City</th>
+      <th class="col-md-5 col-xs-5">Date & Time</th>
+      <th class="col-md-4 col-xs-4">Price</th>
+      <th class="col-md-3 col-xs-3">Invoice</th>
     </tr>
     <tr class="warning no-result">
       <td colspan="4"><i class="fa fa-warning"></i> No result</td>
@@ -127,27 +127,28 @@
   <tbody>
     <tr>
       <th scope="row">1</th>
-      <td>Vatanay Özbeyli</td>
-      <td>UI & UX</td>
-      <td>Istanbul</td>
+      <td>
+      </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">2</th>
-      <td>Burak Özkan</td>
-      <td>Software Developer</td>
-      <td>Istanbul</td>
+      <td></td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td>Egemen Özbeyli</td>
-      <td>Purchasing</td>
-      <td>Kocaeli</td>
+      <td></td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">4</th>
-      <td>Engin Kızıl</td>
-      <td>Sales</td>
-      <td>Bozuyük</td>
+      <td></td>
+      <td></td>
+      <td></td>
     </tr>
   </tbody>
 </table>

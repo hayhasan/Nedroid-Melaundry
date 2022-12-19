@@ -173,8 +173,7 @@ $koneksi = mysqli_connect("localhost","root","","melaundry");
             </h1>
             
             <p class='animated slideInDown'>
-              Jangan buang waktumu untuk mencuci, karena mencuci adalah tugas kami. 
-              Mari berbelanja sekarang juga, dan dapatkan promo menarik lainnya.
+              Jangan buang waktumu untuk mencuci, karena mencuci adalah tugas kami.Mari berbelanja sekarang juga, dan dapatkan promo menarik lainnya.
             </p>
             <a style='color:white ;'  class='btn btn-primary py-3 px-4 animated slideInDown' href = 'order.php'
               >ORDER SEKARANG</a>";
@@ -206,8 +205,8 @@ $koneksi = mysqli_connect("localhost","root","","melaundry");
                 <div class="card__cta">
                   <div class="card__price-box">
                   <FORM NAME="WordForm">  
-                    <INPUT TYPE=TEXT value="ASHIO" id="voucher15" NAME="WordBox" id="wordbox" class="form-control" disabled><br>
-                    
+                    <INPUT TYPE=TEXT NAME="WordBox" id="wordbox" class="form-control" ><br>
+                    <a onClick="PickRandomWord(document.WordForm);" id="button11">SHOW</a>
                   </FORM>
                   </div>
                 </div>
@@ -226,9 +225,9 @@ $koneksi = mysqli_connect("localhost","root","","melaundry");
               <img src="newyear back.png" style="width:341px ;" alt="">
                 <div class="card__cta">
                   <div class="card__price-box">
-                  <FORM NAME="WordForm1"> 
-                  <INPUT TYPE=TEXT value="HSP9W" id="voucher30" NAME="WordBox" id="wordbox" class="form-control" disabled><br>
-                    
+                  <FORM NAME="WordForm1">  
+                    <INPUT TYPE=TEXT NAME="WordBox" id="wordbox" class="form-control" ><br>
+                    <a onClick="PickRandomWord(document.WordForm1);" id="button11">SHOW</a>
                   </FORM>
                   </div>
                   
@@ -250,8 +249,8 @@ $koneksi = mysqli_connect("localhost","root","","melaundry");
                 <div class="card__cta">
                 <div class="card__price-box">
                   <FORM NAME="WordForm2">  
-                  <INPUT TYPE=TEXT value="JAOEP" id="voucher20" NAME="WordBox" id="wordbox" class="form-control" disabled><br>
-                    
+                    <INPUT TYPE=TEXT NAME="WordBox" id="wordbox" class="form-control" ><br>
+                    <a onClick="PickRandomWord(document.WordForm2);" id="button11">SHOW</a>
                   </FORM>
                     
               </div>
