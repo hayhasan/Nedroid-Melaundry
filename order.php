@@ -6,8 +6,9 @@
   }else{
     $user = $_SESSION['user'];
     $id = $user['id'];
-    $sqledit = "Select * from data_user where id='$id'";
-    $hasiledit = $koneksi->query($sqledit); //memproses query
+    $query = " select * from data_user where id= '$id' ";
+    $result = mysqli_query($koneksi, $query);
+    $user = mysqli_fetch_assoc($result);
   }
 ?>
 

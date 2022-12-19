@@ -6,6 +6,11 @@ if(! $_SESSION['login']){
 }else{
   $user = $_SESSION['user'];
   $id = $user['id'];
+  
+  $query = " select * from data_user where id= '$id' ";
+  $result = mysqli_query($koneksi, $query);
+  $user = mysqli_fetch_assoc($result);
+
   $name = $user['firstName'];
   $image = $user['image'];
 }
