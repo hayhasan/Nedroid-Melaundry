@@ -143,7 +143,7 @@
               <p>
                 Berikut adalah berbagai pilihan metode pembayaran untuk tagihan anda,Pembayaran anda akan dikonfirmasi paling lama 1x24 jam.
               </p>
-              <form class="pb-3">
+              <form class="pb-3" action="paymentreguler_controller.php" method="post">>
                 <div class="d-flex flex-row pb-3">
                   <div class="d-flex align-items-center pe-2">
                     <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1"
@@ -198,9 +198,8 @@
                     <div class="ms-auto">089620150272</div>
                   </div>
                 </div>
-
+                <button value="Lanjutkan Pembayaran" name="payment" class="btn btn-primary btn-block btn-lg"  href="success.php">Lanjutkan Pembayaran</button>
               </form>
-              <input type="button" value="Lanjutkan Pembayaran" class="btn btn-primary btn-block btn-lg" />
             </div>
           </div>
 

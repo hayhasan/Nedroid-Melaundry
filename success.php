@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+            <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,7 +10,8 @@
     <meta content="" name="description" />
 
     <!-- Favicon -->
-   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
     <link href="Logo.png" rel="icon" />
     <!-- Bootstrap CSS -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'>
@@ -105,146 +107,22 @@
     <!-- Navbar End -->
 
     <!-- invoice -->
-    <section style="background-color: #eee;">
-  <div class="container py-5">
-    <div class="card">
-      <div class="card-body">
-        <div class="row d-flex justify-content-center pb-5">
-          <div class="col-md-7 col-xl-5 mb-4 mb-md-0">
-            <div class="py-4 d-flex flex-row">
-              <img src="Logo.png" alt="">
-              
+    <section style="background-color:white;">
+    <div class="vh-100 d-flex justify-content-center align-items-center">
+            <div>
+                <div class="mb-4 text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="text-success" width="75" height="75"
+                        fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                    </svg>
+                </div>
+                <div class="text-center">
+                    <h1>Thank You !</h1>
+                    <p>Thanks for order our service. If you have any questions about your order, contact us anytime.</p>
+                    <a class="btn btn-primary" href="index.php">Back Home</a>
+                </div>
             </div>
-            
-            <h4 style="color:#EC3F1B;">Royale Pass</h4>
-            <div class="d-flex pt-2">
-              <div>
-                <p>
-                  <b>Pengaktifan member Melaundry </b>
-                </p>
-              </div>
-            </div>
-            <p>
-              Anda memilih paket member " Royale pass " selamat menikmati keuntungan sebagai membership selama 1 bulan.
-            </p>
-           
-            <hr />
-            <div class="pt-2">
-              <div class="d-flex pb-2">
-                <div>
-                  <p>
-                    <b>Total Pembayaran <span class="text-success">Rp 250.000</span></b>
-                  </p>
-                </div>
-                <div class="ms-auto">
-                  
-                </div>
-              </div>
-              <p>
-                Berikut adalah berbagai pilihan metode pembayaran untuk tagihan anda,Pembayaran anda akan dikonfirmasi paling lama 1x24 jam.
-              </p>
-              <form class="pb-3" action="paymentroyale_controller.php" method="post">>
-                <div class="d-flex flex-row pb-3">
-                  <div class="d-flex align-items-center pe-2">
-                    <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1"
-                      value="" aria-label="..." checked />
-                  </div>
-                  <div class="rounded border d-flex w-100 p-3 align-items-center">
-                    <p class="mb-0">
-                      <img src="Atm.png" style="width: 50px;" alt="">  Transfer Bank
-                      
-                    </p>
-                    <div class="ms-auto">1308895510</div>
-                  </div>
-                </div>
-
-                <div class="d-flex flex-row pb-3">
-                  <div class="d-flex align-items-center pe-2">
-                    <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1"
-                      value="" aria-label="..." checked />
-                  </div>
-                  <div class="rounded border d-flex w-100 p-3 align-items-center">
-                    <p class="mb-0">
-                      <img src="ShopeePay.png" style="width: 50px;" alt="">  ShopeePay
-                      
-                    </p>
-                    <div class="ms-auto">089620150272</div>
-                  </div>
-                </div>
-                
-                <div class="d-flex flex-row">
-                  <div class="d-flex align-items-center pe-2">
-                    <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel2"
-                      value="" aria-label="..." />
-                  </div>
-                  <div class="rounded border d-flex w-100 p-3 align-items-center">
-                    <p class="mb-0">
-                      <img src="Gopay.png" style="width: 50px;" alt=""></i>      Gopay
-                    </p>
-                    <div class="ms-auto">089620150272</div>
-                  </div>
-                </div>
-
-                <div class="d-flex flex-row pb-3">
-                  <div class="d-flex align-items-center pe-2">
-                    <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1"
-                      value="" aria-label="..." checked />
-                  </div>
-                  <div class="rounded border d-flex w-100 p-3 align-items-center">
-                    <p class="mb-0">
-                      <img src="OVO.png" style="width: 30px;" alt="">      OVO
-                      
-                    </p>
-                    <div class="ms-auto">089620150272</div>
-                  </div>
-                </div>
-                <button value="Lanjutkan Pembayaran"  href="success.php" name="payment" class="btn btn-primary btn-block btn-lg">Lanjutkan Pembayaran</button>
-              </form>
-            </div>
-          </div>
-
-          <div class="col-md-5 col-xl-4 offset-xl-1">
-            <div class="py-4 d-flex justify-content-end">
-              <h6><a href="index.php">Batalkan dan Kembali</a></h6>
-            </div>
-            <div class="rounded d-flex flex-column p-2" style="background-color: #f8f9fa;">
-              <div class="p-2 me-3">
-                <h4>Total Pesanan</h4>
-              </div>
-             
-              <div class="p-2 d-flex">
-                <div class="col-8">Bebas pilih pewangi</div>
-                <div class="ms-auto">Free</div>
-              </div>
-              <div class="p-2 d-flex">
-                <div class="col-8">Cuci tanpa batas</div>
-                <div class="ms-auto">Free</div>
-              </div>
-              <div class="p-2 d-flex">
-                <div class="col-8">Antar Jemput pakaian</div>
-                <div class="ms-auto">Free </div>
-              </div>
-              <div class="p-2 d-flex">
-                <div class="col-8">Laundry Bag</div>
-                <div class="ms-auto">Free </div>
-              </div>
-              <div class="p-2 d-flex">
-                <div class="col-8">Royale Pass</div>
-                <div class="ms-auto">Rp 250.000</div>
-              </div>
-              <div class="border-top px-2 mx-2"></div>
-         
-              <div class="border-top px-2 mx-2"></div>
-              <div class="p-2 d-flex pt-3">
-                <div class="col-8"><b>Total</b></div>
-                <div class="ms-auto"><b class="text-success">Rp 250.000</b></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
     <!--aaa invoice end -->
     

@@ -173,7 +173,7 @@ $koneksi = mysqli_connect("localhost","root","","melaundry");
             </h1>
             
             <p class='animated slideInDown'>
-              Mari berbelanja sekarang juga, dan dapatkan promo menarik lainnya.
+              Jangan buang waktumu untuk mencuci, karena mencuci adalah tugas kami.Mari berbelanja sekarang juga, dan dapatkan promo menarik lainnya.
             </p>
             <a style='color:white ;'  class='btn btn-primary py-3 px-4 animated slideInDown' href = 'order.php'
               >ORDER SEKARANG</a>";

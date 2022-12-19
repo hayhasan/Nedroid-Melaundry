@@ -1,7 +1,14 @@
 <?php
+  $koneksi = mysqli_connect("localhost","root","","melaundry");
   session_start();
   if (! isset($_SESSION['login'])){
     $_SESSION['login'] = false;
+  }else{
+    $user = $_SESSION['user'];
+    $id = $user['id'];
+    $query = " select * from data_user where id= '$id' ";
+    $result = mysqli_query($koneksi, $query);
+    $user = mysqli_fetch_assoc($result);
   }
 ?>
 
@@ -107,7 +114,7 @@
             </nav>
     </nav>
     <!-- Navbar End -->
-    <H1>ORDER ACTIVITY</H1>
+    <H1 style="color:gold;">ORDER ACTIVITY</H1>
     <div class="form-group pull-right">
     <input type="text" class="search form-control" placeholder="What you looking for?">
 </div>
@@ -115,42 +122,35 @@
 <table class="table table-hover table-bordered results">
   <thead>
     <tr>
-      <th>#</th>
-      <th class="col-md-5 col-xs-5">Name / Surname</th>
-      <th class="col-md-4 col-xs-4">Job</th>
-      <th class="col-md-3 col-xs-3">City</th>
+      <th class="col-md-5 col-xs-5">Date & Time</th>
+      <th class="col-md-4 col-xs-4">Price</th>
+      <th class="col-md-3 col-xs-3">Invoice</th>
     </tr>
     <tr class="warning no-result">
       <td colspan="4"><i class="fa fa-warning"></i> No result</td>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Vatanay Özbeyli</td>
-      <td>UI & UX</td>
-      <td>Istanbul</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Burak Özkan</td>
-      <td>Software Developer</td>
-      <td>Istanbul</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Egemen Özbeyli</td>
-      <td>Purchasing</td>
-      <td>Kocaeli</td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td>Engin Kızıl</td>
-      <td>Sales</td>
-      <td>Bozuyük</td>
-    </tr>
-  </tbody>
-</table>
+  <?php
+                    $sql = "SELECT * from order_user where id_user = '$id'"; 
+                    $hasil = $koneksi->query($sql); //memproses query
+    if ($hasil->num_rows > 0) {
+       //menampilkan data setiap barisnya
+       while ($baris = $hasil->fetch_assoc()) {
+                       $price = $baris['price'];
+                       $nota = $baris['nota'];
+                       $tanggal = $baris['tanggal'];
+                       echo "<tr><td>$tanggal</td>";
+                       echo "<td>$price</td><td><a href='map.php'>$nota</a></td>" ?>
+                    </tbody>
+                    <?php          
+       }	
+       echo "</table>";
+    } else {
+            echo "Data tidak ditemukan";
+    }
+    $koneksi->close(); // menutup koneksi
+?>
 <!-- Editable table -->
     <!-- history end -->
     

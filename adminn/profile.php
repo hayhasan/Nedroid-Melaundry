@@ -200,6 +200,17 @@ if(! $_SESSION['login']){
                   <span class="hide-menu">Data User</span>
                 </a>
               </li>
+              
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link waves-effect waves-dark sidebar-link"
+                  href="../controller_logout.php"
+                  aria-expanded="false"
+                >
+                <i class="far fa-sign-out" aria-hidden="true"></i>
+                  <span class="hide-menu">Logout</span>
+                </a>
+              </li>
             </ul>
           </nav>
           <!-- End Sidebar navigation -->

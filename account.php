@@ -1,9 +1,18 @@
 <?php
-$koneksi = mysqli_connect("localhost","root","","melaundry");
-session_start();
-if(! $_SESSION['login']){
-  header("Location:index.php");
-}
+  $koneksi = mysqli_connect("localhost","root","","melaundry");
+  session_start();
+  if (! isset($_SESSION['login'])){
+    $_SESSION['login'] = false;
+  }else{
+    $user = $_SESSION['user'];
+    $id = $user['id'];
+    $query = " select * from data_user where id= '$id' ";
+    $result = mysqli_query($koneksi, $query);
+    $user = mysqli_fetch_assoc($result);
+
+    $name = $user["firstName"];
+    $image = $user["image"];
+  }
 ?>
 
 <!DOCTYPE html>
@@ -19,10 +28,13 @@ if(! $_SESSION['login']){
 
 
     <!-- Favicon -->
+    
+    <link rel="stylesheet" href="profile_image_style.css">  <!-- IKI ANYAR CSS -->
     <link rel="stylesheet" href="nedroid2.css">
     <link rel="stylesheet" href="profile.css">
-   
-      
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- IKI ANYAR CSS -->
+ 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
@@ -127,12 +139,6 @@ if(! $_SESSION['login']){
 <!-- info -->
 
 <body class="profile-page">
-<?php 
-$user = $_SESSION['user'];
-$id = $user['id'];
-$sqledit = "Select * from data_user where id='$id'";
-$hasiledit = $koneksi->query($sqledit); //memproses query
-?>
   <div class="page-header header-filter" data-parallax="true" style="background-image:url('http://wallpapere.org/wp-content/uploads/2012/02/black-and-white-city-night.png');"></div>
   <div class="main main-raised">
   <div class="profile-content">
@@ -141,11 +147,77 @@ $hasiledit = $koneksi->query($sqledit); //memproses query
                 <div class="col-md-6 ml-auto mr-auto">
                    <div class="profile">
                         <div class="avatar">
-                            <img src="https://images.unsplash.com/photo-1544435253-f0ead49638fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="Circle Image" class="img-raised rounded-circle img-fluid">
+                        <form class="form" id = "form" action="" enctype="multipart/form-data" method="post"> <!-- Mulai Kene -->
+      <div class="upload">
+        <img src="img/<?php echo $image; ?>" width = 125 height = 125 title="<?php echo $image; ?>"> 
+        <div class="round">
+          <input type="hidden" name="id" value="<?php echo $id; ?>">
+          <input type="hidden" name="name" value="<?php echo $name; ?>">
+          <input type="file" name="image" id = "image" accept=".jpg, .jpeg, .png">
+          <i class = "fa fa-camera" style = "color: #fff;"></i>
+        </div>
+      </div>
+    </form>
+    <script type="text/javascript">
+      document.getElementById("image").onchange = function(){
+          document.getElementById("form").submit();
+      };
+    </script>
+    <?php  
+    if(isset($_FILES["image"]["name"])){
+      $id = $_POST["id"];
+      $name = $_POST["name"];
+
+      $imageName = $_FILES["image"]["name"];
+      $imageSize = $_FILES["image"]["size"];
+      $tmpName = $_FILES["image"]["tmp_name"];
+
+      // Image validation
+      $validImageExtension = ['jpg', 'jpeg', 'png'];
+      $imageExtension = explode('.', $imageName);
+      $imageExtension = strtolower(end($imageExtension));
+      if (!in_array($imageExtension, $validImageExtension)){
+        echo
+        "
+        <script>
+          alert('Invalid Image Extension');
+          document.location.href = 'account.php';
+        </script>
+        ";
+      }
+      elseif ($imageSize > 1200000){
+        echo
+        "
+        <script>
+          alert('Image Size Is Too Large');
+          document.location.href = 'account.php';
+        </script>
+        ";
+      }
+      else{
+        $newImageName = $name . " - " . date("Y.m.d") . " - " . date("h.i.sa"); // Generate new image name
+        $newImageName .= '.' . $imageExtension;
+        $query = "UPDATE data_user SET image = '$newImageName' WHERE id = $id";
+        mysqli_query($koneksi, $query);
+        move_uploaded_file($tmpName, 'img/' . $newImageName);
+        echo
+        "
+        <script>
+        document.location.href = 'account.php';
+        </script>
+        ";
+      }
+    }
+    ?> <!-- TEKAN KENEE -->
                         </div>
                         <div class="name">
                             <h3 class="title"><?php echo $user['firstName'], " ", $user['lastName']; ?></h3>
-              <h5>Gold Pass</h5>
+              <h5><?php if($user['status'] == null){
+                    echo "free pass";
+              }else{
+                    echo $user['status'];
+              }
+                 ?></h5>
               <a href="#pablo" class="btn btn-just-icon btn-link btn-dribbble"><i class="fa fa-dribbble"></i></a>
                               <a href="#pablo" class="btn btn-just-icon btn-link btn-twitter"><i class="fa fa-twitter"></i></a>
                               <a href="#pablo" class="btn btn-just-icon btn-link btn-pinterest"><i class="fa fa-pinterest"></i></a>
@@ -181,14 +253,41 @@ $hasiledit = $koneksi->query($sqledit); //memproses query
         <div class="tab-content tab-space">
           <div class="tab-pane active text-center gallery" id="studio">
         <div class="row">
-          <div class="col-md-3 ml-auto">
-              <img src="https://images.unsplash.com/photo-1567755997194-f92b5dc9106f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=931&q=80" class="rounded">
-            <img src="https://images.unsplash.com/photo-1575176648002-f2021e56b375?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" class="rounded">
-          </div>
-          <div class="col-md-3 mr-auto">
-            <img src="https://images.unsplash.com/photo-1509129823085-3bf323eab856?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="rounded">
-            <img src="https://images.unsplash.com/photo-1634759868063-2d0e1ca08b20?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" class="rounded">
-          </div>
+          
+    <div class="container-xxl bg-light py-5 my-5">
+        <div class="container py-5">
+            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <h1 class="display-6">Detail Account</h1>
+                <p class="text-primary fs-5 mb-5">Kamu telah melakukan</p>
+            </div>
+            <div class="row g-3">
+                <div class="col-6 col-md-3 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="bg-white text-center p-3">
+                        <h1 class="mb-0">7 Hari</h1>
+                        <span class="text-primary fs-5">Akun Member</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="bg-white text-center p-3">
+                        <h1 class="mb-0">1</h1>
+                        <span class="text-primary fs-5">Hari Ini</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="bg-white text-center p-3">
+                        <h1 class="mb-0">4</h1>
+                        <span class="text-primary fs-5">Minggu ini</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 wow fadeIn" data-wow-delay="0.7s">
+                    <div class="bg-white text-center p-3">
+                        <h1 class="mb-0">110</h1>
+                        <span class="text-primary fs-5">Selesai</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
         </div>
       </div>
           <div class="tab-pane text-center gallery" id="works">

@@ -1,3 +1,14 @@
+<?php
+$koneksi = mysqli_connect("localhost","root","","melaundry");
+session_start();
+if(! $_SESSION['login']){
+  header("Location:login.php");
+}else{
+  $user = $_SESSION['user'];
+  $id = $user['id'];
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -99,7 +110,7 @@
             </div>
         </div>
             <nav class="collapse navbar-collapse"> 
-              <button data-toggle="modal" data-target="#loginModal"  class="btn btn-outline-success" style="color: rgb(0, 213, 255);width: 90px; border-color: rgb(0, 213, 255);" type="button" >Login</button >       </nav>
+              <a href='controller_logout.php' class='btn btn-outline-success' style='color: rgb(0, 213, 255);width: 90px; border-color: rgb(0, 213, 255);' >Logout</a>       </nav>
     </nav id="pakaian">
     <!-- Navbar End -->
 
@@ -109,7 +120,7 @@
     <div class="container mb-5 mt-3">
       <div class="row d-flex align-items-baseline">
         <div class="col-xl-9">
-          <p style="color: #7e8d9f;font-size: 20px;">Invoice >> <strong>ID: #123-123</strong></p>
+          <p style="color: #7e8d9f;font-size: 20px;">Invoice >> <strong>ID User: <?php echo $user['id'] ?></strong></p>
         </div>
         <div class="col-xl-3 float-end">
          
@@ -130,17 +141,17 @@
         <div class="row">
           <div class="col-xl-8">
             <ul class="list-unstyled">
-              <li class="text-muted">To: <span style="color:#5d9fc5 ;">John Lorem</span></li>
-              <li class="text-muted">Street, City</li>
-              <li class="text-muted">State, Country</li>
-              <li class="text-muted"><i class="fas fa-phone"></i> 123-456-789</li>
+              <li class="text-muted">To: <span style="color:#5d9fc5 ;"><?php echo $user['firstName'], " ", $user['lastName'] ?></span></li>
+              <li class="text-muted"><?php echo $user['city'] ?></li>
+              <li class="text-muted"><?php echo $user['province'] ?></li>
+              <li class="text-muted"><i class="fas fa-phone"></i> <?php echo $user['phone'] ?></li>
             </ul>
           </div>
           <div class="col-xl-4">
             <p class="text-muted">Invoice</p>
             <ul class="list-unstyled">
               <li class="text-muted"><i class="fas fa-circle" style="color:#84B0CA ;"></i> <span
-                  class="fw-bold">ID:</span>#123-456</li>
+                  class="fw-bold">ID User: </span><?php echo $user['id'] ?></li>
               <li class="text-muted"><i class="fas fa-circle" style="color:#84B0CA ;"></i> <span
                   class="fw-bold">Creation Date: </span>Jun 23,2021</li>
               <li class="text-muted"><i class="fas fa-circle" style="color:#84B0CA ;"></i> <span
@@ -154,38 +165,40 @@
           <table class="table table-striped table-borderless">
             <thead style="background-color:#84B0CA ;" class="text-white">
               <tr>
-                <th scope="col">#</th>
-                <th scope="col">Description</th>
-                <th scope="col">Qty</th>
-                <th scope="col">Unit Price</th>
-                <th scope="col">Amount</th>
+                <th class="border-top-0">Invoice</th>
+                <th class="border-top-0">Phone Number</th>
+                <th class="border-top-0">Pickup Address</th>
+                <th class="border-top-0">Price</th>
+                <th class="border-top-0">Date Order</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Pro Package</td>
-                <td>4</td>
-                <td>$200</td>
-                <td>$800</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Web hosting</td>
-                <td>1</td>
-                <td>$10</td>
-                <td>$10</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Consulting</td>
-                <td>1 year</td>
-                <td>$300</td>
-                <td>$300</td>
-              </tr>
-            </tbody>
-
-          </table>
+                    <?php
+                    $result = mysqli_query($koneksi, "SELECT SUM(price) AS value_sum FROM order_user where id_user = '$id'"); 
+                    $row = mysqli_fetch_assoc($result); 
+                    $sum = $row['value_sum'];
+                    $sql = "SELECT * from order_user where id_user = '$id'"; 
+                    $hasil = $koneksi->query($sql); //memproses query
+    if ($hasil->num_rows > 0) {
+       //menampilkan data setiap barisnya
+       while ($baris = $hasil->fetch_assoc()) {
+                       $id = $baris['id'];
+                       $phone = $baris['phone'];
+                       $address =$baris['address'];
+                       $price = $baris['price'];
+                       $nota = $baris['nota'];
+                       $tanggal = $baris['tanggal'];
+                       echo "<tr><td>$nota</td>";
+                       echo "<td>$phone</td><td>$address</td>><td>$price</td><td>$tanggal</td>" ?>
+                    </tbody>
+                    <?php          
+       }	
+       echo "</table>";
+    } else {
+            echo "Data tidak ditemukan";
+    }
+    $koneksi->close(); // menutup koneksi
+?>
         </div>
         <div class="row">
           <div class="col-xl-8">
@@ -198,7 +211,7 @@
               <li class="text-muted ms-3 mt-2"><span class="text-black me-4">Tax(15%)</span>$111</li>
             </ul>
             <p class="text-black float-start"><span class="text-black me-3"> Total Amount</span><span
-                style="font-size: 25px;">$1221</span></p>
+                style="font-size: 25px;"><?php echo $sum ?></span></p>
           </div>
         </div>
         <hr>

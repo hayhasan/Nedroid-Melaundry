@@ -6,8 +6,9 @@
   }else{
     $user = $_SESSION['user'];
     $id = $user['id'];
-    $sqledit = "Select * from data_user where id='$id'";
-    $hasiledit = $koneksi->query($sqledit); //memproses query
+    $query = " select * from data_user where id= '$id' ";
+    $result = mysqli_query($koneksi, $query);
+    $user = mysqli_fetch_assoc($result);
   }
 ?>
 
@@ -155,6 +156,7 @@
       <label for="inputState">Pilihan Paket</label><br />
       <script>
       function multiplyBy() {
+        
         oper = document.getElementById("operator").value;
 
         num1 = document.getElementById("firstNumber").value;
@@ -172,6 +174,14 @@
         } 
       }
     </script>
+    <?php if(!$user['status'] == null){
+      echo "<script>
+          function multiplyBy() {
+          document.getElementById('result').innerHTML = 0;
+          document.getElementById('resultsc').value = 0;
+          }
+      </script>";
+    }?>
       <select
       onclick="multiplyBy()"
         name="paket"
@@ -193,7 +203,7 @@
                   </div>
                   <div class="form-group col-md-5">
                     <label for="inputState">Pilihan Pewangi</label><br>
-                    <select style="background-color: white;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <select style="background-color: white;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" name="pewangi">
                       Pilihan Paket
                     </button>>
                       <option>Vanilla</option>
@@ -212,7 +222,7 @@
                   
                   <div class="form-group col-md-2">
                     <label for="inputZip">Berat</label>
-                    <input placeholder="                kg" type="text" class="form-control" id="firstNumber">
+                    <input placeholder="                kg" type="text" name="berat" class="form-control" id="firstNumber">
                   </div>
                 </div>
                 <div class="form-group">
@@ -287,6 +297,7 @@ lakukan pembayaran dalam 1x25 menit.
               style="background-color: #b856df; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
               <h5  class="d-flex align-items-center justify-content-end text-white mb-0">TOTAL
                 BIAYA : Rp <span style="color:white ;" class="h2 mb-0 ms-2"> <label  style="font-size:24px;" id="result">0</label></span></h5>
+                <input type="hidden" class="form-control" id="datesc" placeholder="0" value="<?php echo date('Y-m-d'); ?>"  name="tanggal"/>
                 <input type="hidden" class="form-control" id="resultsc" placeholder="0"  name="price"/>
                 <input type="hidden" class="form-control" id="randomfieldsc" placeholder="0"  name="nota"/>
                 
