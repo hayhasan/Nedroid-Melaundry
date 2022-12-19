@@ -203,7 +203,7 @@
                   </div>
                   <div class="form-group col-md-5">
                     <label for="inputState">Pilihan Pewangi</label><br>
-                    <select style="background-color: white;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <select style="background-color: white;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" name="pewangi">
                       Pilihan Paket
                     </button>>
                       <option>Vanilla</option>
@@ -222,7 +222,7 @@
                   
                   <div class="form-group col-md-2">
                     <label for="inputZip">Berat</label>
-                    <input placeholder="                kg" type="text" class="form-control" id="firstNumber">
+                    <input placeholder="                kg" type="text" name="berat" class="form-control" id="firstNumber">
                   </div>
                 </div>
                 <div class="form-group">

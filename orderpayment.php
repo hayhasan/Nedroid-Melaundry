@@ -1,3 +1,18 @@
+<?php
+$koneksi = mysqli_connect("localhost","root","","melaundry");
+session_start();
+if(! $_SESSION['login']){
+  header("Location:index.php");
+}else{
+
+  
+  $query = " SELECT * FROM `order_user` WHERE id=(SELECT MAX(id) FROM `order_user`) ";
+  $result = mysqli_query($koneksi, $query);
+  $user = mysqli_fetch_assoc($result);
+
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -121,7 +136,7 @@
             <div class="d-flex pt-2">
               <div>
                 <p>
-                  <b>Paket Laundry Reguler</b>
+                  <b>Paket Laundry <?php echo $user['paket']; ?></b>
                 </p>
               </div>
             </div>
@@ -133,7 +148,7 @@
               <div class="d-flex pb-2">
                 <div>
                   <p>
-                    <b>Total Pembayaran <span class="text-success">Rp 2.500.000</span></b>
+                    <b>Total Pembayaran <span class="text-success">Rp <?php echo $user['price']; ?></span></b>
                   </p>
                 </div>
                 <div class="ms-auto">
@@ -198,14 +213,14 @@
                     <div class="ms-auto">089620150272</div>
                   </div>
                 </div>
-                <button  href="success.php" value="Lanjutkan Pembayaran" name="payment" class="btn btn-primary btn-block btn-lg">Lanjutkan Pembayaran</button>
+                <a  href="success.php" value="Lanjutkan Pembayaran" name="payment" class="btn btn-primary btn-block btn-lg">Lanjutkan Pembayaran</a>
               </form>         
             </div>
           </div>
 
           <div class="col-md-5 col-xl-4 offset-xl-1">
             <div class="py-4 d-flex justify-content-end">
-              <h6><a href="index.php">Batalkan dan Kembali</a></h6>
+              <h6><a href="batal_order_controller.php">Batalkan dan Kembali</a></h6>
             </div>
             <div class="rounded d-flex flex-column p-2" style="background-color: #f8f9fa;">
               <div class="p-2 me-3">
@@ -213,31 +228,23 @@
               </div>
              
               <div class="p-2 d-flex">
-                <div class="col-8">Bebas pilih pewangi</div>
-                <div class="ms-auto">Free</div>
+                <div class="col-8">Berat cucian</div>
+                <div class="ms-auto"><?php echo $user['berat']; ?> kg</div>
               </div>
               <div class="p-2 d-flex">
-                <div class="col-8">Cuci tanpa batas</div>
+                <div class="col-8"><?php echo $user['pewangi']; ?></div>
                 <div class="ms-auto">Free</div>
               </div>
               <div class="p-2 d-flex">
                 <div class="col-8">Antar Jemput pakaian</div>
                 <div class="ms-auto">Free </div>
               </div>
-              <div class="p-2 d-flex">
-                <div class="col-8">Laundry Bag</div>
-                <div class="ms-auto">Free </div>
-              </div>
-              <div class="p-2 d-flex">
-                <div class="col-8">Gold Pass</div>
-                <div class="ms-auto">Rp 2.500.000</div>
-              </div>
               <div class="border-top px-2 mx-2"></div>
          
               <div class="border-top px-2 mx-2"></div>
               <div class="p-2 d-flex pt-3">
                 <div class="col-8"><b>Total</b></div>
-                <div class="ms-auto"><b class="text-success">Rp 2.500.000</b></div>
+                <div class="ms-auto"><b class="text-success">Rp <?php echo $user['price']; ?></b></div>
               </div>
             </div>
           </div>

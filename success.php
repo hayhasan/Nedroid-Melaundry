@@ -120,7 +120,7 @@
                 <div class="text-center">
                     <h1>Thank You !</h1>
                     <p>Thanks for order our service. If you have any questions about your order, contact us anytime.</p>
-                    <button class="btn btn-primary" href="index.php">Back Home</button>
+                    <a class="btn btn-primary" href="index.php">Back Home</a>
                 </div>
             </div>
 </section>
