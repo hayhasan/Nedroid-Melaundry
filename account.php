@@ -236,7 +236,7 @@ if(! $_SESSION['login']){
                           <li class="nav-item">
                               <a class="nav-link active" href="#studio" role="tab" data-toggle="tab">
                                 <i class="material-icons">history </i>
-                                Riwayat Cucian
+                                Detail Account
                               </a>
                           </li>
                           <li class="nav-item">
@@ -251,19 +251,40 @@ if(! $_SESSION['login']){
           </div>
           </div>
       
-        <div class="tab-content tab-space">
-          <div class="tab-pane active text-center gallery" id="studio">
-        <div class="row">
-          <div class="col-md-3 ml-auto">
-              <img src="https://images.unsplash.com/photo-1567755997194-f92b5dc9106f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=931&q=80" class="rounded">
-            <img src="https://images.unsplash.com/photo-1575176648002-f2021e56b375?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" class="rounded">
-          </div>
-          <div class="col-md-3 mr-auto">
-            <img src="https://images.unsplash.com/photo-1509129823085-3bf323eab856?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="rounded">
-            <img src="https://images.unsplash.com/photo-1634759868063-2d0e1ca08b20?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" class="rounded">
-          </div>
+    <div class="container-xxl bg-light py-5 my-5">
+        <div class="container py-5">
+            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <h1 class="display-6">Detail Account</h1>
+                <p class="text-primary fs-5 mb-5">Kamu telah melakukan</p>
+            </div>
+            <div class="row g-3">
+                <div class="col-6 col-md-3 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="bg-white text-center p-3">
+                        <h1 class="mb-0">7 Hari</h1>
+                        <span class="text-primary fs-5">Akun Member</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="bg-white text-center p-3">
+                        <h1 class="mb-0">1</h1>
+                        <span class="text-primary fs-5">Hari Ini</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="bg-white text-center p-3">
+                        <h1 class="mb-0">4</h1>
+                        <span class="text-primary fs-5">Minggu ini</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 wow fadeIn" data-wow-delay="0.7s">
+                    <div class="bg-white text-center p-3">
+                        <h1 class="mb-0">110</h1>
+                        <span class="text-primary fs-5">Selesai</span>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+    </div>
           <div class="tab-pane text-center gallery" id="works">
           <div class="row">
            <div>
