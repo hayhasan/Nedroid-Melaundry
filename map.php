@@ -114,7 +114,7 @@
       
                   <div class="d-flex justify-content-between align-items-center mb-5">
                     <div>
-                      <h5 class="mb-0">INVOICE <a href="invoice.php" class="text-primary font-weight-bold">#Y34XDHR</a></h5>
+                      <h5 class="mb-0">INVOICE <a href="invoice.php" class="text-primary font-weight-bold">DETAILS</a></h5>
                     </div>
                     <div class="text-end">
                       <p class="mb-0">Expected Arrival <span><!-- Display the countdown timer in an element -->
