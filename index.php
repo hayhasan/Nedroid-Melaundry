@@ -647,11 +647,22 @@ include 'koneksi.php';
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="mb-4">MeLaundry</h5>
-                    <a class="btn btn-link" href="index.php">Home</a>
-                    <a class="btn btn-link" href="order.php">Order</a>
-                    <a class="btn btn-link" href="activity.php">Activity</a>
-                    <a class="btn btn-link" href="account.php">Account</a>
-                </div>
+                    <?php
+
+                      if(! $_SESSION['login']){ //IKIII
+                        echo "<a class='btn btn-link' href='index.php'>Home</a>
+                        <a class='btn btn-link' href='login.php'>Order</a>
+                        <a class='btn btn-link' href='login.php'>Activity</a>
+                        <a class='btn btn-link' href='login.php'>Account</a>";
+                      }
+                      else{
+                        echo "<a class='btn btn-link' href='index.php'>Home</a>
+                        <a class='btn btn-link' href='order.php'>Order</a>
+                        <a class='btn btn-link' href='activity.php'>Activity</a>
+                        <a class='btn btn-link' href='account.php'>Account</a>";
+                      } 
+                    ?>   <!--TEKAN KENEEE-->
+                </div> 
                 <div class="col-lg-3 col-md-6">
                     <h5 class="mb-4">Bantuan & Panduan</h5>
                     <a class="btn btn-link" href="">Syarat & Ketentuan</a>
@@ -708,10 +719,10 @@ include 'koneksi.php';
                   <div class="d-flex flex-column text-center">
                     <form action="validatelogin.php" method="post">
                       <div class="form-group">
-                        <input type="email" class="form-control" id="email1"placeholder="Your email address..." name="loginemail">
+                        <input type="email" class="form-control" id="email1"placeholder="Your email address..." name="loginemail" required>
                       </div>
                       <div class="form-group">
-                        <input type="password" class="form-control" id="password1" placeholder="Your password..." name="loginpassword">
+                        <input type="password" class="form-control" id="password1" placeholder="Your password..." name="loginpassword" required>
                       </div>
                       <button style="color: white;" type="submit" class="btn btn-info btn-block btn-round" name="login">Login</button>
                     </form>

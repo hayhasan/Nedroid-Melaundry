@@ -10,8 +10,7 @@
         if  ($query = mysqli_query($koneksi, $q)){
             $user = mysqli_fetch_assoc($query);
 
-            if($user['email'] == $email){
-                if($user['password'] == $pass){
+                if($user['email'] == $email and $user['password'] == $pass){
                     $_SESSION['id'] = $user['id'];
                     $_SESSION['login'] = true;
                     if($user['usertype'] == "admin"){
@@ -25,13 +24,12 @@
                     
                     }
                 }else{
-                echo "<script>alert('username atau password tidak sesuai');  window.location = 'Login.php'; </script>";
+                echo "<script>alert('email atau password tidak sesuai');  window.location = 'Login.php'; </script>";
                 }
-                
             }
         }
             
-    }
+    
 
 
 

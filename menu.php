@@ -148,7 +148,16 @@ else{
                           <h5>Pelanggan Setia Kami</h5>
       
                           <ul class="social-icons d-flex justify-content-center">
-                          <a type="submit" style="background-color: #02FFD9 ; border-color: white;height: auto; width: auto; margin-top: 10px;" class="btn btn-primary" href="paymentreguler.php">Cuci Sekarang</a>
+                          <?php
+
+                            if(! $_SESSION['login']){
+                              echo "<a type='submit' style='background-color: #02FFD9 ; border-color: white;height: auto; width: auto; margin-top: 10px;' class='btn btn-primary' href='login.php'>Cuci Sekarang</a>";
+                            }
+                            else{
+                              echo "<a type='submit' style='background-color: #02FFD9 ; border-color: white;height: auto; width: auto; margin-top: 10px;' class='btn btn-primary' href='paymentreguler.php'>Cuci Sekarang</a>";
+                            }
+                            ?>
+                          
                           </ul>
                       </div>
                   </div>
@@ -164,7 +173,15 @@ else{
                     <h4 class="pt-2">Dapatkan keuntungan khusus</h4>
                     <h5>Dengan menjadi Member kami</h5>
                     <ul class="social-icons d-flex justify-content-center">
-                    <a type="submit" style="background-color: #FE2EC8; border-color: white;height: auto; width: auto; margin-top: 10px;" class="btn btn-primary" href="paymentroyale.php">Cuci Sekarang</a>
+                    <?php
+
+                            if(! $_SESSION['login']){
+                              echo "<a type='submit' style='background-color: #FE2EC8 ; border-color: white;height: auto; width: auto; margin-top: 10px;' class='btn btn-primary' href='login.php'>Cuci Sekarang</a>";
+                            }
+                            else{
+                              echo "<a type='submit' style='background-color: #FE2EC8 ; border-color: white;height: auto; width: auto; margin-top: 10px;' class='btn btn-primary' href='paymentroyale.php'>Cuci Sekarang</a>";
+                            }
+                            ?>
                     </ul>
                 </div>
             </div>
@@ -180,7 +197,15 @@ else{
                     <h5>Untuk Pakaian anda</h5>
 
                     <ul class="social-icons d-flex justify-content-center">
-                    <a type="submit" style="background-color: #FE9A2E; border-color: white;height: auto; width: auto; margin-top: 10px;" class="btn btn-primary" href="paymentgold.php">Cuci Sekarang</a>
+                    <?php
+
+                            if(! $_SESSION['login']){
+                              echo "<a type='submit' style='background-color: #FE9A2E ; border-color: white;height: auto; width: auto; margin-top: 10px;' class='btn btn-primary' href='login.php'>Cuci Sekarang</a>";
+                            }
+                            else{
+                              echo "<a type='submit' style='background-color: #FE9A2E ; border-color: white;height: auto; width: auto; margin-top: 10px;' class='btn btn-primary' href='paymentgold.php'>Cuci Sekarang</a>";
+                            }
+                            ?>
                     </ul>
                 </div>
             </div>
@@ -204,7 +229,15 @@ else{
                       <div class="card-content d-flex flex-column align-items-center">
                           <h4 class="pt-2">Khusus Untuk Anda </h4>
                           <h5>Pelanggan Setia Kami</h5>
-                          <a type="submit" style="background-color: #00c8ff; border-color: white;height: auto; width: auto; margin-top: 10px;" class="btn btn-primary" href="order.php">Cuci Sekarang</a>
+                          <?php
+
+                            if(! $_SESSION['login']){
+                              echo "<a type='submit' style='background-color: #00c8ff ; border-color: white;height: auto; width: auto; margin-top: 10px;' class='btn btn-primary' href='login.php'>Cuci Sekarang</a>";
+                            }
+                            else{
+                              echo "<a type='submit' style='background-color: #00c8ff ; border-color: white;height: auto; width: auto; margin-top: 10px;' class='btn btn-primary' href='order.php'>Cuci Sekarang</a>";
+                            }
+                            ?>
                           <ul class="social-icons d-flex justify-content-center">
                               <li style="--i:1">
                                   <a href="#">
@@ -235,7 +268,15 @@ else{
                 <div class="card-content d-flex flex-column align-items-center" >
                     <h4 class="pt-2">Dapatkan keuntungan khusus</h4>
                     <h5>Dengan menjadi Member kami</h5>
-                    <a type="submit" style="background-color: #FE2EC8; border-color: white;height: auto; width: auto; margin-top: 10px;" class="btn btn-primary" href="order.php">Cuci Sekarang</a>
+                    <?php
+
+                            if(! $_SESSION['login']){
+                              echo "<a type='submit' style='background-color: #FE2EC8 ; border-color: white;height: auto; width: auto; margin-top: 10px;' class='btn btn-primary' href='login.php'>Cuci Sekarang</a>";
+                            }
+                            else{
+                              echo "<a type='submit' style='background-color: #FE2EC8 ; border-color: white;height: auto; width: auto; margin-top: 10px;' class='btn btn-primary' href='order.php'>Cuci Sekarang</a>";
+                            }
+                            ?>
                     <ul class="social-icons d-flex justify-content-center">
                         <li style="--i:1">
                             <a href="#">
@@ -265,7 +306,15 @@ else{
                 <div class="card-content d-flex flex-column align-items-center">
                     <h4 class="pt-2">Dapatkan harga termurah</h4>
                     <h5>Untuk Pakaian anda</h5>
-                    <a type="submit" style="background-color: #FE9A2E; border-color: white;height: auto; width: auto; margin-top: 10px;" class="btn btn-primary" href="order.php">Cuci Sekarang</a>
+                    <?php
+
+                            if(! $_SESSION['login']){
+                              echo "<a type='submit' style='background-color: #FE9A2E ; border-color: white;height: auto; width: auto; margin-top: 10px;' class='btn btn-primary' href='login.php'>Cuci Sekarang</a>";
+                            }
+                            else{
+                              echo "<a type='submit' style='background-color: #FE9A2E ; border-color: white;height: auto; width: auto; margin-top: 10px;' class='btn btn-primary' href='order.php'>Cuci Sekarang</a>";
+                            }
+                            ?>
 
                     <ul class="social-icons d-flex justify-content-center">
                         <li style="--i:1">
