@@ -1,5 +1,5 @@
 <?php
-$koneksi = mysqli_connect("localhost","root","","melaundry");
+include 'koneksi.php';
 
 
 $sql = "DELETE FROM `order_user` WHERE id=(SELECT MAX(id) FROM `order_user`)";
