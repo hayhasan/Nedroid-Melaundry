@@ -3,7 +3,13 @@ include '../koneksi.php';
 session_start();
 if(! $_SESSION['login']){
   header("Location:login.php");
+} else{
+                $id = $_SESSION['id'];
+                $query = " select * from data_user where id= '$id' ";
+                $result = mysqli_query($koneksi, $query);
+                $user = mysqli_fetch_assoc($result);
 }
+
 ?>
 
 <!DOCTYPE html>

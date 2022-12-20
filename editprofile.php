@@ -1,8 +1,7 @@
 <?php
 include 'koneksi.php';
 session_start();
-$user = $_SESSION['user'];
-$id = $user['id'];
+$id = $_SESSION['id'];
     $firstName = $_POST['firstName'];
     $lastName = $_POST['lastName'];
     $email = $_POST['email'];
