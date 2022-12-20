@@ -149,10 +149,12 @@
                         <form class="form" id = "form" action="" enctype="multipart/form-data" method="post"> <!-- Mulai Kene -->
       <div style="margin-top:100px;" class="upload">
         <img src="img/<?php echo $image; ?>" style="margin-top:-100px;"  title="<?php echo $image; ?>"> 
-        <div  class="round">
+
+        <div  class="round mr-5">
+          <input type="file" name="image" id = "image" accept=".jpg, .jpeg, .png">
           <input type="hidden" name="id" value="<?php echo $id; ?>">
           <input type="hidden" name="name" value="<?php echo $name; ?>">
-          <input type="file" name="image" id = "image" accept=".jpg, .jpeg, .png">
+          
           <i class = "fa fa-camera" style = "color: #fff; "></i>
         </div>
       </div>
@@ -209,14 +211,14 @@
     }
     ?> <!-- TEKAN KENEE -->
                         </div>
-                        <div class="name">
-                            <h3 class="title"><?php echo $user['firstName'], " ", $user['lastName']; ?></h3>
-              <h5><?php if($user['status'] == null){
-                    echo "free pass";
-              }else{
-                    echo $user['status'];
-              }
-                 ?></h5>
+                        <div class="name mt-1">
+                            <h3 class=""><?php echo $user['firstName'], " ", $user['lastName']; ?></h3>
+                            <h5><?php if($user['status'] == null){
+                                  echo "free pass";
+                            }else{
+                                  echo $user['status'];
+                            }
+                         ?></h5>
               
                         </div>
                     </div>
