@@ -150,6 +150,12 @@
     <label for="exampleFormControlTextarea1">Alamat Jemput Pakaian</label>
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="address"></textarea>
   </div>
+     
+  <div class="form-group col-md-2">
+                    <label for="inputZip">Berat</label>
+                    <input placeholder="kg" style="text-align:right; margin-left:-10px;" type="text" name="berat" class="form-control" id="firstNumber">
+                  </div>
+
                 <div class="form-row">
                   <div class="form-group col-md-6">
                   <form name="hasil">
@@ -219,11 +225,7 @@
                     </select>
                   
                   </div>
-                  
-                  <div class="form-group col-md-2">
-                    <label for="inputZip">Berat</label>
-                    <input placeholder="                kg" type="text" name="berat" class="form-control" id="firstNumber">
-                  </div>
+               
                 </div>
                 <div class="form-group">
                   <div class="form-check">
