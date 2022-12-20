@@ -4,8 +4,10 @@ session_start();
 if(! $_SESSION['login']){
   header("Location:login.php");
 }else{
-  $user = $_SESSION['user'];
-  $id = $user['id'];
+  $id = $_SESSION['id'];
+  $query = " select * from data_user where id= '$id' ";
+  $result = mysqli_query($koneksi, $query);
+  $user = mysqli_fetch_assoc($result);
 }
 ?>
 

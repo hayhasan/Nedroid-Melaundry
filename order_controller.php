@@ -11,11 +11,11 @@
     $pewangi = $_POST['pewangi'];
     $id_user = $_POST['id_user'];
     
-    $conn = mysqli_connect("localhost","root","","melaundry");
+    include 'koneksi.php';
 
 
         $query = "INSERT INTO order_user (name,phone,address,price,nota, tanggal, paket, berat, pewangi, id_user) VALUES ('".$name."', '".$phone."', '".$address."', '".$price."', '".$nota."', '".$tanggal."', '".$paket."', '".$berat."', '".$pewangi."',  '".$id_user."')";
-        if($result = mysqli_query($conn, $query)){
+        if($result = mysqli_query($koneksi, $query)){
             header("location:orderpayment.php");
         }else{
             echo "<script>alert('Terjadi Error');  window.location = 'Sign Up.php'; </script>";

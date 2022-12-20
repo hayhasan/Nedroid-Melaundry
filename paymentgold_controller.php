@@ -1,8 +1,7 @@
 <?php
 include 'koneksi.php';
 session_start();
-$user = $_SESSION['user'];
-$id = $user['id'];
+$id = $_SESSION['id'];
 
         $sqledit = "Update data_user set status = 'Gold Pass' where id='$id'";
         if ($koneksi->query($sqledit) === TRUE) {
