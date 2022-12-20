@@ -9,6 +9,10 @@
     $result = mysqli_query($koneksi, $query);
     $user = mysqli_fetch_assoc($result);
 
+    $jumlah = mysqli_query($koneksi, "SELECT Count(price) AS value_sum FROM order_user where id_user = '$id'"); 
+    $row = mysqli_fetch_assoc($jumlah); 
+    $sum = $row['value_sum'];
+
     $name = $user["firstName"];
     $image = $user["image"];
   }
@@ -262,25 +266,34 @@
             <div class="row g-3">
                 <div class="col-6 col-md-3 wow fadeIn" data-wow-delay="0.1s">
                     <div class="bg-white text-center p-3">
-                        <h1 class="mb-0">7 Hari</h1>
+                        <h1 class="mb-0"><?php 
+                        if($user['status'] == 'Gold Pass'){
+                          echo "1 Tahun";
+                        }elseif ($user['status'] == 'Reguler Pass'){
+                          echo "7 Hari";
+                        }elseif ($user['status'] == 'Royale Pass'){
+                          echo "1 Bulan";
+                        }else{
+                          echo "-";
+                        }?></h1>
                         <span class="text-primary fs-5">Akun Member</span>
                     </div>
                 </div>
                 <div class="col-6 col-md-3 wow fadeIn" data-wow-delay="0.3s">
                     <div class="bg-white text-center p-3">
-                        <h1 class="mb-0">1</h1>
+                        <h1 class="mb-0"><?php echo $sum ?></h1>
                         <span class="text-primary fs-5">Hari Ini</span>
                     </div>
                 </div>
                 <div class="col-6 col-md-3 wow fadeIn" data-wow-delay="0.5s">
                     <div class="bg-white text-center p-3">
-                        <h1 class="mb-0">4</h1>
+                        <h1 class="mb-0"><?php echo $sum ?></h1>
                         <span class="text-primary fs-5">Minggu ini</span>
                     </div>
                 </div>
                 <div class="col-6 col-md-3 wow fadeIn" data-wow-delay="0.7s">
                     <div class="bg-white text-center p-3">
-                        <h1 class="mb-0">110</h1>
+                        <h1 class="mb-0"><?php echo $sum ?></h1>
                         <span class="text-primary fs-5">Selesai</span>
                     </div>
                 </div>
