@@ -4,10 +4,7 @@ include 'koneksi.php';
   if (! isset($_SESSION['login'])){
     $_SESSION['login'] = false;
   }else{
-    $user = $_SESSION['user'];
-    $id = $user['id'];
-    $sqledit = "Select * from data_user where id='$id'";
-    $hasiledit = $koneksi->query($sqledit); //memproses query
+    
   }
 ?>
 
@@ -111,6 +108,11 @@ include 'koneksi.php';
                       <a href='moreinfo.php' class='dropdown-item'>More info</a>";
               }
               else{
+                $user = $_SESSION['user'];
+                $id = $user['id'];
+                $query = " select * from data_user where id= '$id' ";
+                $result = mysqli_query($koneksi, $query);
+                $user = mysqli_fetch_assoc($result);
                 echo "<a href='index.php' class='nav-item nav-link active'>Home</a>
                 <a href='order.php' class='nav-item nav-link'>Order</a>
                 <a href='activity.php' class='nav-item nav-link'>Activity</a>
