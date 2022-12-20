@@ -1,5 +1,5 @@
 <?php
-  $koneksi = mysqli_connect("localhost","root","","melaundry");
+  include 'koneksi.php';
   session_start();
   if (! isset($_SESSION['login'])){
     $_SESSION['login'] = false;
@@ -147,10 +147,17 @@
                 <div class="col-md-6 ml-auto mr-auto">
                    <div class="profile">
                         <div class="avatar">
+<<<<<<< HEAD
                         <form class="form" id = "form" action="" enctype="multipart/form-data" method="post"> <!-- Mulai Kene -->
       <div style="margin-top:-100px;" class="upload">
         <img src="img/<?php echo $image; ?>" style="margin-top:-100px;"  title="<?php echo $image; ?>"> 
         <div  class="round">
+=======
+                        <form class="form"  id = "form" action="" enctype="multipart/form-data" method="post"> <!-- Mulai Kene -->
+      <div  class="upload">
+        <img  src="img/<?php echo $image; ?>"title="<?php echo $image; ?>"> 
+        <div style="margin-top:-1000px;" class="round">
+>>>>>>> 4b759e6206bb172710a8bf076a0334f8f6252945
           <input type="hidden" name="id" value="<?php echo $id; ?>">
           <input type="hidden" name="name" value="<?php echo $name; ?>">
           <input type="file" name="image" id = "image" accept=".jpg, .jpeg, .png">
@@ -218,9 +225,7 @@
                     echo $user['status'];
               }
                  ?></h5>
-              <a href="#pablo" class="btn btn-just-icon btn-link btn-dribbble"><i class="fa fa-dribbble"></i></a>
-                              <a href="#pablo" class="btn btn-just-icon btn-link btn-twitter"><i class="fa fa-twitter"></i></a>
-                              <a href="#pablo" class="btn btn-just-icon btn-link btn-pinterest"><i class="fa fa-pinterest"></i></a>
+              
                         </div>
                     </div>
                 </div>
@@ -350,10 +355,44 @@
                       <div class="col-md-6 mb-4">
                         <label class="form-label" for="form3Example8" >Province</label><br>
                         <select class="btn btn-secondary dropdown-toggle " style="background-color:white ; width: 200px;" name="province">
+                          <option value="Jawa Tengah">Nanggroe Aceh Darussalam</option>
+                          <option value="Jawa Tengah">Sumatera Utara</option>
+                          <option value="Jawa Tengah">Sumatera Selatan</option>
+                          <option value="Jawa Tengah">Sumatera Barat</option>
+                          <option value="Jawa Tengah">Bengkulu</option>
+                          <option value="Jawa Tengah">Riau</option>
+                          <option value="Jawa Tengah">Kepulauan Riau</option>
+                          <option value="Jawa Tengah">Jambi</option>
+                          <option value="Jawa Tengah">Lampung</option>
+                          <option value="Jawa Tengah">Bangka Belitung</option>
+                          <option value="Jawa Tengah">Kalimantan Barat</option>
+                          <option value="Jawa Tengah">Kalimantan Timur </option>
+                          <option value="Jawa Tengah">Kalimantan Selatan</option>
+                          <option value="Jawa Tengah">Kalimantan Tengah</option>
+                          <option value="Jawa Tengah">Kalimantan Utara</option>
+                          <option value="Jawa Tengah">Banten</option>
+                          <option value="Jawa Tengah">DKI Jakarta</option>
+                          <option value="Jawa Tengah">Jawa Barat</option>
                           <option value="Jawa Tengah">Jawa Tengah</option>
-                          <option value="Jawa Barat">Jawa Barat</option>
-                          <option value="Jawa Timur">Jawa Timur</option>
-                          <option value="DI Yogyakarta">Daerah Istimewa Yogyakarta</option>
+                          <option value="Jawa Tengah">Daerah Istimewa Yogyakarta</option>
+                          <option value="Jawa Tengah">Jawa Timur</option>
+                          <option value="Jawa Tengah">Bali </option>
+                          <option value="Jawa Tengah">Nusa Tenggara Timur</option>
+                          <option value="Jawa Tengah">Nusa Tenggara Barat</option>
+                          <option value="Jawa Tengah">Gorontalo</option>
+                          <option value="Jawa Tengah">Sulawesi Barat</option>
+                          <option value="Jawa Tengah">Sulawesi Tengah</option>
+                          <option value="Jawa Tengah">Sulawesi Utara</option>
+                          <option value="Jawa Tengah">Sulawesi Tenggara</option>
+                          <option value="Jawa Tengah">Sulawesi Selatan</option>
+                          <option value="Jawa Tengah">Maluku Utara</option>
+                          <option value="Jawa Tengah">Maluku</option>
+                          <option value="Jawa Tengah">Papua Barat</option>
+                          <option value="Jawa Tengah">Papua</option>
+                          <option value="Jawa Tengah">Papua Tengah</option>
+                          <option value="Jawa Barat">Papua Pegunungan</option>
+                          <option value="Jawa Timur">Papua Selatan</option>
+                          <option value="DI Yogyakarta">Papua Barat Daya</option>
                         </select>
     
                       </div>
@@ -364,6 +403,104 @@
                           <option value="Semarang">Semarang</option>
                           <option value="Pacitan">Pacitan</option>
                           <option value="Kudus">Kudus</option>
+                          <option value="Magelang">Banda Aceh</option>
+                          <option value="Magelang">Langsa</option>
+                          <option value="Magelang">Lhokseumawe</option>
+                          <option value="Magelang">Sabang</option>
+                          <option value="Magelang">Subulussalam</option>
+                          <option value="Magelang">Denpasar</option>
+                          <option value="Magelang">Pangkalpinang</option>
+                          <option value="Magelang">Cilegon</option>
+                          <option value="Magelang">Serang</option>
+                          <option value="Magelang">Tangerang Selatan</option>
+                          <option value="Magelang">Tangerang</option>
+                          <option value="Magelang">Bengkulu</option>
+                          <option value="Magelang">Yogyakarta</option>
+                          <option value="Magelang">Gorontalo</option>
+                          <option value="Magelang">Kota Administrasi Jakarta Barat</option>
+                          <option value="Magelang">Kota Administrasi Jakarta Pusat</option>
+                          <option value="Magelang">Kota Administrasi Jakarta Selatan</option>
+                          <option value="Magelang">Kota Administrasi Jakarta Timur</option>
+                          <option value="Magelang">Kota Administrasi Jakarta Utara</option>
+                          <option value="Magelang">Sungai Penuh</option>
+                          <option value="Magelang">Jambi</option>
+                          <option value="Magelang">Bandung</option>
+                          <option value="Magelang">	Bekasi</option>
+                          <option value="Magelang">	Bogor</option>
+                          <option value="Magelang">Cimahi</option>
+                          <option value="Magelang">Cirebon</option>
+                          <option value="Magelang">Depok</option>
+                          <option value="Magelang">Sukabumi</option>
+                          <option value="Magelang">Tasikmalaya</option>
+                          <option value="Magelang">Banjar</option>
+                          <option value="Magelang">Pekalongan</option>
+                          <option value="Magelang">Salatiga</option>
+                          <option value="Magelang">Semarang</option>
+                          <option value="Magelang">Surakarta</option>
+                          <option value="Magelang">Tegal</option>
+                          <option value="Magelang">Batu</option>
+                          <option value="Magelang">Blitar</option>
+                          <option value="Magelang">Kediri</option>
+                          <option value="Magelang">Madiun</option>
+                          <option value="Magelang">Malang</option>
+                          <option value="Magelang">Mojokerto</option>
+                          <option value="Magelang">	Pasuruan</option>
+                          <option value="Magelang">	Probolinggo</option>
+                          <option value="Magelang">Surabaya</option>
+                          <option value="Magelang">	Pontianak</option>
+                          <option value="Magelang">Singkawang</option>
+                          <option value="Magelang">Banjarbaru</option>
+                          <option value="Magelang">Banjarmasin</option>
+                          <option value="Magelang">Palangka Raya</option>
+                          <option value="Magelang">Balikpapan</option>
+                          <option value="Magelang">Bontang</option>
+                          <option value="Magelang">Samarinda</option>
+                          <option value="Magelang">Nusantara</option>
+                          <option value="Magelang">Tarakan</option>
+                          <option value="Magelang">Batam</option>
+                          <option value="Magelang">Tanjungpinang</option>
+                          <option value="Magelang">Bandar Lampung</option>
+                          <option value="Magelang">Metro</option>
+                          <option value="Magelang">Ternate</option>
+                          <option value="Magelang">Tidore Kepulauan</option>
+                          <option value="Magelang">Ambon</option>
+                          <option value="Magelang">	Tual</option>
+                          <option value="Magelang">	Bima</option>
+                          <option value="Magelang">Mataram</option>
+                          <option value="Magelang">Kupang</option>
+                          <option value="Magelang">Sorong</option>
+                          <option value="Magelang">Jayapura</option>
+                          <option value="Magelang">Dumai</option>
+                          <option value="Magelang">Pekanbaru</option>
+                          <option value="Magelang">Makassar</option>
+                          <option value="Magelang">Palopo</option>
+                          <option value="Magelang">Parepare</option>
+                          <option value="Magelang">Palu</option>
+                          <option value="Magelang">Baubau</option>
+                          <option value="Magelang">Kendari</option>
+                          <option value="Magelang">Bitung</option>
+                          <option value="Magelang">	Kotamobagu</option>
+                          <option value="Magelang">Manado</option>
+                          <option value="Magelang">	Tomohon</option>
+                          <option value="Magelang">Bukittinggi</option>
+                          <option value="Magelang">Padang</option>
+                          <option value="Magelang">	Padang Panjang</option>
+                          <option value="Magelang">Pariaman</option>
+                          <option value="Magelang">Payakumbuh</option>
+                          <option value="Magelang">Sawahlunto</option>
+                          <option value="Magelang">	Solok</option>
+                          <option value="Magelang">Lubuklinggau</option>
+                          <option value="Magelang">Pagar Alam</option>
+                          <option value="Magelang">Palembang</option>
+                          <option value="Magelang">Prabumulih</option>
+                          <option value="Magelang">	Binjai</option>
+                          <option value="Magelang">Gunungsitoli</option>
+                          <option value="Magelang">Medan</option>
+                          <option value="Magelang">Padangsidimpuan</option>
+                          <option value="Magelang">Pematangsiantar</option>
+                          <option value="Magelang">Sibolga</option>
+                          <option value="Magelang">Tebing Tinggi</option>
+                          <option value="Magelang">	Tanjungbalai</option>
                         </select>   
                       </div>
                     </div>
