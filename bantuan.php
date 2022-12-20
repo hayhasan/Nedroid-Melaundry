@@ -132,8 +132,26 @@
                             <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    karena setiap layanan di Melaundry dirancang untuk memudahkan anda dalam urusan kebersihan pakaian dan juga pengguna 
-                                    tidak perlu kesusahan lagi.
+                            1.  KETENTUAN UMUM <br> <br>
+
+                                i.Ketentuan Penggunaan ini menjabarkan ketentuan-ketentuan yang mengatur penggunaan layanan PUNYA yang disediakan untuk Anda,
+                                berupa penjualan dan penyediaan suatu fitur, teknologi, produk, perangkat lunak, dan jasa, atau fungsi lain
+                                yang diberikan oleh produk atau jasa tersebut oleh Punya, termasuk namun tidak terbatas pada: <br> <br>
+                                
+                                ii.Punya dapat mengubah Ketentuan Penggunaan dari waktu ke waktu, dan Punya akan memberitahukan mengenai perubahan tersebut kepada
+                                Pelanggan melalui email atau dengan memberikan pesan tertulis pada saat Pelanggan menggunakan Layanan. Apabila Pelanggan terus menggunakan
+                                Layanan setelah menerima pesan tersebut, maka Pelanggan dianggap setuju untuk tunduk pada perubahan Ketentuan Penggunaan tersebut. <br> <br>
+
+                                iii.Dari waktu ke waktu, Punya dapat menambah, mengubah atau menghilangkan seluruh atau sebagian fitur atau fungsi dalam Layanan.
+                                Pelanggan dapat melakukan instalasi atas versi terbaru untuk menerima perubahan-perubahan tersebut. Punya juga dapat memutuskan 
+                                untuk berhenti menyediakan seluruh atau sebagian dari Layanan pada setiap waktu, dan tidak ada satu ketentuan pun di dalam Ketentuan 
+                                Penggunaan ini yang dapat dijadikan sebagai jaminan bahwa Aplikasi atau bagian dari Layanan manapun akan selalu tersedia, 
+                                baik pada bentuk saat ini atau bentuk lainnya, dan/atau bahwa Punya akan terus mendukung, menjaga, atau meneruskan untuk menawarkan 
+                                Layanan dan/atau Aplikasi atau versi mana pun daripadanya. <br><br>
+
+                                iv.Punya dapat menawarkan fitur khusus yang memiliki syarat-syarat dan ketentuan-ketentuan tersendiri di samping Ketentuan Penggunaan 
+                                ini (“Ketentuan Penggunaan Terpisah”). Dalam hal tersebut, ada Ketentuan Penggunaan Terpisah yang akan berlaku apabila terdapat 
+                                ketidaksesuaian dengan Ketentuan Penggunaan ini.
                                 </div>
                             </div>
                         </div>
@@ -147,7 +165,17 @@
                             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    Disclaimer</div>
+                                i. Anda dengan ini memberikan izin yang bebas royalti, tidak dapat dicabut kembali, tanpa batas waktu, dapat disublisensikan dan berlaku 
+                                di seluruh dunia untuk menggunakan (termasuk untuk tujuan komersial) informasi dan/atau data yang dikumpulkan oleh Punya melalui penggunaan 
+                                Anda atas Layanan, dengan ketentuan bahwa Punya akan menggabungkan (dengan data dari pengguna lainnya) atau menjadikan informasi atau data 
+                                tersebut menjadi anonim sebelum menggunakannya. Selain dari hak ini, Punya tidak menuntut hak kekayaan intelektual lainnya sehubungan dengan 
+                                informasi atau konten yang diberikan oleh Anda pada Layanan. <br><br>
+
+                                ii. Penggunaan dan/atau akses ke Layanan juga akan tunduk pada segala aturan yang dituangkan dalam kebijakan privasi Punya yang dimuat pada 
+                                Aplikasi dan/atau Situs (“Kebijakan Privasi”). Dengan menyetujui Ketentuan Penggunaan ini, kami mengasumsikan bahwa Anda telah membaca dan 
+                                menyetujui isi dari Kebijakan Privasi. Kebijakan Privasi dan Ketentuan Penggunaan ini merupakan suatu kesatuan dokumen yang perlu disetujui 
+                                oleh Pelanggan sebelum dapat mendaftarkan diri dan menggunakan Layanan.
+                            </div>
                             </div>
                         </div>
                         <div class="accordion-item wow fadeInUp" data-wow-delay="0.3s">
@@ -160,8 +188,9 @@
                             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    Para staff melaundry adalah staff yang sudah ahli dibidang ini dan juga untuk alat-alat yang digunakan
-                                    adalah alat-alat yang terbaik.
+                                    Untuk informasi lebih lanjut hubungi kami: <br>
+                                     WA:08123456789 <br>
+                                     Email:cs@melaundry.id
                                 </div>
                             </div>
                         </div>
