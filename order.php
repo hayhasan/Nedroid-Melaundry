@@ -110,9 +110,9 @@
                 <a href="moreinfo.php" class="dropdown-item">More info</a>
             </div>
         </div>
-            <nav class="collapse navbar-collapse"> 
-            <a href='controller_logout.php' class='btn btn-outline-success' style='color: rgb(0, 213, 255);width: 90px; border-color: rgb(0, 213, 255);' >Logout</a>       
-            </nav>
+            
+            <a href='controller_logout.php' class='btn btn-outline-success' style='color: rgb(0, 213, 255);height:40px; margin-top:20px;width: 90px; border-color: rgb(0, 213, 255);' >Logout</a>       
+            
     </nav>
     <!-- Navbar End -->
    
