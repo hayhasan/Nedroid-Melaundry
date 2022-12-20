@@ -120,11 +120,11 @@
                       <a href='moreinfo.php' class='dropdown-item'>More info</a>";
               }
               else{
-                echo "<a href='index.php' class='nav-item nav-link active'>Home</a>
+                echo "<a href='index.php' class='nav-item nav-link '>Home</a>
                 <a href='order.php' class='nav-item nav-link'>Order</a>
                 <a href='activity.php' class='nav-item nav-link'>Activity</a>
                 <div class='nav-item dropdown'>
-                  <a href='#' class='nav-link dropdown-toggle' data-bs-toggle='dropdown'>Features</a>
+                  <a href='#' class='nav-link dropdown-toggle active' data-bs-toggle='dropdown'>Features</a>
                   <div class='dropdown-menu shadow-sm m-0'>
                       <a href='account.php' class='dropdown-item'>Account</a>
                       <a href='menu.php' class='dropdown-item'>Menu</a>
@@ -133,17 +133,19 @@
         ?>
             </div>
         </div>
-            <nav class="collapse navbar-collapse"> 
-            <?php
+                    
+        <?php
 
-              if(! $_SESSION['login']){
-                echo "<button data-toggle='modal' data-target='#loginModal' class='btn btn-outline-success' style='color: rgb(0, 213, 255);width: 90px; border-color: rgb(0, 213, 255);' type='button' >Login</button>";
-              }
-              else{
-                echo "<a href='controller_logout.php' class='btn btn-outline-success' style='color: rgb(0, 213, 255);width: 90px; border-color: rgb(0, 213, 255);' >Logout</a>";
-              }
-            ?>      
-            </nav>
+if(! $_SESSION['login']){
+  echo "<button data-toggle='modal' data-target='#loginModal' class='btn btn-outline-success' style='color: rgb(0, 213, 255);height:40px; margin-top:20px; width: 90px; border-color: rgb(0, 213, 255);' type='button' >Login</button>";
+}
+else{
+  echo "<a href='controller_logout.php' class='btn btn-outline-success' style='color: rgb(0, 213, 255);width: 90px; height:40px; margin-top:20px; border-color: rgb(0, 213, 255);' >Logout</a>";
+}
+?>
+    <!-- <button data-toggle="modal" data-target="#loginModal" class="btn btn-outline-success" style="color: rgb(0, 213, 255);width: 90px; border-color: rgb(0, 213, 255);" type="button" >Login</button>  -->
+
+
     </nav id="pakaian">
     <!-- Navbar End -->
     <!-- team section start -->

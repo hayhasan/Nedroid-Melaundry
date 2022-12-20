@@ -28,9 +28,9 @@
 
     <!-- Favicon -->
     
-    <link rel="stylesheet" href="profile_image_style.css">  <!-- IKI ANYAR CSS -->
     <link rel="stylesheet" href="nedroid2.css">
     <link rel="stylesheet" href="profile.css">
+    
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- IKI ANYAR CSS -->
  
@@ -75,11 +75,12 @@
 
     <!-- Template Stylesheet -->
     <link href="style.css" rel="stylesheet" />
-    <link rel="stylesheet" href="nedroid.css">
       <!-- Style CSS -->
       <link rel="stylesheet" href="stylepopup.css">
       <!-- Demo CSS -->
       <link rel="stylesheet" href="css/demo.css">
+      
+    <link rel="stylesheet" href="profile_image_style.css">  <!-- IKI ANYAR CSS -->
       
     
   </head>
@@ -131,8 +132,7 @@
                 <a href="moreinfo.php" class="dropdown-item">More info</a>
             </div>
         </div>
-            <nav class="collapse navbar-collapse"> 
-                <a href="controller_logout.php" class="btn btn-outline-success" style="color: rgb(0, 213, 255);width: 90px; border-color: rgb(0, 213, 255);" type="button" >Logout</a >  </nav>
+                <a href="controller_logout.php" class="btn btn-outline-success" style="height:40px; margin-top:20px;color: rgb(0, 213, 255);width: 90px; border-color: rgb(0, 213, 255);" type="button" >Logout</a >  </nav>
     </nav>
     <!-- Navbar End -->
 <!-- info -->
@@ -146,14 +146,21 @@
                 <div class="col-md-6 ml-auto mr-auto">
                    <div class="profile">
                         <div class="avatar">
+<<<<<<< HEAD
+                        <form class="form" id = "form" action="" enctype="multipart/form-data" method="post"> <!-- Mulai Kene -->
+      <div style="margin-top:-100px;" class="upload">
+        <img src="img/<?php echo $image; ?>" style="margin-top:-100px;"  title="<?php echo $image; ?>"> 
+        <div  class="round">
+=======
                         <form class="form"  id = "form" action="" enctype="multipart/form-data" method="post"> <!-- Mulai Kene -->
       <div  class="upload">
         <img  src="img/<?php echo $image; ?>"title="<?php echo $image; ?>"> 
         <div style="margin-top:-1000px;" class="round">
+>>>>>>> 4b759e6206bb172710a8bf076a0334f8f6252945
           <input type="hidden" name="id" value="<?php echo $id; ?>">
           <input type="hidden" name="name" value="<?php echo $name; ?>">
           <input type="file" name="image" id = "image" accept=".jpg, .jpeg, .png">
-          <i class = "fa fa-camera" style = "color: #fff;"></i>
+          <i class = "fa fa-camera" style = "color: #fff; "></i>
         </div>
       </div>
     </form>
@@ -232,7 +239,7 @@
                           <li class="nav-item">
                               <a class="nav-link active" href="#studio" role="tab" data-toggle="tab">
                                 <i class="material-icons">history </i>
-                                Riwayat Cucian
+                                Detail Account
                               </a>
                           </li>
                           <li class="nav-item">

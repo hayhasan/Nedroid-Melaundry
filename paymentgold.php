@@ -99,8 +99,7 @@
                 <a href="moreinfo.php" class="dropdown-item">More info</a>
             </div>
         </div>
-            <nav class="collapse navbar-collapse"> 
-              <button data-toggle="modal" data-target="#loginModal"  class="btn btn-outline-success" style="color: rgb(0, 213, 255);width: 90px; border-color: rgb(0, 213, 255);" type="button" >Login</button >       </nav>
+              <button data-toggle="modal" data-target="#loginModal"  class="btn btn-outline-success" style="color: rgb(0, 213, 255);height:40px; margin-top:20px;width: 90px; border-color: rgb(0, 213, 255);" type="button" >Login</button >       </nav>
     </nav id="pakaian">
     <!-- Navbar End -->
 

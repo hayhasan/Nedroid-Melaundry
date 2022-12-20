@@ -101,8 +101,12 @@
                 <a href="moreinfo.php" class="dropdown-item">More info</a>
             </div>
         </div>
+<<<<<<< HEAD
+              <button data-toggle="modal" data-target="#loginModal"  class="btn btn-outline-success" style="color: rgb(0, 213, 255);height:40px; margin-top:20px;width: 90px; border-color: rgb(0, 213, 255);" type="button" >Login</button >       </nav>
+=======
             <nav class="collapse navbar-collapse"> 
             <a href='controller_logout.php' class='btn btn-outline-success' style='color: rgb(0, 213, 255);width: 90px; border-color: rgb(0, 213, 255);' >Logout</a>       </nav>
+>>>>>>> 4b759e6206bb172710a8bf076a0334f8f6252945
     </nav id="pakaian">
     <!-- Navbar End -->
 
