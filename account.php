@@ -146,17 +146,10 @@
                 <div class="col-md-6 ml-auto mr-auto">
                    <div class="profile">
                         <div class="avatar">
-<<<<<<< HEAD
                         <form class="form" id = "form" action="" enctype="multipart/form-data" method="post"> <!-- Mulai Kene -->
-      <div style="margin-top:-100px;" class="upload">
+      <div style="margin-top:100px;" class="upload">
         <img src="img/<?php echo $image; ?>" style="margin-top:-100px;"  title="<?php echo $image; ?>"> 
         <div  class="round">
-=======
-                        <form class="form"  id = "form" action="" enctype="multipart/form-data" method="post"> <!-- Mulai Kene -->
-      <div  class="upload">
-        <img  src="img/<?php echo $image; ?>"title="<?php echo $image; ?>"> 
-        <div style="margin-top:-1000px;" class="round">
->>>>>>> 4b759e6206bb172710a8bf076a0334f8f6252945
           <input type="hidden" name="id" value="<?php echo $id; ?>">
           <input type="hidden" name="name" value="<?php echo $name; ?>">
           <input type="file" name="image" id = "image" accept=".jpg, .jpeg, .png">
@@ -295,8 +288,7 @@
         </div>
       </div>
           <div class="tab-pane text-center gallery" id="works">
-          <div class="row">
-           <div>
+            
             <!-- account -->
     <section class=" h-100 bg-light">
       <div class="container py-5 h-100">
@@ -530,6 +522,8 @@
         </div>
       </div>
     </section>  
+          <div class="row">
+           <div>
       <!-- account -->
            </div>
           </div>
@@ -571,7 +565,7 @@
                         <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text"
                             placeholder="Your email">
                         <button type="button"
-                           class="btn btn-primary py-2 px-3 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                           class="btn btn-outline-success py-2 px-3 position-absolute top-0 end-0 mt-2 me-2" style="color:#00f7ff;border-color:#00f7ff;">SignUp</button>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
