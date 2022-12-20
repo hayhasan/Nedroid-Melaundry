@@ -102,7 +102,7 @@
             </div>
         </div>
             <nav class="collapse navbar-collapse"> 
-              <button data-toggle="modal" data-target="#loginModal"  class="btn btn-outline-success" style="color: rgb(0, 213, 255);width: 90px; border-color: rgb(0, 213, 255);" type="button" >Login</button >       </nav>
+            <a href='controller_logout.php' class='btn btn-outline-success' style='color: rgb(0, 213, 255);width: 90px; border-color: rgb(0, 213, 255);' >Logout</a>       </nav>
     </nav id="pakaian">
     <!-- Navbar End -->
 

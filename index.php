@@ -1,5 +1,5 @@
 <?php
-$koneksi = mysqli_connect("localhost","root","","melaundry");
+include 'koneksi.php';
   session_start();
   if (! isset($_SESSION['login'])){
     $_SESSION['login'] = false;

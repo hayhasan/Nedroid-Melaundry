@@ -1,5 +1,5 @@
 <?php
-  $koneksi = mysqli_connect("localhost","root","","melaundry");
+  include 'koneksi.php';
   session_start();
   if (! isset($_SESSION['login'])){
     $_SESSION['login'] = false;
@@ -147,10 +147,10 @@
                 <div class="col-md-6 ml-auto mr-auto">
                    <div class="profile">
                         <div class="avatar">
-                        <form class="form" id = "form" action="" enctype="multipart/form-data" method="post"> <!-- Mulai Kene -->
-      <div class="upload">
-        <img src="img/<?php echo $image; ?>" width = 125 height = 125 title="<?php echo $image; ?>"> 
-        <div class="round">
+                        <form class="form"  id = "form" action="" enctype="multipart/form-data" method="post"> <!-- Mulai Kene -->
+      <div  class="upload">
+        <img  src="img/<?php echo $image; ?>"title="<?php echo $image; ?>"> 
+        <div style="margin-top:-1000px;" class="round">
           <input type="hidden" name="id" value="<?php echo $id; ?>">
           <input type="hidden" name="name" value="<?php echo $name; ?>">
           <input type="file" name="image" id = "image" accept=".jpg, .jpeg, .png">
@@ -218,9 +218,7 @@
                     echo $user['status'];
               }
                  ?></h5>
-              <a href="#pablo" class="btn btn-just-icon btn-link btn-dribbble"><i class="fa fa-dribbble"></i></a>
-                              <a href="#pablo" class="btn btn-just-icon btn-link btn-twitter"><i class="fa fa-twitter"></i></a>
-                              <a href="#pablo" class="btn btn-just-icon btn-link btn-pinterest"><i class="fa fa-pinterest"></i></a>
+              
                         </div>
                     </div>
                 </div>

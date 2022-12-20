@@ -16,7 +16,7 @@
 
         $query = "INSERT INTO order_user (name,phone,address,price,nota, tanggal, paket, berat, pewangi, id_user) VALUES ('".$name."', '".$phone."', '".$address."', '".$price."', '".$nota."', '".$tanggal."', '".$paket."', '".$berat."', '".$pewangi."',  '".$id_user."')";
         if($result = mysqli_query($conn, $query)){
-            echo "<script>alert('Berhasil order, menuju map');  window.location = 'orderpayment.php'; </script>";
+            header("location:orderpayment.php");
         }else{
             echo "<script>alert('Terjadi Error');  window.location = 'Sign Up.php'; </script>";
         }

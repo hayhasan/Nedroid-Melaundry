@@ -1,5 +1,5 @@
 <?php
-$koneksi = mysqli_connect("localhost","root","","melaundry");
+include '../koneksi.php';
 
 $id=$_GET['id'];
 

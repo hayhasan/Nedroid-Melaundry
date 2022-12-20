@@ -1,5 +1,5 @@
 <?php
-    include 'connection.php';
+    include 'koneksi.php';
     session_start();
 
     $email = $_POST['loginemail'];
@@ -7,7 +7,7 @@
     $q = "SELECT * FROM dataUser";
 
     if(isset($_POST['login'])){
-        if($query = mysqli_query($conn, $q)){
+        if($query = mysqli_query($koneksi, $q)){
             $data = mysqli_fetch_assoc($query);
 
             if($data['email'] == $email){
