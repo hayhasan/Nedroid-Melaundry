@@ -154,13 +154,13 @@
       <div style="margin-top:100px;" class="upload">
         <img src="img/<?php echo $image; ?>" style="margin-top:-100px;"  title="<?php echo $image; ?>"> 
 
-       
-          <input type="file" name="image"  id = "image" accept=".jpg, .jpeg, .png">
+        <div  class="round mr-5">
+          <input type="file" name="image" id = "image" accept=".jpg, .jpeg, .png">
           <input type="hidden" name="id" value="<?php echo $id; ?>">
           <input type="hidden" name="name" value="<?php echo $name; ?>">
           
           <i class = "fa fa-camera" style = "color: #fff; "></i>
-       
+        </div>
       </div>
     </form>
     <script type="text/javascript">
