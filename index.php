@@ -241,7 +241,7 @@ include 'koneksi.php';
                 echo "<a class='btn btn-primary py-3 px-4 animated pulse infinite ms-auto' id='tombollangganan' href='login.php'>Berlangganan</a>";
               }
               else{
-                echo "<a class='btn btn-primary py-3 px-4 animated pulse infinite ms-auto' id='tombollangganan' href='payment.php'>Berlangganan</a>";
+                echo "<a class='btn btn-primary py-3 px-4 animated pulse infinite ms-auto' id='tombollangganan' href='paymentroyale.php'>Berlangganan</a>";
               }
             ?>
             </div>
