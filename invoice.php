@@ -153,8 +153,7 @@ if(! $_SESSION['login']){
             <ul class="list-unstyled">
               <li class="text-muted"><i class="fas fa-circle" style="color:#84B0CA ;"></i> <span
                   class="fw-bold">ID User: </span><?php echo $user['id'] ?></li>
-              <li class="text-muted"><i class="fas fa-circle" style="color:#84B0CA ;"></i> <span
-                  class="fw-bold">Creation Date: </span>Jun 23,2021</li>
+            
               <li class="text-muted"><i class="fas fa-circle" style="color:#84B0CA ;"></i> <span
                   class="me-1 fw-bold">Status:</span><span class="badge badge-pill badge-success">
                   succes</span></li>
@@ -208,8 +207,8 @@ if(! $_SESSION['login']){
           </div>
           <div class="col-xl-3">
             <ul class="list-unstyled">
-              <li class="text-muted ms-3"><span class="text-black me-4">SubTotal</span>$1110</li>
-              <li class="text-muted ms-3 mt-2"><span class="text-black me-4">Tax(15%)</span>$111</li>
+              <li></li>
+              <li></li>
             </ul>
             <p class="text-black float-start"><span class="text-black me-3"> Total Amount</span><span
                 style="font-size: 25px;"><?php echo $sum ?></span></p>
