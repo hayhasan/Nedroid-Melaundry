@@ -125,11 +125,11 @@
                         <div class="accordion-item wow fadeInUp" data-wow-delay="0.1s">
                             <h2 class="accordion-header" id="headingOne">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                                     Syarat & Ketentuan
                                 </button>
                             </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                             1.  KETENTUAN UMUM <br> <br>
@@ -194,6 +194,26 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.4s">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                  Disclaimer
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                All the information on this website - melaundry.site - is published in good faith and for general information purpose only. Melaundry does not make any warranties about the completeness, reliability and accuracy of this information. Any action you take upon the information you find on this website (Melaundry), is strictly at your own risk. Melaundry will not be liable for any losses and/or damages in connection with the use of our website. Our Disclaimer was generated with the help of the .</p>
+                                From our website, you can visit other websites by following hyperlinks to such external sites. While we strive to provide only quality links to useful and ethical websites, we have no control over the content and nature of these sites. These links to other websites do not imply a recommendation for all the content found on these sites. Site owners and content may change without notice and may occur before we have the opportunity to remove a link which may have gone 'bad'.</p>
+                                Please be also aware that when you leave our website, other sites may have different privacy policies and terms which are beyond our control. Please be sure to check the Privacy Policies of these sites as well as their "Terms of Service" before engaging in any business or uploading any information.
+                                Consent
+                                By using our website, you hereby consent to our disclaimer and agree to its terms.
+                                Update
+                                Should we update, amend or make any changes to this document, those changes will be prominently posted here.
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -228,18 +248,28 @@
                     <p><i class="fa fa-envelope me-3"></i>cs@melaundry.id</p>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h5 class="mb-4">MeLaundry</h5>
-                    <a class="btn btn-link" href="index.php">Home</a>
-                    <a class="btn btn-link" href="order.php">Order</a>
-                    <a class="btn btn-link" href="activity.php">Activity</a>
-                    <a class="btn btn-link" href="account.php">Account</a>
+                    <h5 class="mb-4">MeLaundry</h5><?php
+
+if(! $_SESSION['login']){ //IKIII
+  echo "<a class='btn btn-link' href='index.php'>Home</a>
+  <a class='btn btn-link' href='login.php'>Order</a>
+  <a class='btn btn-link' href='login.php'>Activity</a>
+  <a class='btn btn-link' href='login.php'>Account</a>";
+}
+else{
+  echo "<a class='btn btn-link' href='index.php'>Home</a>
+  <a class='btn btn-link' href='order.php'>Order</a>
+  <a class='btn btn-link' href='activity.php'>Activity</a>
+  <a class='btn btn-link' href='account.php'>Account</a>";
+} 
+?>   <!--TEKAN KENEEE-->
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="mb-4">Bantuan & Panduan</h5>
-                    <a class="btn btn-link" href="">Syarat & Ketentuan</a>
-                    <a class="btn btn-link" href="">Kebijakan Privasi</a>
-                    <a class="btn btn-link" href="">Disclaimer</a>
-                    <a class="btn btn-link" href="">Hubungi Kami</a>
+                    <a class="btn btn-link" href="bantuan.php">Syarat & Ketentuan</a>
+                    <a class="btn btn-link" href="bantuan.php">Kebijakan Privasi</a>
+                    <a class="btn btn-link" href="bantuan.php">Disclaimer</a>
+                    <a class="btn btn-link" href="bantuan.php">Hubungi Kami</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="mb-4">Ikuti Kami</h5>

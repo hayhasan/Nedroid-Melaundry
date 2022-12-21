@@ -266,18 +266,28 @@ else{
                     <p><i class="fa fa-envelope me-3"></i>cs@melaundry.id</p>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h5 class="mb-4">MeLaundry</h5>
-                    <a class="btn btn-link" href="index.php">Home</a>
-                    <a class="btn btn-link" href="order.php">Order</a>
-                    <a class="btn btn-link" href="activity.php">Activity</a>
-                    <a class="btn btn-link" href="account.php">Account</a>
+                    <h5 class="mb-4">MeLaundry</h5><?php
+
+if(! $_SESSION['login']){ //IKIII
+  echo "<a class='btn btn-link' href='index.php'>Home</a>
+  <a class='btn btn-link' href='login.php'>Order</a>
+  <a class='btn btn-link' href='login.php'>Activity</a>
+  <a class='btn btn-link' href='login.php'>Account</a>";
+}
+else{
+  echo "<a class='btn btn-link' href='index.php'>Home</a>
+  <a class='btn btn-link' href='order.php'>Order</a>
+  <a class='btn btn-link' href='activity.php'>Activity</a>
+  <a class='btn btn-link' href='account.php'>Account</a>";
+} 
+?>   <!--TEKAN KENEEE-->
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="mb-4">Bantuan & Panduan</h5>
-                    <a class="btn btn-link" href="">Syarat & Ketentuan</a>
-                    <a class="btn btn-link" href="">Kebijakan Privasi</a>
-                    <a class="btn btn-link" href="">Disclaimer</a>
-                    <a class="btn btn-link" href="">Hubungi Kami</a>
+                    <a class="btn btn-link" href="bantuan.php">Syarat & Ketentuan</a>
+                    <a class="btn btn-link" href="bantuan.php">Kebijakan Privasi</a>
+                    <a class="btn btn-link" href="bantuan.php">Disclaimer</a>
+                    <a class="btn btn-link" href="bantuan.php">Hubungi Kami</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="mb-4">Ikuti Kami</h5>
