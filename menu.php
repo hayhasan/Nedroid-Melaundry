@@ -442,10 +442,10 @@ else{
                   <div class="d-flex flex-column text-center">
                     <form action="validatelogin.php" method="post">
                     <div class="form-group">
-                        <input type="email" class="form-control" id="email1"placeholder="Your email address..." name="loginemail">
+                        <input type="email" class="form-control" id="email1"placeholder="Your email address..." name="loginemail" required>
                       </div>
                       <div class="form-group">
-                        <input type="password" class="form-control" id="password1" placeholder="Your password..." name="loginpassword">
+                        <input type="password" class="form-control" id="password1" placeholder="Your password..." name="loginpassword" required>
                       </div>
                       <button style="color: white;" type="submit" class="btn btn-info btn-block btn-round" name="login">Login</button>
                     </form>
