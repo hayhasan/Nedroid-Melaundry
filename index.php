@@ -201,7 +201,7 @@ include 'koneksi.php';
                 <img src="voucher winter.png">
             </div>
             <div class="back">
-            <img src="voucher winter back.png">
+            <img src="back1.png">
             </div>
         </div>
 
@@ -210,7 +210,7 @@ include 'koneksi.php';
             <img src="newyear front.png">
             </div>
             <div class="back">
-            <img src="newyear back.png">
+            <img src="back2.png">
               </div>
         </div>
 
@@ -219,7 +219,7 @@ include 'koneksi.php';
             <img src="motherday front.png">
             </div>
             <div class="back">
-            <img src="motherday back.png">
+            <img src="back3.png" >
           </div>
         </div>
 

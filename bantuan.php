@@ -121,15 +121,15 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-10">
+                  
                     <div class="accordion" id="accordionExample">
-                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.1s">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                    Syarat & Ketentuan
-                                </button>
+                    <div class="accordion-item wow fadeInUp" data-wow-delay="0.5s">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    Syarat & Ketentuan
                             </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne"
+                            <div id="collapseFive" class="accordion-collapse collapse " aria-labelledby="headingFive"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                             1.  KETENTUAN UMUM <br> <br>
